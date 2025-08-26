@@ -57,9 +57,9 @@ const nextConfig = {
           },
         ],
       },
-      // Fonts caching
+      // Fonts caching - fixed regex pattern
       {
-        source: '/(.*\\.(woff|woff2|ttf|eot))',
+        source: '/fonts/(.*)',
         headers: [
           {
             key: 'Cache-Control',
@@ -72,7 +72,6 @@ const nextConfig = {
 
   // Experimental features for performance
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
 

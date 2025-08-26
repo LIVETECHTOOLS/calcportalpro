@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'Financial Education Blog | CalcPortal Pro',
     description: 'Expert financial tips, guides, and insights on personal finance, investing, loans, taxes, and more.',
     url: 'https://calcportalpro.com/blog',
-    type: 'blog',
+    type: 'website',
   },
   alternates: {
     canonical: '/blog',
