@@ -3,17 +3,55 @@ import Link from 'next/link';
 import { Calendar, Clock, User, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Financial Education Blog - Expert Tips & Guides | CalcPortal Pro',
-  description: 'Learn about personal finance, investing, loans, taxes, and more with our expert financial education blog. Get tips, guides, and insights to improve your financial literacy.',
-  keywords: 'financial blog, personal finance blog, investment blog, loan blog, tax blog, financial education',
+  title: 'Financial Education Blog | CalcPortal Pro',
+  description: 'Expert financial tips, guides, and insights on personal finance, investing, loans, taxes, and more. Improve your financial literacy with our educational blog.',
+  keywords: 'financial blog, personal finance, investment tips, loan guides, tax advice, financial education, money management',
   openGraph: {
-    title: 'Financial Education Blog - Expert Tips & Guides | CalcPortal Pro',
-    description: 'Learn about personal finance, investing, loans, taxes, and more with our expert financial education blog.',
+    title: 'Financial Education Blog | CalcPortal Pro',
+    description: 'Expert financial tips, guides, and insights on personal finance, investing, loans, taxes, and more.',
     url: 'https://calcportalpro.com/blog',
+    type: 'blog',
   },
   alternates: {
     canonical: '/blog',
   },
+};
+
+// Blog Listing Schema
+const blogListingSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "CalcPortal Pro Financial Education Blog",
+  "description": "Expert financial tips, guides, and insights on personal finance, investing, loans, taxes, and more",
+  "url": "https://calcportalpro.com/blog",
+  "publisher": {
+    "@type": "Organization",
+    "name": "CalcPortal Pro",
+    "url": "https://calcportalpro.com"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Article",
+          "name": "How to Start an Emergency Fund: A Complete Guide for 2025",
+          "url": "https://calcportalpro.com/blog/how-to-start-emergency-fund"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Article",
+          "name": "High Yield Savings Account Guide: Maximize Your Money in 2025",
+          "url": "https://calcportalpro.com/blog/high-yield-savings-account-guide"
+        }
+      }
+    ]
+  }
 };
 
 const blogPosts = [
@@ -165,8 +203,17 @@ const categories = [
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-primary-50">
-      <div className="container-max py-8">
+    <>
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(blogListingSchema),
+        }}
+      />
+      
+      <div className="min-h-screen bg-primary-50">
+        <div className="container-max py-8">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl lg:text-5xl font-bold text-secondary-500 mb-4">
@@ -295,5 +342,6 @@ export default function BlogPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

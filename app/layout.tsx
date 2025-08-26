@@ -2,49 +2,79 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'arial'],
+});
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://calcportalpro.com'),
+  
   title: {
-    default: 'CalcPortal Pro - Smarter Financial Tools. Better Money Decisions.',
+    default: 'CalcPortal Pro - Free Financial Calculators & Tools',
     template: '%s | CalcPortal Pro'
   },
-  description: 'Take control of your finances with our free, easy-to-use calculators and tools. Budgeting, loans, mortgages, taxes, investments, and retirement planning.',
-  keywords: 'financial calculator, loan calculator, mortgage calculator, tax calculator, investment calculator, retirement calculator, budgeting tools',
-  authors: [{ name: 'CalcPortal Pro' }],
+  
+  description: 'Free financial calculators for loans, mortgages, investments, taxes, and retirement planning. Make smarter money decisions with our easy-to-use tools.',
+  
+  keywords: [
+    'financial calculator',
+    'loan calculator', 
+    'mortgage calculator',
+    'investment calculator',
+    'retirement calculator',
+    'tax calculator',
+    'savings calculator',
+    'compound interest calculator',
+    'CD calculator',
+    'Roth IRA calculator',
+    'budgeting tools',
+    'financial planning'
+  ],
+  
+  authors: [{ name: 'CalcPortal Pro Team' }],
   creator: 'CalcPortal Pro',
   publisher: 'CalcPortal Pro',
+  
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://calcportalpro.com'),
+  
   alternates: {
     canonical: '/',
   },
+  
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://calcportalpro.com',
-    title: 'CalcPortal Pro - Smarter Financial Tools. Better Money Decisions.',
-    description: 'Take control of your finances with our free, easy-to-use calculators and tools.',
+    title: 'CalcPortal Pro - Free Financial Calculators & Tools',
+    description: 'Free financial calculators for loans, mortgages, investments, taxes, and retirement planning. Make smarter money decisions with our easy-to-use tools.',
     siteName: 'CalcPortal Pro',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://calcportalpro.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'CalcPortal Pro - Financial Calculators',
+        alt: 'CalcPortal Pro - Professional Financial Calculators',
+        type: 'image/jpeg',
       },
     ],
   },
+  
   twitter: {
     card: 'summary_large_image',
-    title: 'CalcPortal Pro - Smarter Financial Tools. Better Money Decisions.',
-    description: 'Take control of your finances with our free, easy-to-use calculators and tools.',
-    images: ['/og-image.jpg'],
+    title: 'CalcPortal Pro - Free Financial Calculators & Tools',
+    description: 'Free financial calculators for loans, mortgages, investments, taxes, and retirement planning.',
+    images: ['https://calcportalpro.com/og-image.jpg'],
+    creator: '@calcportalpro',
+    site: '@calcportalpro',
   },
+  
   robots: {
     index: true,
     follow: true,
@@ -56,9 +86,57 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  
   verification: {
-    google: 'your-google-verification-code',
+    google: process.env.GOOGLE_VERIFICATION_CODE || 'your-google-verification-code',
   },
+  
+  other: {
+    'msapplication-TileColor': '#2563eb',
+    'theme-color': '#2563eb',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'default',
+    'apple-mobile-web-app-title': 'CalcPortal Pro',
+  },
+};
+
+// Organization Schema
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "CalcPortal Pro",
+  "url": "https://calcportalpro.com",
+  "logo": "https://calcportalpro.com/logo.png",
+  "description": "Professional financial calculators and tools for better money decisions",
+  "foundingDate": "2025",
+  "sameAs": [
+    "https://twitter.com/calcportalpro",
+    "https://linkedin.com/company/calcportalpro",
+    "https://facebook.com/calcportalpro"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "url": "https://calcportalpro.com/contact"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  }
+};
+
+// Website Schema
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "CalcPortal Pro",
+  "url": "https://calcportalpro.com",
+  "description": "Free financial calculators and tools",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://calcportalpro.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
 };
 
 export default function RootLayout({
@@ -69,9 +147,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        {/* Essential Meta Tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+        <meta name="format-detection" content="telephone=no" />
+        
+        {/* Favicon & Icons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        
+        {/* Preload Critical Resources */}
+        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/api/placeholder/1200/630" as="image" />
+        
+        {/* DNS Prefetch */}
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//images.unsplash.com" />
         
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RWDG6W0T4"></script>
@@ -81,8 +173,26 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-3RWDG6W0T4');
+              gtag('config', 'G-3RWDG6W0T4', {
+                page_title: document.title,
+                page_location: window.location.href,
+                send_page_view: true
+              });
             `,
+          }}
+        />
+        
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
           }}
         />
       </head>

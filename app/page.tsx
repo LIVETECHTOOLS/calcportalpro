@@ -8,20 +8,21 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'CalcPortal Pro - Smarter Financial Tools. Better Money Decisions.',
-  description: 'Take control of your finances with our free, easy-to-use calculators and tools. Budgeting, loans, mortgages, taxes, investments, and retirement planning.',
-  keywords: 'financial calculator, loan calculator, mortgage calculator, tax calculator, investment calculator, retirement calculator, budgeting tools',
+  title: 'CalcPortal Pro - Free Financial Calculators',
+  description: 'Free financial calculators for loans, mortgages, investments, taxes, and retirement planning. Make smarter money decisions with our easy-to-use tools.',
+  keywords: 'financial calculator, loan calculator, mortgage calculator, tax calculator, investment calculator, retirement calculator, savings calculator, CD calculator, Roth IRA calculator',
   openGraph: {
-    title: 'CalcPortal Pro - Smarter Financial Tools. Better Money Decisions.',
-    description: 'Take control of your finances with our free, easy-to-use calculators and tools.',
+    title: 'CalcPortal Pro - Free Financial Calculators',
+    description: 'Free financial calculators for loans, mortgages, investments, taxes, and retirement planning. Make smarter money decisions with our easy-to-use tools.',
     url: 'https://calcportalpro.com',
     siteName: 'CalcPortal Pro',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://calcportalpro.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'CalcPortal Pro - Financial Calculators',
+        alt: 'CalcPortal Pro - Professional Financial Calculators',
+        type: 'image/jpeg',
       },
     ],
     locale: 'en_US',
@@ -29,27 +30,59 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CalcPortal Pro - Smarter Financial Tools. Better Money Decisions.',
-    description: 'Take control of your finances with our free, easy-to-use calculators and tools.',
-    images: ['/og-image.jpg'],
+    title: 'CalcPortal Pro - Free Financial Calculators',
+    description: 'Free financial calculators for loans, mortgages, investments, taxes, and retirement planning.',
+    images: ['https://calcportalpro.com/og-image.jpg'],
   },
   alternates: {
     canonical: '/',
   },
 };
 
+// Homepage Schema
+const homepageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "CalcPortal Pro - Free Financial Calculators",
+  "description": "Free financial calculators for loans, mortgages, investments, taxes, and retirement planning",
+  "url": "https://calcportalpro.com",
+  "mainEntity": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Financial Calculator Suite",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  ]
+};
+
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-primary-50">
-      <Header />
-      <main>
-        <HeroSection />
-        <CategoryBlocks />
-        <PopularCalculators />
-        <EducationalHubs />
-        <TestimonialSection />
-      </main>
-      <Footer />
-    </div>
+    <>
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homepageSchema),
+        }}
+      />
+      
+      <div className="min-h-screen bg-primary-50">
+        <Header />
+        <main>
+          <HeroSection />
+          <CategoryBlocks />
+          <PopularCalculators />
+          <EducationalHubs />
+          <TestimonialSection />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
