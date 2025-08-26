@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin/*
+Disallow: /api/*
+
+# Host
+Host: https://calcportalpro.com
+
+# Sitemaps
+Sitemap: https://calcportalpro.com/sitemap.xml
