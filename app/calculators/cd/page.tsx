@@ -29,11 +29,19 @@ export default function CDCalculatorPage() {
             </p>
           </div>
         </div>
+<<<<<<< HEAD
           </div>
           
       {/* Calculator Component */}
       <div className="py-8">
           <CDCalculator />
+=======
+      </div>
+
+      {/* Calculator Component */}
+      <div className="py-8">
+        <CDCalculator />
+>>>>>>> b7dc9ba80516882d0d4e00565f793ca6da31e4ee
       </div>
       <AdUnit adSlot="6578933471" />
 
@@ -79,7 +87,11 @@ export default function CDCalculatorPage() {
                 <li>Shop around for the best rates between different banks</li>
                 <li>Consider the impact of inflation on real returns</li>
                 <li>Plan for reinvestment when CDs mature</li>
+<<<<<<< HEAD
                   </ul>
+=======
+              </ul>
+>>>>>>> b7dc9ba80516882d0d4e00565f793ca6da31e4ee
             </div>
           </div>
         </div>
