@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'APR vs Interest Rate: What\'s the Difference and Why It Matters | CalcPortal Pro',
@@ -122,6 +123,8 @@ export default function APRvsInterestRate() {
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
               When shopping for loans, whether it's a mortgage, auto loan, or personal loan, you'll encounter two important numbers: the interest rate and the APR (Annual Percentage Rate). While these terms are often used interchangeably, they represent different aspects of your loan costs and understanding the difference is crucial for making informed borrowing decisions. This comprehensive guide will explain what each rate means, how they differ, and why both matter when comparing loan offers.
             </p>
+
+            <AdUnit adSlot="6578932201" />
 
             <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
               What is the Interest Rate?
@@ -262,6 +265,8 @@ export default function APRvsInterestRate() {
               </div>
             </div>
 
+            <AdUnit adSlot="6578932202" />
+
             <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
               Purpose and Use Cases
             </h3>
@@ -398,6 +403,8 @@ export default function APRvsInterestRate() {
             <p className="text-gray-700 mb-8">
               For help comparing loan offers and understanding the true cost of borrowing, use our comprehensive suite of <Link href="/calculators" className="text-blue-600 hover:text-blue-800 underline">financial calculators</Link>. These tools can help you calculate monthly payments, compare total costs, and make informed decisions about your borrowing needs.
             </p>
+
+            <AdUnit adSlot="6578932203" />
 
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-8">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Takeaways:</h3>

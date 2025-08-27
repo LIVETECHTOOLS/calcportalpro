@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: '5 Tips for Building an Investment Portfolio in 2025 | CalcPortal Pro',
@@ -122,6 +123,8 @@ export default function BuildingInvestmentPortfolio() {
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
               Building a successful investment portfolio in 2025 requires more than just picking a few stocks and hoping for the best. It demands strategic planning, disciplined execution, and ongoing management. Whether you're just starting your investment journey or looking to optimize an existing portfolio, these five essential tips will help you create a robust foundation for long-term wealth building and financial security.
             </p>
+
+            <AdUnit adSlot="6578932301" />
 
             <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
               Tip 1: Define Your Investment Goals and Timeline
@@ -249,6 +252,8 @@ export default function BuildingInvestmentPortfolio() {
                 </table>
               </div>
             </div>
+
+            <AdUnit adSlot="6578932302" />
 
             <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
               The Power of Diversification
@@ -435,6 +440,8 @@ export default function BuildingInvestmentPortfolio() {
             <p className="text-gray-700 mb-8">
               To help you implement these strategies, explore our comprehensive suite of <Link href="/calculators" className="text-green-600 hover:text-green-800 underline">financial calculators</Link>, including our <Link href="/calculators/investment" className="text-green-600 hover:text-green-800 underline">investment calculator</Link> for portfolio planning and our <Link href="/calculators/retirement" className="text-green-600 hover:text-green-800 underline">retirement calculator</Link> for long-term goal setting.
             </p>
+
+            <AdUnit adSlot="6578932303" />
 
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-8">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Takeaways:</h3>
