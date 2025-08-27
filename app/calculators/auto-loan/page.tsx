@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import AutoLoanCalculator from '@/components/calculators/AutoLoanCalculator';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'Auto Loan Calculator | CalcPortal Pro',
@@ -26,6 +27,8 @@ export default function AutoLoanCalculatorPage() {
         </div>
 
         <AutoLoanCalculator />
+
+        <AdUnit adSlot="6578933401" />
 
         <div className="mt-12 prose max-w-none">
           <h2>Understanding Auto Loans</h2>
@@ -59,6 +62,8 @@ export default function AutoLoanCalculatorPage() {
             <li>Maintenance and fuel costs</li>
             <li>Depreciation</li>
           </ul>
+
+          <AdUnit adSlot="6578933402" />
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import TaxCalculator from '@/components/calculators/TaxCalculator'
+import AdUnit from '@/components/ads/AdUnit'
 
 export const metadata: Metadata = {
   title: 'Tax Calculator - Calculate Your Tax Liability | CalcPortal Pro',
@@ -38,6 +39,8 @@ export default function TaxCalculatorPage() {
 
           <TaxCalculator />
 
+          <AdUnit adSlot="6578933301" />
+
           <div className="mt-16 bg-white rounded-lg shadow-sm p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Understanding Federal Income Taxes
@@ -62,6 +65,8 @@ export default function TaxCalculatorPage() {
                 <li><strong>35%:</strong> $243,726 to $609,350</li>
                 <li><strong>37%:</strong> $609,351 and above</li>
               </ul>
+
+              <AdUnit adSlot="6578933302" />
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
                 Common Tax Deductions

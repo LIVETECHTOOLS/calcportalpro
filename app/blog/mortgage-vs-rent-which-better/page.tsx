@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'Mortgage vs Rent: Which is Better for Your Financial Situation? | CalcPortal Pro',
@@ -123,6 +124,8 @@ export default function MortgageVsRent() {
               One of the most significant financial decisions many people face is whether to buy a home with a mortgage or continue renting. This choice has far-reaching implications for your financial future, lifestyle, and long-term wealth building. In 2025, with changing housing markets, interest rates, and economic conditions, making an informed decision requires careful analysis of both options and consideration of your unique circumstances.
             </p>
 
+            <AdUnit adSlot="6578932721" />
+
             <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
               Understanding the True Cost of Homeownership
             </h2>
@@ -204,6 +207,8 @@ export default function MortgageVsRent() {
             <p className="text-gray-700 mb-6">
               This equity can be accessed through home equity loans, lines of credit, or cash-out refinancing for other financial needs. In retirement, you can potentially downsize to a smaller home or use a reverse mortgage to access your home equity for living expenses.
             </p>
+
+            <AdUnit adSlot="6578932722" />
 
             <div className="bg-green-50 border-l-4 border-green-400 p-6 my-6">
               <h4 className="font-semibold text-green-900 mb-3">Equity Building Example:</h4>
@@ -457,6 +462,7 @@ export default function MortgageVsRent() {
                 <li>• The decision should align with your current circumstances and long-term goals</li>
               </ul>
             </div>
+            <AdUnit adSlot="6578932723" />
           </div>
         </div>
       </div>

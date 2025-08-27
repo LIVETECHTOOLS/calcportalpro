@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import CDCalculator from '../../../components/calculators/CDCalculator'
+import AdUnit from '@/components/ads/AdUnit'
 
 export const metadata: Metadata = {
   title: 'CD Calculator - Calculate Certificate of Deposit Returns | CalcPortal Pro',
@@ -34,6 +35,7 @@ export default function CDCalculatorPage() {
       <div className="py-8">
         <CDCalculator />
       </div>
+      <AdUnit adSlot="6578933471" />
 
       {/* Educational Content */}
       <div className="bg-white py-16">
@@ -56,6 +58,7 @@ export default function CDCalculatorPage() {
                 CD rates are typically higher than savings accounts because you're committing your money for a set period. 
                 Longer terms usually offer higher rates, though this isn't always the case in inverted yield curve environments.
               </p>
+              <AdUnit adSlot="6578933472" />
 
               <h3>CD Laddering Strategy</h3>
               <p>

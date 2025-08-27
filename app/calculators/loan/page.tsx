@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calculator, DollarSign, TrendingUp, Clock } from 'lucide-react';
 import LoanCalculator from '@/components/calculators/LoanCalculator';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'Loan Calculator - Calculate Loan Payments & Interest | CalcPortal Pro',
@@ -54,6 +55,8 @@ export default function LoanPage() {
           <div className="bg-white rounded-2xl shadow-soft p-8 mb-12">
             <LoanCalculator />
           </div>
+
+          <AdUnit adSlot="6578933101" />
 
           {/* Educational Content */}
           <div className="prose prose-lg max-w-none">
@@ -155,6 +158,8 @@ export default function LoanPage() {
                   A 1% lower interest rate on a $25,000 loan over 5 years can save over $700 in interest.
                 </p>
               </div>
+
+              <AdUnit adSlot="6578933102" />
               <div>
                 <h4 className="text-lg font-semibold text-gray-800 mb-2">
                   Loan Term Considerations

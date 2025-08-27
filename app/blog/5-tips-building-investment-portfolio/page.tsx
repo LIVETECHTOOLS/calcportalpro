@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
@@ -74,7 +74,7 @@ export default function BuildingInvestmentPortfolio() {
         <div className="bg-white shadow-sm border-b">
           <div className="max-w-4xl mx-auto px-4 py-6">
             <Link 
-              href="/blog" 
+              href="/blog?category=Investing" 
               className="inline-flex items-center text-green-600 hover:text-green-800 transition-colors mb-4"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -380,7 +380,7 @@ export default function BuildingInvestmentPortfolio() {
 
             <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
               The Importance of Staying the Course
-            </h2>
+            </h3>
             
             <p className="text-gray-700 mb-6">
               Market volatility is inevitable, and even the most carefully constructed portfolios will experience periods of decline. During these challenging times, it's essential to remember your long-term investment goals and avoid making emotional decisions based on short-term market movements.

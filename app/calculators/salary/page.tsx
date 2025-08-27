@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import SalaryCalculator from '@/components/calculators/SalaryCalculator'
+import AdUnit from '@/components/ads/AdUnit'
 
 export const metadata: Metadata = {
   title: 'Salary Calculator - Calculate Take-Home Pay | CalcPortal Pro',
@@ -38,6 +39,8 @@ export default function SalaryCalculatorPage() {
 
           <SalaryCalculator />
 
+          <AdUnit adSlot="6578933451" />
+
           <div className="mt-16 bg-white rounded-lg shadow-sm p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Understanding Your Salary and Compensation
@@ -60,6 +63,8 @@ export default function SalaryCalculatorPage() {
                 <li><strong>Bonuses:</strong> Performance-based or discretionary additional payments</li>
                 <li><strong>Benefits:</strong> Health insurance, retirement contributions, and other perks</li>
               </ul>
+
+              <AdUnit adSlot="6578933452" />
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
                 Common Deductions

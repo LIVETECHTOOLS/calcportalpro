@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowLeft, DollarSign, TrendingUp, Calendar, Calculator, Lock } from 'lucide-react'
+import AdUnit from '@/components/ads/AdUnit'
 
 export const metadata: Metadata = {
   title: 'CD Rates Guide 2025: Best Certificate of Deposit Rates & Strategies | CalcPortal Pro',
@@ -46,6 +47,8 @@ export default function CDRatesGuide() {
           a safe haven for your money while earning competitive interest. This comprehensive guide will help you understand 
           CD rates, strategies, and how to use our CD calculator to maximize your returns.
         </p>
+
+        <AdUnit adSlot="6578932731" />
 
         <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">
           What Are Certificates of Deposit (CDs)?
@@ -133,6 +136,8 @@ export default function CDRatesGuide() {
           </div>
           <p className="text-xs text-gray-500 mt-2">*Rates as of January 2025. Rates may vary and are subject to change.</p>
         </div>
+
+        <AdUnit adSlot="6578932732" />
 
         <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">
           Understanding CD Rate Factors
@@ -433,6 +438,8 @@ export default function CDRatesGuide() {
           Remember that CDs are best suited for money you won't need immediately and when you want guaranteed 
           returns. Use our CD calculator to compare options and find the best strategy for your financial goals.
         </p>
+
+        <AdUnit adSlot="6578932733" />
 
         <div className="bg-primary-50 border border-primary-200 rounded-lg p-6 text-center">
           <h3 className="text-lg font-semibold text-primary-900 mb-3">

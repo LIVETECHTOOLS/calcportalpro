@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import RothIRACalculator from '../../../components/calculators/RothIRACalculator'
+import AdUnit from '@/components/ads/AdUnit'
 
 export const metadata: Metadata = {
   title: 'Roth IRA Calculator - Calculate Retirement Savings & Tax Benefits | CalcPortal Pro',
@@ -34,6 +35,7 @@ export default function RothIRACalculatorPage() {
       <div className="py-8">
         <RothIRACalculator />
       </div>
+      <AdUnit adSlot="6578933441" />
 
       {/* Educational Content */}
       <div className="bg-white py-16">
@@ -65,6 +67,7 @@ export default function RothIRACalculatorPage() {
                 For 2025, the annual contribution limit is $7,000 for individuals under 50 and $8,000 for those 50 and older. 
                 These limits apply to all your IRAs combined, not per account.
               </p>
+              <AdUnit adSlot="6578933442" />
 
               <h3>Income Limits</h3>
               <p>

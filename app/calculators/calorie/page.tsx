@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calculator, Activity, Heart, TrendingUp } from 'lucide-react';
 import CalorieCalculator from '@/components/calculators/CalorieCalculator';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'Calorie Calculator - Calculate Daily Calorie Needs & BMR | CalcPortal Pro',
@@ -54,6 +55,8 @@ export default function CaloriePage() {
           <div className="bg-white rounded-2xl shadow-soft p-8 mb-12">
             <CalorieCalculator />
           </div>
+
+          <AdUnit adSlot="6578933491" />
 
           {/* Educational Content */}
           <div className="prose prose-lg max-w-none">
@@ -140,6 +143,8 @@ export default function CaloriePage() {
                 </ul>
               </div>
             </div>
+
+            <AdUnit adSlot="6578933492" />
 
             <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
               Weight Management Strategies

@@ -1,7 +1,8 @@
 "use client";
 
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { Calendar, Clock, User, ArrowRight } from 'lucide-react';
 
 export type BlogPost = {
@@ -22,7 +23,33 @@ type Props = {
 };
 
 export default function BlogListingClient({ posts, categories }: Props) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+
+  // Initialize and sync category from query string
+  useEffect(() => {
+    const categoryFromQuery = searchParams.get('category');
+    if (categoryFromQuery && categories.includes(categoryFromQuery)) {
+      setSelectedCategory(categoryFromQuery);
+    } else if (!categoryFromQuery) {
+      setSelectedCategory('All');
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams, categories]);
+
+  const handleSelectCategory = (category: string) => {
+    setSelectedCategory(category);
+    const params = new URLSearchParams(searchParams.toString());
+    if (category === 'All') {
+      params.delete('category');
+    } else {
+      params.set('category', category);
+    }
+    router.push(`${pathname}${params.toString() ? `?${params.toString()}` : ''}`);
+  };
 
   const filteredPosts = useMemo(() => {
     if (selectedCategory === 'All') return posts;
@@ -46,7 +73,7 @@ export default function BlogListingClient({ posts, categories }: Props) {
         {categories.map((category) => (
           <button
             key={category}
-            onClick={() => setSelectedCategory(category)}
+            onClick={() => handleSelectCategory(category)}
             aria-pressed={selectedCategory === category}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
               selectedCategory === category

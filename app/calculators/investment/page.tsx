@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import InvestmentCalculator from '@/components/calculators/InvestmentCalculator'
+import AdUnit from '@/components/ads/AdUnit'
 
 export const metadata: Metadata = {
   title: 'Investment Calculator - Plan Your Investment Strategy | CalcPortal Pro',
@@ -38,6 +39,8 @@ export default function InvestmentCalculatorPage() {
 
           <InvestmentCalculator />
 
+          <AdUnit adSlot="6578933201" />
+
           <div className="mt-16 bg-white rounded-lg shadow-sm p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Understanding Investment Planning
@@ -60,6 +63,8 @@ export default function InvestmentCalculatorPage() {
                 <li><strong>Diversification:</strong> Spreading investments across different asset classes</li>
                 <li><strong>Time Horizon:</strong> Longer investment periods generally reduce risk</li>
               </ul>
+
+              <AdUnit adSlot="6578933202" />
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
                 Investment Strategies

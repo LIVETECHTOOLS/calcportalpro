@@ -1,12 +1,13 @@
 import { Metadata } from 'next';
 import GradeCalculator from '@/components/calculators/GradeCalculator';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
-  title: 'Grade Calculator - Calculate Your Final Grade | CalcPortal Pro',
+  title: 'Grade Calculator | Calcportalpro',
   description: 'Free grade calculator to determine your final grade based on assignments, tests, and exams. Calculate weighted grades and GPA with our easy-to-use tool.',
-  keywords: 'grade calculator, final grade calculator, weighted grade calculator, GPA calculator, academic calculator',
+  keywords: 'grade calculator, final grade calculator, weighted grade calculator, test grade calculator, GPA calculator, academic calculator',
   openGraph: {
-    title: 'Grade Calculator - Calculate Your Final Grade | CalcPortal Pro',
+    title: 'Grade Calculator - Grade Calculator',
     description: 'Free grade calculator to determine your final grade based on assignments, tests, and exams.',
     url: 'https://calcportalpro.com/calculators/grade',
   },
@@ -33,6 +34,8 @@ export default function GradePage() {
         <div className="max-w-4xl mx-auto">
           <GradeCalculator />
         </div>
+
+        <AdUnit adSlot="6578933521" />
 
         {/* Educational Content */}
         <div className="mt-16 max-w-4xl mx-auto">

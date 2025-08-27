@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import CompoundInterestCalculator from '@/components/calculators/CompoundInterestCalculator';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'Compound Interest Calculator - Calculate Investment Growth | CalcPortal Pro',
@@ -33,6 +34,8 @@ export default function CompoundInterestPage() {
         <div className="max-w-4xl mx-auto">
           <CompoundInterestCalculator />
         </div>
+
+        <AdUnit adSlot="6578933501" />
 
         {/* Educational Content */}
         <div className="mt-16 max-w-4xl mx-auto">

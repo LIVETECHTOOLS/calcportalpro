@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calculator, BookOpen, TrendingUp } from 'lucide-react';
 import GPACalculator from '@/components/calculators/GPACalculator';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'GPA Calculator - Calculate Your Grade Point Average | CalcPortal Pro',
@@ -54,6 +55,8 @@ export default function GPAPage() {
           <div className="bg-white rounded-2xl shadow-soft p-8 mb-12">
             <GPACalculator />
           </div>
+
+          <AdUnit adSlot="6578933511" />
 
           {/* Educational Content */}
           <div className="prose prose-lg max-w-none">

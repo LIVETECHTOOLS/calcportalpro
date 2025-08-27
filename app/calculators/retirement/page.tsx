@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import RetirementCalculator from '@/components/calculators/RetirementCalculator'
+import AdUnit from '@/components/ads/AdUnit'
 
 export const metadata: Metadata = {
   title: 'Retirement Calculator - Plan Your Financial Future | CalcPortal Pro',
@@ -38,6 +39,8 @@ export default function RetirementCalculatorPage() {
 
           <RetirementCalculator />
 
+          <AdUnit adSlot="6578933431" />
+
           <div className="mt-16 bg-white rounded-lg shadow-sm p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Understanding Retirement Planning
@@ -60,6 +63,8 @@ export default function RetirementCalculatorPage() {
                 <li><strong>Investment Returns:</strong> Historical market returns average 7-10% annually</li>
                 <li><strong>Inflation:</strong> Plan for 2-3% annual inflation to maintain purchasing power</li>
               </ul>
+
+              <AdUnit adSlot="6578933432" />
 
               <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
                 Retirement Savings Strategies

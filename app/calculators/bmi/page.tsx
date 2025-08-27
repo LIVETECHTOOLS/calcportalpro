@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import BMICalculator from '@/components/calculators/BMICalculator';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'BMI Calculator | CalcPortal Pro',
@@ -27,6 +28,8 @@ export default function BMICalculatorPage() {
 
         <BMICalculator />
 
+        <AdUnit adSlot="6578933481" />
+
         <div className="mt-12 prose max-w-none">
           <h2>What is BMI?</h2>
           <p>
@@ -46,6 +49,7 @@ export default function BMICalculatorPage() {
           <p>
             BMI is not a diagnostic tool and doesn't measure body fat directly. It may not be accurate for:
           </p>
+          <AdUnit adSlot="6578933482" />
           <ul>
             <li>Athletes with high muscle mass</li>
             <li>Pregnant women</li>

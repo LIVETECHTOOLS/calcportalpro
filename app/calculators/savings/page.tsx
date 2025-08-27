@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calculator, PiggyBank, TrendingUp, Target } from 'lucide-react';
 import SavingsCalculator from '@/components/calculators/SavingsCalculator';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'Savings Calculator - Calculate Interest & Growth | CalcPortal Pro',
@@ -54,6 +55,8 @@ export default function SavingsPage() {
           <div className="bg-white rounded-2xl shadow-soft p-8 mb-12">
             <SavingsCalculator />
           </div>
+
+          <AdUnit adSlot="6578933461" />
 
           {/* Educational Content */}
           <div className="prose prose-lg max-w-none">

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import BusinessLoanCalculator from '@/components/calculators/BusinessLoanCalculator';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'Business Loan Calculator | CalcPortal Pro',
@@ -27,6 +28,8 @@ export default function BusinessLoanCalculatorPage() {
 
         <BusinessLoanCalculator />
 
+        <AdUnit adSlot="6578933421" />
+
         <div className="mt-12 prose max-w-none">
           <h2>Understanding Business Loans</h2>
           <p>
@@ -51,6 +54,8 @@ export default function BusinessLoanCalculatorPage() {
             <li>Business plan and purpose of funds</li>
             <li>Collateral or personal guarantee</li>
           </ul>
+
+          <AdUnit adSlot="6578933422" />
         </div>
       </div>
     </div>

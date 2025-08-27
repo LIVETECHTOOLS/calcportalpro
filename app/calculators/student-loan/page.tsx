@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import StudentLoanCalculator from '@/components/calculators/StudentLoanCalculator';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'Student Loan Calculator | CalcPortal Pro',
@@ -27,6 +28,8 @@ export default function StudentLoanCalculatorPage() {
 
         <StudentLoanCalculator />
 
+        <AdUnit adSlot="6578933411" />
+
         <div className="mt-12 prose max-w-none">
           <h2>Understanding Student Loans</h2>
           <p>
@@ -49,6 +52,8 @@ export default function StudentLoanCalculatorPage() {
             <li><strong>Graduated Repayment:</strong> Payments start low and increase over time</li>
             <li><strong>Extended Repayment:</strong> Extended term up to 25 years</li>
           </ul>
+
+          <AdUnit adSlot="6578933412" />
         </div>
       </div>
     </div>

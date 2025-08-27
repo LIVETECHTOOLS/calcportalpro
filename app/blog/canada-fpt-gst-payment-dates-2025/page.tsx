@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowLeft, Calendar, DollarSign, Calculator, AlertTriangle, CheckCircle } from 'lucide-react'
+import AdUnit from '@/components/ads/AdUnit'
 
 export const metadata: Metadata = {
   title: 'Canada FPT & GST Payment Dates 2025: Complete Guide | CalcPortal Pro',
@@ -46,6 +47,8 @@ export default function CanadaFPTGSTGuide() {
           Canadians. This comprehensive guide covers the 2025 payment dates, eligibility requirements, and how to calculate 
           your benefits using our tax calculator.
         </p>
+
+        <AdUnit adSlot="6578932741" />
 
         <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">
           What is the Canada FPT (Federal Poverty Tax Credit)?
@@ -136,6 +139,8 @@ export default function CanadaFPTGSTGuide() {
             <strong>Note:</strong> Payment dates may vary by 1-2 business days if the scheduled date falls on a weekend or holiday.
           </p>
         </div>
+
+        <AdUnit adSlot="6578932742" />
 
         <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">
           Eligibility Requirements
@@ -424,6 +429,8 @@ export default function CanadaFPTGSTGuide() {
           account regularly. Use our comprehensive tax calculator to estimate your benefits and plan for the 
           quarterly GST/HST payments.
         </p>
+
+        <AdUnit adSlot="6578932743" />
 
         <div className="bg-primary-50 border border-primary-200 rounded-lg p-6 text-center">
           <h3 className="text-lg font-semibold text-primary-900 mb-3">

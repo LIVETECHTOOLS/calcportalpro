@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'How GPA Impacts College Admissions: A Comprehensive Guide | CalcPortal Pro',
@@ -123,6 +124,8 @@ export default function HowGPAImpactsCollegeAdmissions() {
               Your Grade Point Average (GPA) is one of the most critical factors in college admissions, serving as a primary indicator of your academic performance and potential for success in higher education. In 2025, as college admissions become increasingly competitive, understanding how GPA impacts your college prospects and how to optimize your academic standing has never been more important. This comprehensive guide will explore the role of GPA in college admissions, GPA requirements for different types of institutions, and strategies to improve your academic performance.
             </p>
 
+            <AdUnit adSlot="6578932711" />
+
             <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
               Understanding GPA and Its Role in College Admissions
             </h2>
@@ -180,6 +183,8 @@ export default function HowGPAImpactsCollegeAdmissions() {
             <p className="text-gray-700 mb-6">
               Colleges typically recalculate GPAs using their own standardized methods to ensure fair comparison across different schools and grading systems. Understanding how your weighted GPA translates to college admissions standards is essential for accurate self-assessment.
             </p>
+
+            <AdUnit adSlot="6578932712" />
 
             <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
               GPA Requirements for Different Types of Colleges
@@ -443,6 +448,7 @@ export default function HowGPAImpactsCollegeAdmissions() {
                 <li>• Regular GPA tracking and goal setting supports academic improvement</li>
               </ul>
             </div>
+            <AdUnit adSlot="6578932713" />
           </div>
         </div>
       </div>

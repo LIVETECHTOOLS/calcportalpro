@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calculator, Clock, Calendar, TrendingUp } from 'lucide-react';
 import TimeCalculator from '@/components/calculators/TimeCalculator';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'Time Calculator - Calculate Time Differences & Duration | CalcPortal Pro',
@@ -54,6 +55,8 @@ export default function TimePage() {
           <div className="bg-white rounded-2xl shadow-soft p-8 mb-12">
             <TimeCalculator />
           </div>
+
+          <AdUnit adSlot="6578933531" />
 
           {/* Educational Content */}
           <div className="prose prose-lg max-w-none">
@@ -139,6 +142,8 @@ export default function TimePage() {
                 </ul>
               </div>
             </div>
+
+            <AdUnit adSlot="6578933532" />
 
             <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
               Time Management Best Practices

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'Top Study Hacks to Improve Your GPA in 2025 | CalcPortal Pro',
@@ -123,6 +124,8 @@ export default function TopStudyHacksImproveGPA() {
               Improving your GPA requires more than just spending more time studying—it demands strategic, efficient, and scientifically-proven study techniques. In 2025, with the increasing academic competition and evolving educational landscape, students need to master advanced study strategies that maximize learning while minimizing time investment. This comprehensive guide will reveal the most effective study hacks that can transform your academic performance and significantly boost your GPA.
             </p>
 
+            <AdUnit adSlot="6578932701" />
+
             <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
               Understanding the Science of Effective Learning
             </h2>
@@ -184,6 +187,8 @@ export default function TopStudyHacksImproveGPA() {
             <p className="text-gray-700 mb-6">
               Research shows that active learning techniques can improve retention by up to 75% compared to passive methods. This is why techniques like self-quizzing, teaching others, and problem-solving are so much more effective than simply re-reading notes.
             </p>
+
+            <AdUnit adSlot="6578932702" />
 
             <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
               Hack #1: The Feynman Technique
@@ -508,6 +513,7 @@ export default function TopStudyHacksImproveGPA() {
                 <li>• Adequate sleep is essential for memory consolidation and learning</li>
               </ul>
             </div>
+            <AdUnit adSlot="6578932703" />
           </div>
         </div>
       </div>
