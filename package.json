@@ -1,0 +1,54 @@
+{
+  "name": "calcportalpro",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postbuild": "next-sitemap",
+    "analyze": "ANALYZE=true next build",
+    "type-check": "tsc --noEmit",
+    "seo-check": "npm run build && npm run sitemap && npm run robots",
+    "sitemap": "next-sitemap",
+    "robots": "next-sitemap --robots",
+    "performance": "lighthouse https://calcportalpro.com --output=json --output-path=./lighthouse-report.json",
+    "validate-html": "npm run build && npx html-validate dist",
+    "test:accessibility": "npm run build && npx axe-core --dir=dist"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^10.16.16",
+    "lucide-react": "^0.294.0",
+    "next": "14.0.4",
+    "next-sitemap": "^4.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^14.0.4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "axe-core": "^4.8.3",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "html-validate": "^8.12.0",
+    "lighthouse": "^11.6.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": [
+    ">0.3%",
+    "not dead",
+    "not op_mini all"
+  ]
+}
