@@ -49,6 +49,159 @@ const blogListingSchema = {
           "name": "High Yield Savings Account Guide: Maximize Your Money in 2025",
           "url": "https://calcportalpro.com/blog/high-yield-savings-account-guide"
         }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Article",
+          "name": "How Much House Can I Afford? Complete Guide for 2025",
+          "url": "https://calcportalpro.com/blog/how-much-house-can-i-afford"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Article",
+          "name": "CD Rates Guide 2025: Best Certificate of Deposit Rates & Strategies",
+          "url": "https://calcportalpro.com/blog/cd-rates-guide-2025"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Article",
+          "name": "Canada FPT & GST Payment Dates 2025: Complete Guide",
+          "url": "https://calcportalpro.com/blog/canada-fpt-gst-payment-dates-2025"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Article",
+          "name": "Understanding Different Types of Loans: Which One is Right for You?",
+          "url": "https://calcportalpro.com/blog/understanding-different-types-loans"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "Article",
+          "name": "5 Tips for Building an Investment Portfolio in 2025",
+          "url": "https://calcportalpro.com/blog/5-tips-building-investment-portfolio"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "Article",
+          "name": "APR vs Interest Rate: What's the Difference and Why It Matters",
+          "url": "https://calcportalpro.com/blog/apr-vs-interest-rate-difference"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "Article",
+          "name": "How GPA Impacts College Admissions: A Comprehensive Guide",
+          "url": "https://calcportalpro.com/blog/how-gpa-impacts-college-admissions"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "Article",
+          "name": "Top Study Hacks to Improve Your GPA in 2025",
+          "url": "https://calcportalpro.com/blog/top-study-hacks-improve-gpa"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "Article",
+          "name": "Mortgage vs Rent: Which is Better for Your Financial Situation?",
+          "url": "https://calcportalpro.com/blog/mortgage-vs-rent-which-better"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "Article",
+          "name": "Tax Deductions Every Small Business Owner Should Know",
+          "url": "https://calcportalpro.com/blog/tax-deductions-small-business-owners"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "Article",
+          "name": "Understanding Different Types of Loans: Which One is Right for You?",
+          "url": "https://calcportalpro.com/blog/understanding-different-types-loans"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "Article",
+          "name": "5 Tips for Building an Investment Portfolio in 2025",
+          "url": "https://calcportalpro.com/blog/5-tips-building-investment-portfolio"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "Article",
+          "name": "Mortgage vs Rent: Which is Better for Your Financial Situation?",
+          "url": "https://calcportalpro.com/blog/mortgage-vs-rent-which-better"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "Article",
+          "name": "APR vs Interest Rate: What's the Difference and Why It Matters",
+          "url": "https://calcportalpro.com/blog/apr-vs-interest-rate-difference"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "Article",
+          "name": "How GPA Impacts College Admissions: A Comprehensive Guide",
+          "url": "https://calcportalpro.com/blog/how-gpa-impacts-college-admissions"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "Article",
+          "name": "Top Study Hacks to Improve Your GPA in 2025",
+          "url": "https://calcportalpro.com/blog/top-study-hacks-improve-gpa"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "Article",
+          "name": "Tax Deductions Every Small Business Owner Should Know",
+          "url": "https://calcportalpro.com/blog/tax-deductions-small-business-owners"
+        }
       }
     ]
   }
@@ -138,9 +291,9 @@ const blogPosts = [
     excerpt: 'Understanding the difference between APR and interest rate can save you thousands on loans and credit cards.',
     category: 'Loans',
     author: 'Michael Chen',
-    readTime: '4 min',
+    readTime: '10 min',
     publishDate: '2025-01-08',
-    slug: 'apr-vs-interest-rate-explained',
+    slug: 'apr-vs-interest-rate-difference',
     featured: false,
   },
   {
@@ -182,8 +335,85 @@ const blogPosts = [
     excerpt: 'Maximize your tax savings with these essential deductions that can reduce your business tax liability.',
     category: 'Taxes',
     author: 'Jennifer Walsh',
-    readTime: '5 min',
+    readTime: '12 min',
     publishDate: '2024-12-28',
+    slug: 'tax-deductions-small-business-owners',
+    featured: false,
+  },
+  {
+    id: 13,
+    title: 'Understanding Different Types of Loans: Which One is Right for You?',
+    excerpt: 'Comprehensive guide to different types of loans including personal loans, mortgages, auto loans, student loans, and business loans.',
+    category: 'Loans',
+    author: 'CalcPortal Pro Team',
+    readTime: '8 min',
+    publishDate: '2025-01-15',
+    slug: 'understanding-different-types-loans',
+    featured: false,
+  },
+  {
+    id: 14,
+    title: '5 Tips for Building an Investment Portfolio in 2025',
+    excerpt: 'Learn the essential strategies for building a successful investment portfolio with diversification and risk management.',
+    category: 'Investing',
+    author: 'CalcPortal Pro Team',
+    readTime: '10 min',
+    publishDate: '2025-01-15',
+    slug: '5-tips-building-investment-portfolio',
+    featured: false,
+  },
+  {
+    id: 15,
+    title: 'Mortgage vs Rent: Which is Better for Your Financial Situation?',
+    excerpt: 'Comprehensive analysis of mortgage vs rent decisions including financial implications and hidden costs.',
+    category: 'Real Estate',
+    author: 'CalcPortal Pro Team',
+    readTime: '12 min',
+    publishDate: '2025-01-15',
+    slug: 'mortgage-vs-rent-which-better',
+    featured: false,
+  },
+  {
+    id: 16,
+    title: 'APR vs Interest Rate: What\'s the Difference and Why It Matters',
+    excerpt: 'Learn the crucial differences between APR and interest rate and how they affect your loan costs.',
+    category: 'Loans',
+    author: 'CalcPortal Pro Team',
+    readTime: '10 min',
+    publishDate: '2025-01-15',
+    slug: 'apr-vs-interest-rate-difference',
+    featured: false,
+  },
+  {
+    id: 17,
+    title: 'How GPA Impacts College Admissions: A Comprehensive Guide',
+    excerpt: 'Learn how your GPA affects college admissions and discover strategies to improve your academic standing.',
+    category: 'Education',
+    author: 'CalcPortal Pro Team',
+    readTime: '12 min',
+    publishDate: '2025-01-15',
+    slug: 'how-gpa-impacts-college-admissions',
+    featured: false,
+  },
+  {
+    id: 18,
+    title: 'Top Study Hacks to Improve Your GPA in 2025',
+    excerpt: 'Discover proven study strategies and techniques to boost your GPA and academic performance.',
+    category: 'Education',
+    author: 'CalcPortal Pro Team',
+    readTime: '15 min',
+    publishDate: '2025-01-15',
+    slug: 'top-study-hacks-improve-gpa',
+    featured: false,
+  },
+  {
+    id: 19,
+    title: 'Tax Deductions Every Small Business Owner Should Know',
+    excerpt: 'Discover essential tax deductions for small business owners and learn how to maximize your tax savings.',
+    category: 'Taxes',
+    author: 'CalcPortal Pro Team',
+    readTime: '12 min',
+    publishDate: '2025-01-15',
     slug: 'tax-deductions-small-business-owners',
     featured: false,
   },

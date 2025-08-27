@@ -32,6 +32,10 @@ export const metadata: Metadata = {
     'Roth IRA calculator',
     'budgeting tools',
     'financial planning'
+    'grde calculator',
+    'gpa calculator',
+    'interest calculator',
+    'roth ira calculator',
   ],
   
   authors: [{ name: 'CalcPortal Pro Team' }],
