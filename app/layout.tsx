@@ -155,10 +155,27 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <meta name="format-detection" content="telephone=no" />
         
-        {/* Favicon & Icons */}
+        {/* Favicon & Icons - Comprehensive setup for Google Search */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <link rel="mask-icon" href="/favicon.svg" color="#F59E0B" />
         <link rel="manifest" href="/manifest.json" />
+        
+        {/* Additional favicon meta tags for Google */}
+        <meta name="msapplication-TileColor" content="#2563eb" />
+        <meta name="msapplication-TileImage" content="/favicon-32x32.png" />
+        <meta name="theme-color" content="#2563eb" />
+        
+        {/* Google-specific favicon meta tags */}
+        <meta name="google-site-verification" content="your-google-verification-code" />
+        <meta name="google" content="notranslate" />
+        
+        {/* Additional icon formats for maximum compatibility */}
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         
         {/* Preload Critical Resources */}
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
