@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'Understanding Different Types of Loans: Which One is Right for You? | CalcPortal Pro',
@@ -122,6 +123,8 @@ export default function UnderstandingDifferentTypesLoans() {
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
               Choosing the right type of loan can significantly impact your financial future. With so many loan options available in 2025, understanding the differences between personal loans, mortgages, auto loans, student loans, and business loans is crucial for making informed financial decisions. This comprehensive guide will help you navigate the complex world of lending and find the perfect loan for your specific needs.
             </p>
+
+            <AdUnit adSlot="6578932015" />
 
             <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
               What Are the Main Types of Loans Available?
@@ -261,6 +264,8 @@ export default function UnderstandingDifferentTypesLoans() {
               </ul>
             </div>
 
+            <AdUnit adSlot="6578932016" />
+
             <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
               How to Choose the Right Loan Type for Your Situation
             </h2>
@@ -295,7 +300,7 @@ export default function UnderstandingDifferentTypesLoans() {
 
             <h3 className="text-2xl font-bold text-gray-900 mt-12 mb-6">
               Understanding Interest Rates and Loan Terms
-            </h2>
+            </h3>
             
             <p className="text-gray-700 mb-6">
               Interest rates significantly impact the total cost of borrowing. Even a small difference in rates can result in substantial savings or additional costs over the life of a loan. When comparing loan offers, focus on the annual percentage rate (APR), which includes both the interest rate and any additional fees.
@@ -384,6 +389,8 @@ export default function UnderstandingDifferentTypesLoans() {
             <p className="text-gray-700 mb-8">
               For more financial guidance and to calculate potential loan payments, explore our comprehensive suite of <Link href="/calculators" className="text-blue-600 hover:text-blue-800 underline">financial calculators</Link>. These tools can help you understand the true cost of borrowing and make more informed financial decisions.
             </p>
+
+            <AdUnit adSlot="6578932017" />
 
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-8">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Takeaways:</h3>

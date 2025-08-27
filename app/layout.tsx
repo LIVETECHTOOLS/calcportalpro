@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     'CD calculator',
     'Roth IRA calculator',
     'budgeting tools',
-    'financial planning'
-    'grde calculator',
+    'financial planning',
+    'grade calculator',
     'gpa calculator',
     'interest calculator',
     'roth ira calculator',
@@ -185,6 +185,9 @@ export default function RootLayout({
             `,
           }}
         />
+
+        {/* Google AdSense */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5944904248745587" crossOrigin="anonymous"></script>
         
         {/* Structured Data */}
         <script

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import MortgageCalculator from '@/components/calculators/MortgageCalculator';
+import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
   title: 'Mortgage Calculator | CalcPortal Pro',
@@ -68,6 +69,8 @@ export default function MortgagePage() {
             </p>
           </div>
 
+          <AdUnit adSlot="6578933001" />
+
           {/* Calculator */}
           <div className="max-w-6xl mx-auto">
             <MortgageCalculator />
@@ -79,6 +82,8 @@ export default function MortgagePage() {
               <h2 className="text-2xl font-bold text-secondary-500 mb-6">
                 Understanding Mortgage Payments
               </h2>
+              
+              <AdUnit adSlot="6578933002" />
               
               <div className="prose prose-lg max-w-none">
                 <p className="text-secondary-100 mb-4">
