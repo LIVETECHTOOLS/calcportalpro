@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'All Calculators | CalcPortal Pro',
-  description: 'Browse all financial, academic, and health calculators on CalcPortal Pro.'
+  title: 'All Calculators',
+  description: 'Browse all financial, academic and health calculators on CalcPortal Pro.' 
 };
 
 const calculators = [
