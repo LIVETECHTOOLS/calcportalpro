@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { FileText, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service - CalcPortal Pro | CalcPortal Pro',
+  title: 'Terms of Service',
   description: 'Read our Terms of Service to understand the rules and guidelines for using CalcPortal Pro\'s financial calculators and services.',
   keywords: 'terms of service, terms and conditions, CalcPortal Pro terms, user agreement',
   openGraph: {
-    title: 'Terms of Service - CalcPortal Pro | CalcPortal Pro',
+    title: 'Terms of Service',
     description: 'Read our Terms of Service to understand the rules and guidelines for using CalcPortal Pro\'s financial calculators and services.',
     url: 'https://calcportalpro.com/terms',
   },
