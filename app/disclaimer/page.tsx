@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 import { AlertTriangle, Info, Shield, FileText } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Disclaimer - CalcPortal Pro | CalcPortal Pro',
+  title: 'Disclaimer',
   description: 'Important disclaimers about CalcPortal Pro\'s financial calculators and educational content. Read our comprehensive disclaimer.',
   keywords: 'disclaimer, financial disclaimer, calculator disclaimer, CalcPortal Pro disclaimer',
   openGraph: {
-    title: 'Disclaimer - CalcPortal Pro | CalcPortal Pro',
+    title: 'Disclaimer',
     description: 'Important disclaimers about CalcPortal Pro\'s financial calculators and educational content.',
     url: 'https://calcportalpro.com/disclaimer',
   },
