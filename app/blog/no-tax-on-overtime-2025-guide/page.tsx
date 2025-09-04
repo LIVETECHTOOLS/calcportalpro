@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import AdUnit from '@/components/ads/AdUnit'
 
 export const metadata: Metadata = {
-  title: 'No Tax on Overtime 2025: Complete Guide to Overtime Tax Exemptions',
+  title: 'No Tax on Overtime 2025',
   description: 'Learn about the 2025 overtime tax exemptions, when no tax on overtime starts, and how to maximize your take-home pay. Expert guide to overtime tax rules.',
   keywords: 'no tax on overtime, 2025 overtime tax exemptions, when does no tax on overtime start, overtime tax rules, overtime pay tax free',
   openGraph: {
