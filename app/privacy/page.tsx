@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { Shield, Eye, Lock, Users, Calendar } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - CalcPortal Pro | CalcPortal Pro',
+  title: 'Privacy Policy',
   description: 'Learn how CalcPortal Pro collects, uses, and protects your personal information. Read our comprehensive privacy policy.',
   keywords: 'privacy policy, data protection, personal information, CalcPortal Pro privacy',
   openGraph: {
-    title: 'Privacy Policy - CalcPortal Pro | CalcPortal Pro',
+    title: 'Privacy Policy',
     description: 'Learn how CalcPortal Pro collects, uses, and protects your personal information.',
     url: 'https://calcportalpro.com/privacy',
   },
