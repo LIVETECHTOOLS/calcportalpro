@@ -11,14 +11,12 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://calcportalpro.com'),
-  
-  title: {
-    default: 'CalcPortal Pro - Free Financial Calculators & Tools',
-    template: '%s | CalcPortal Pro'
-  },
-  
+
+  // ✅ No template, so titles render exactly as defined in page metadata
+  title: 'CalcPortal Pro - Free Financial Calculators & Tools',
+
   description: 'Free financial calculators for loans, mortgages, investments, taxes, and retirement planning. Make smarter money decisions with our easy-to-use tools.',
-  
+
   keywords: [
     'financial calculator',
     'loan calculator', 
@@ -37,21 +35,21 @@ export const metadata: Metadata = {
     'interest calculator',
     'roth ira calculator',
   ],
-  
+
   authors: [{ name: 'CalcPortal Pro Team' }],
   creator: 'CalcPortal Pro',
   publisher: 'CalcPortal Pro',
-  
+
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  
+
   alternates: {
     canonical: '/',
   },
-  
+
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -69,7 +67,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  
+
   twitter: {
     card: 'summary_large_image',
     title: 'CalcPortal Pro - Free Financial Calculators & Tools',
@@ -78,7 +76,7 @@ export const metadata: Metadata = {
     creator: '@calcportalpro',
     site: '@calcportalpro',
   },
-  
+
   robots: {
     index: true,
     follow: true,
@@ -90,11 +88,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  
+
   verification: {
     google: process.env.GOOGLE_VERIFICATION_CODE || 'your-google-verification-code',
   },
-  
+
   other: {
     'msapplication-TileColor': '#2563eb',
     'theme-color': '#2563eb',
@@ -149,7 +147,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+     <html lang="en">
       <head>
         {/* Essential Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
