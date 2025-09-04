@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Contact CalcPortal Pro - Get in Touch | CalcPortal Pro',
+  title: 'Contact',
   description: 'Contact CalcPortal Pro for questions, feedback, or support. We\'re here to help you with your financial calculator needs.',
   keywords: 'contact CalcPortal Pro, support, feedback, financial calculator help',
   openGraph: {
-    title: 'Contact CalcPortal Pro - Get in Touch | CalcPortal Pro',
+    title: 'Contact',
     description: 'Contact CalcPortal Pro for questions, feedback, or support.',
     url: 'https://calcportalpro.com/contact',
   },
