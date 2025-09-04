@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { Calculator, Target, Users, Award, Globe, Heart } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About CalcPortal Pro - Our Mission & Story | CalcPortal Pro',
+  title: 'About CalcPortal Pro',
   description: 'Learn about CalcPortal Pro\'s mission to provide free, accurate financial calculators and educational resources to help everyone make better financial decisions.',
-  keywords: 'about CalcPortal Pro, financial calculator company, financial education mission, company story',
+  keywords: 'about CalcPortal Pro, financial calculator company, financial education mission, mortgage calculator, loan calculator, company story',
   openGraph: {
-    title: 'About CalcPortal Pro - Our Mission & Story | CalcPortal Pro',
+    title: 'About CalcPortal Pro',
     description: 'Learn about CalcPortal Pro\'s mission to provide free, accurate financial calculators and educational resources.',
     url: 'https://calcportalpro.com/about',
   },
