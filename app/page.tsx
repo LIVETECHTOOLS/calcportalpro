@@ -8,11 +8,11 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'CalcPortal Pro - Free Financial Calculators',
+  title: 'CalcPortal Pro',
   description: 'Free financial calculators for loans, mortgages, investments, taxes, and retirement planning. Make smarter money decisions with our easy-to-use tools.',
   keywords: 'financial calculator, loan calculator, mortgage calculator, tax calculator, investment calculator, retirement calculator, savings calculator, CD calculator, Roth IRA calculator',
   openGraph: {
-    title: 'CalcPortal Pro - Free Financial Calculators',
+    title: 'CalcPortal Pro',
     description: 'Free financial calculators for loans, mortgages, investments, taxes, and retirement planning. Make smarter money decisions with our easy-to-use tools.',
     url: 'https://calcportalpro.com',
     siteName: 'CalcPortal Pro',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CalcPortal Pro - Free Financial Calculators',
+    title: 'CalcPortal Pro',
     description: 'Free financial calculators for loans, mortgages, investments, taxes, and retirement planning.',
     images: ['https://calcportalpro.com/og-image.jpg'],
   },
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 const homepageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "CalcPortal Pro - Free Financial Calculators",
+  "name": "CalcPortal Pro",
   "description": "Free financial calculators for loans, mortgages, investments, taxes, and retirement planning",
   "url": "https://calcportalpro.com",
   "mainEntity": [
