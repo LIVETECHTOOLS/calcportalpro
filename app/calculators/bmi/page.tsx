@@ -100,7 +100,6 @@ export default function BMICalculatorPage() {
           <AdUnit
             adSlot="2674505389"
             adFormat=""
-            dataFullWidthResponsive="false"
             style={{ display: "inline-block", width: "728px", height: "90px" }}
           />
         </div>
