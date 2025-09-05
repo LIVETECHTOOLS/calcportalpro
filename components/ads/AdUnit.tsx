@@ -1,49 +1,46 @@
 "use client";
 
-import { useEffect } from 'react';
-import clsx from 'clsx';
+import { useEffect } from "react";
+import clsx from "clsx";
 
 type AdUnitProps = {
-  adSlot: string;
-  adLayout?: string;
-  adFormat?: string;
+  type?: "fixed" | "responsive"; // Ad type
   className?: string;
   style?: React.CSSProperties;
-  fullWidth?: boolean;
 };
 
-export default function AdUnit({
-  adSlot,
-  adLayout = 'in-article',
-  adFormat = 'fluid',
-  className,
-  style,
-  fullWidth = false,
-}: AdUnitProps) {
+export default function AdUnit({ type = "responsive", className, style }: AdUnitProps) {
   useEffect(() => {
     try {
       // @ts-ignore
       (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch {}
+    } catch (err) {
+      console.warn("AdSense error:", err);
+    }
   }, []);
 
   return (
     <div
-      className={clsx(
-        'my-6 flex justify-center',
-        fullWidth ? 'w-full' : 'w-full max-w-3xl',
-        className
-      )}
+      className={clsx("my-6 flex justify-center w-full", className)}
+      style={style}
     >
-      <ins
-        className="adsbygoogle"
-        style={{ display: 'block', ...style }}
-        data-ad-client="ca-pub-5944904248745587"
-        data-ad-slot={adSlot}
-        data-ad-layout={adLayout}
-        data-ad-format={adFormat}
-        data-full-width-responsive="true"
-      />
+      {type === "fixed" ? (
+        <ins
+          className="adsbygoogle"
+          style={{ display: "inline-block", width: "728px", height: "90px" }}
+          data-ad-client="ca-pub-5944904248745587"
+          data-ad-slot="2674505389"
+        />
+      ) : (
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-5944904248745587"
+          data-ad-slot="1716130019"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
+      )}
     </div>
   );
 }
