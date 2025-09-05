@@ -1,240 +1,180 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import ClientLayoutWrapper from "@/components/ClientLayoutWrapper";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-  fallback: ["system-ui", "arial"],
-});
+import type { Metadata } from 'next';
+import GradeCalculator from '@/components/calculators/GradeCalculator';
+import ClientLayoutWrapper from '@/components/ClientLayoutWrapper';
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://calcportalpro.com"),
-  title: "CalcPortal Pro",
+  title: 'Grade Calculator',
   description:
-    "Free financial calculators for loans, mortgages, investments, taxes, and retirement planning. Make smarter money decisions with our easy-to-use tools.",
-  keywords: [
-    "financial calculator",
-    "loan calculator",
-    "mortgage calculator",
-    "investment calculator",
-    "retirement calculator",
-    "tax calculator",
-    "savings calculator",
-    "compound interest calculator",
-    "CD calculator",
-    "Roth IRA calculator",
-    "budgeting tools",
-    "financial planning",
-    "grade calculator",
-    "gpa calculator",
-    "interest calculator",
-    "roth ira calculator",
-  ],
-  authors: [{ name: "CalcPortal Pro Team" }],
-  creator: "CalcPortal Pro",
-  publisher: "CalcPortal Pro",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  alternates: { canonical: "/" },
+    'Free grade calculator to determine your final grade based on assignments, tests, and exams. Calculate weighted grades, final exam scores, semester results, and GPA with our easy-to-use tool.',
+  keywords:
+    'grade calculator, final grade calculator, weighted grade calculator, test grade calculator, semester grade calculator, college grade calculator, class grade calculator, easy grade calculator, average grade calculator, final exam grade calculator, letter grade calculator, overall grade calculator, GPA calculator, grade calculator with weights, grade calculator points, exam grade calculator',
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://calcportalpro.com",
-    title: "CalcPortal Pro - Free Financial Calculators & Tools",
+    title: 'Grade Calculator',
     description:
-      "Free financial calculators for loans, mortgages, investments, taxes, and retirement planning. Make smarter money decisions with our easy-to-use tools.",
-    siteName: "CalcPortal Pro",
-    images: [
-      {
-        url: "https://calcportalpro.com/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "CalcPortal Pro - Professional Financial Calculators",
-        type: "image/jpeg",
-      },
-    ],
+      'Free grade calculator to determine your final grade based on assignments, tests, exams, and participation. Includes weighted, final exam, and GPA calculations.',
+    url: 'https://calcportalpro.com/calculators/grade',
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "CalcPortal Pro",
-    description:
-      "Free financial calculators for loans, mortgages, investments, taxes, and retirement planning.",
-    images: ["https://calcportalpro.com/og-image.jpg"],
-    creator: "@calcportalpro",
-    site: "@calcportalpro",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  verification: {
-    google:
-      process.env.GOOGLE_VERIFICATION_CODE || "your-google-verification-code",
-  },
-  other: {
-    "msapplication-TileColor": "#2563eb",
-    "theme-color": "#2563eb",
-    "apple-mobile-web-app-capable": "yes",
-    "apple-mobile-web-app-status-bar-style": "default",
-    "apple-mobile-web-app-title": "CalcPortal Pro",
+  alternates: {
+    canonical: '/calculators/grade',
   },
 };
 
-// Schema.org JSON-LD
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "CalcPortal Pro",
-  url: "https://calcportalpro.com",
-  logo: "https://calcportalpro.com/logo.png",
-  description:
-    "Professional financial calculators and tools for better money decisions",
-  foundingDate: "2025",
-  sameAs: [
-    "https://twitter.com/calcportalpro",
-    "https://linkedin.com/company/calcportalpro",
-    "https://facebook.com/calcportalpro",
-  ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "customer service",
-    url: "https://calcportalpro.com/contact",
-  },
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "US",
-  },
-};
-
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "CalcPortal Pro",
-  url: "https://calcportalpro.com",
-  description: "Free financial calculators and tools",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://calcportalpro.com/search?q={search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function GradePage() {
   return (
-    <html lang="en">
-      <head>
-        {/* Essential Meta */}
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        />
-        <meta name="format-detection" content="telephone=no" />
+    <ClientLayoutWrapper>
+      <div className="min-h-screen bg-primary-50">
+        <div className="container-max py-8">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl lg:text-5xl font-bold text-secondary-500 mb-4">
+              Grade Calculator
+            </h1>
+            <p className="text-xl text-secondary-100 max-w-3xl mx-auto">
+              Calculate your final grade based on assignments, tests, exams, and
+              participation. Use our weighted grade calculator, final exam grade
+              calculator, and GPA calculator to see where you stand.
+            </p>
+          </div>
 
-        {/* Favicons */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link
-          rel="icon"
-          href="/favicon-16x16.png"
-          type="image/png"
-          sizes="16x16"
-        />
-        <link
-          rel="icon"
-          href="/favicon-32x32.png"
-          type="image/png"
-          sizes="32x32"
-        />
-        <link
-          rel="apple-touch-icon"
-          href="/apple-touch-icon.png"
-          sizes="180x180"
-        />
-        <link rel="mask-icon" href="/favicon.svg" color="#F59E0B" />
-        <link rel="manifest" href="/manifest.json" />
+          {/* Calculator */}
+          <div className="max-w-4xl mx-auto">
+            <GradeCalculator />
+          </div>
 
-        {/* Microsoft & Theme */}
-        <meta name="msapplication-TileColor" content="#2563eb" />
-        <meta name="msapplication-TileImage" content="/favicon-32x32.png" />
-        <meta name="theme-color" content="#2563eb" />
+          {/* Educational Content */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h2 className="text-2xl font-bold text-secondary-500 mb-6">
+                Understanding Grade Calculations
+              </h2>
 
-        {/* Google site verification */}
-        <meta
-          name="google-site-verification"
-          content="your-google-verification-code"
-        />
-        <meta name="google" content="notranslate" />
+              <div className="prose prose-lg max-w-none text-secondary-100">
+                <p className="mb-4">
+                  Grade calculators help students track academic performance and
+                  set realistic goals. With this tool, you can calculate overall,
+                  weighted, or final grades to see what you need to succeed.
+                </p>
 
-        {/* Fonts preload */}
-        <link
-          rel="preload"
-          href="/fonts/inter-var.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+                <h3 className="text-xl font-bold text-secondary-500 mt-6 mb-3">
+                  Final Grade Calculator
+                </h3>
+                <p className="mb-4">
+                  Enter your coursework, quizzes, and exams to see your projected
+                  semester or course grade. This is especially useful at the end
+                  of a class when you want to know your final standing.
+                </p>
 
-        {/* Analytics */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-3RWDG6W0T4"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-3RWDG6W0T4', {
-                page_title: document.title,
-                page_location: window.location.href,
-                send_page_view: true
-              });
-            `,
-          }}
-        />
+                <h3 className="text-xl font-bold text-secondary-500 mt-6 mb-3">
+                  Weighted Grade Calculator
+                </h3>
+                <p className="mb-4">
+                  Many courses assign different weights to homework, quizzes, and
+                  exams. Our weighted grade calculator ensures you get accurate
+                  results by factoring in these differences.
+                </p>
 
-        {/* Google AdSense */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5944904248745587"
-          crossOrigin="anonymous"
-        ></script>
+                <h3 className="text-xl font-bold text-secondary-500 mt-6 mb-3">
+                  Test & Exam Grade Calculator
+                </h3>
+                <p className="mb-4">
+                  Wondering what score you need on your next test or final exam?
+                  Input your current grades and exam weight to instantly find out
+                  what you need to pass or reach your target grade.
+                </p>
 
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(websiteSchema),
-          }}
-        />
-      </head>
-      <body className={inter.className}>
-        <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
-      </body>
-    </html>
+                <h3 className="text-xl font-bold text-secondary-500 mt-6 mb-3">
+                  Letter Grade Calculator
+                </h3>
+                <p className="mb-4">
+                  Easily convert percentages into letter grades. Below is a
+                  standard U.S. letter grade conversion chart:
+                </p>
+                <table className="table-auto border-collapse border border-gray-300 mb-6">
+                  <thead>
+                    <tr className="bg-gray-100">
+                      <th className="border px-4 py-2">Percentage</th>
+                      <th className="border px-4 py-2">Letter Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border px-4 py-2">90–100%</td>
+                      <td className="border px-4 py-2">A</td>
+                    </tr>
+                    <tr>
+                      <td className="border px-4 py-2">80–89%</td>
+                      <td className="border px-4 py-2">B</td>
+                    </tr>
+                    <tr>
+                      <td className="border px-4 py-2">70–79%</td>
+                      <td className="border px-4 py-2">C</td>
+                    </tr>
+                    <tr>
+                      <td className="border px-4 py-2">60–69%</td>
+                      <td className="border px-4 py-2">D</td>
+                    </tr>
+                    <tr>
+                      <td className="border px-4 py-2">&lt; 60%</td>
+                      <td className="border px-4 py-2">F</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h3 className="text-xl font-bold text-secondary-500 mt-6 mb-3">
+                  Tips for Improving Your Grade
+                </h3>
+                <ul className="list-disc list-inside space-y-2 mb-4">
+                  <li>Prioritize assignments and exams with higher weight</li>
+                  <li>Track your progress regularly using this calculator</li>
+                  <li>Focus on consistent study habits rather than last-minute cramming</li>
+                  <li>Ask for help early if you’re struggling in a subject</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h2 className="text-2xl font-bold text-secondary-500 mb-6">Grade Calculator FAQs</h2>
+              <div className="space-y-6 text-secondary-100">
+                <div>
+                  <h3 className="font-semibold">How do I calculate my final grade?</h3>
+                  <p>
+                    Multiply each grade by its weight, add them together, then
+                    divide by the total weight. Our calculator does this for you
+                    automatically.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold">What is a weighted grade calculator?</h3>
+                  <p>
+                    A weighted grade calculator accounts for the different
+                    percentages assigned to homework, quizzes, exams, and
+                    participation when calculating your final score.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold">How much do I need on my final exam to pass?</h3>
+                  <p>
+                    Enter your current grades and the exam weight to instantly see
+                    what score you need on the final to pass or reach your target
+                    grade.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold">Does this work for college grades?</h3>
+                  <p>
+                    Yes! The grade calculator can be used for middle school, high
+                    school, and college courses that use percentage or weighted
+                    grading systems.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ClientLayoutWrapper>
   );
 }
