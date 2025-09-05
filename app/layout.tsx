@@ -1,11 +1,7 @@
-"use client";
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { usePathname } from "next/navigation";
 import "./globals.css";
-import AdUnit from "@/components/ads/AdUnit";
-import { ReactNode, ReactElement, isValidElement, cloneElement } from "react";
+import ClientLayoutWrapper from "@/components/ClientLayoutWrapper";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,6 +10,7 @@ const inter = Inter({
   fallback: ["system-ui", "arial"],
 });
 
+// ✅ Metadata must stay in a server component
 export const metadata: Metadata = {
   metadataBase: new URL("https://calcportalpro.com"),
   title: "CalcPortal Pro",
@@ -40,7 +37,11 @@ export const metadata: Metadata = {
   authors: [{ name: "CalcPortal Pro Team" }],
   creator: "CalcPortal Pro",
   publisher: "CalcPortal Pro",
-  formatDetection: { email: false, address: false, telephone: false },
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -81,9 +82,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google:
-      process.env.GOOGLE_VERIFICATION_CODE ||
-      "your-google-verification-code",
+    google: process.env.GOOGLE_VERIFICATION_CODE || "your-google-verification-code",
   },
   other: {
     "msapplication-TileColor": "#2563eb",
@@ -94,137 +93,63 @@ export const metadata: Metadata = {
   },
 };
 
-// Schemas
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "CalcPortal Pro",
-  url: "https://calcportalpro.com",
-  logo: "https://calcportalpro.com/logo.png",
-  description:
-    "Professional financial calculators and tools for better money decisions",
-  foundingDate: "2025",
-  sameAs: [
-    "https://twitter.com/calcportalpro",
-    "https://linkedin.com/company/calcportalpro",
-    "https://facebook.com/calcportalpro",
-  ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "customer service",
-    url: "https://calcportalpro.com/contact",
-  },
-  address: { "@type": "PostalAddress", addressCountry: "US" },
-};
-
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "CalcPortal Pro",
-  url: "https://calcportalpro.com",
-  description: "Free financial calculators and tools",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://calcportalpro.com/search?q={search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
-};
-
-// 🔹 Smart Blog Content Wrapper
-function BlogContentWrapper({ children }: { children: ReactNode }) {
-  const childrenArray = Array.isArray(children) ? children : [children];
-  const injectedContent: ReactNode[] = [];
-  let paragraphCount = 0;
-
-  childrenArray.forEach((child, index) => {
-    injectedContent.push(child);
-
-    if (
-      isValidElement(child) &&
-      (child.type as any) === "p" // check for paragraphs
-    ) {
-      paragraphCount++;
-      if (paragraphCount === 3) {
-        injectedContent.push(
-          <div key="mid-ad" style={{ margin: "40px 0" }}>
-            <AdUnit adSlot="1716130019" />
-          </div>
-        );
-      }
-    }
-  });
-
-  return <>{injectedContent}</>;
-}
-
-export default function RootLayout({ children }: { children: ReactNode }) {
-  const pathname = usePathname();
-  const isBlog = pathname.startsWith("/blog/");
-
+// ✅ RootLayout must be a **server component**
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <head>
-        {/* Meta, favicons, preload, analytics, adsense, schema — unchanged */}
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        />
+        {/* Essential Meta */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <meta name="format-detection" content="telephone=no" />
+
+        {/* Favicons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+        <link rel="mask-icon" href="/favicon.svg" color="#F59E0B" />
+        <link rel="manifest" href="/manifest.json" />
+
+        {/* Microsoft & Theme */}
         <meta name="msapplication-TileColor" content="#2563eb" />
+        <meta name="msapplication-TileImage" content="/favicon-32x32.png" />
         <meta name="theme-color" content="#2563eb" />
 
+        {/* Google site verification */}
+        <meta name="google-site-verification" content="your-google-verification-code" />
+        <meta name="google" content="notranslate" />
+
+        {/* Fonts preload */}
+        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+
+        {/* Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RWDG6W0T4"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-3RWDG6W0T4');
-            `,
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3RWDG6W0T4', {
+              page_title: document.title,
+              page_location: window.location.href,
+              send_page_view: true
+            });
+          `,
           }}
         />
 
+        {/* Google AdSense */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5944904248745587"
           crossOrigin="anonymous"
-        ></script>
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(websiteSchema),
-          }}
         />
       </head>
-      <body className={inter.className}>
-        {/* 🔹 Global Header Ad */}
-        <AdUnit
-          adSlot="2674505389"
-          style={{ display: "inline-block", width: "728px", height: "90px" }}
-        />
-
-        {/* Page Content */}
-        <main>
-          {isBlog ? (
-            <BlogContentWrapper>{children}</BlogContentWrapper>
-          ) : (
-            children
-          )}
-        </main>
-
-        {/* 🔹 Global Footer Ad */}
-        <AdUnit adSlot="1716130019" />
+      <body>
+        {/* ✅ Wrap children with client component */}
+        <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
       </body>
     </html>
   );
