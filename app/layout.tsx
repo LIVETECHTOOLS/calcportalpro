@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://calcportalpro.com'),
 
   // ✅ No template, so titles render exactly as defined in page metadata
-  title: 'CalcPortal Pro - Free Financial Calculators & Tools',
+  title: 'CalcPortal Pro',
 
   description: 'Free financial calculators for loans, mortgages, investments, taxes, and retirement planning. Make smarter money decisions with our easy-to-use tools.',
 
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    title: 'CalcPortal Pro - Free Financial Calculators & Tools',
+    title: 'CalcPortal Pro',
     description: 'Free financial calculators for loans, mortgages, investments, taxes, and retirement planning.',
     images: ['https://calcportalpro.com/og-image.jpg'],
     creator: '@calcportalpro',
