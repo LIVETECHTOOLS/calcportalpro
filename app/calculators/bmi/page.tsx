@@ -50,23 +50,23 @@ export const metadata: Metadata = {
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "applicationCategory": "HealthApplication",
-  "operatingSystem": "Web",
-  "name": "BMI Calculator",
-  "url": "https://calcportalpro.com/calculators/bmi",
-  "description":
+  applicationCategory: "HealthApplication",
+  operatingSystem: "Web",
+  name: "BMI Calculator",
+  url: "https://calcportalpro.com/calculators/bmi",
+  description:
     "Free online BMI Calculator to check your Body Mass Index (BMI) for men, women, children, and adults using height and weight.",
-  "publisher": {
+  publisher: {
     "@type": "Organization",
-    "name": "CalcPortal Pro",
-    "url": "https://calcportalpro.com",
-    "logo": "https://calcportalpro.com/logo.png",
+    name: "CalcPortal Pro",
+    url: "https://calcportalpro.com",
+    logo: "https://calcportalpro.com/logo.png",
   },
-  "offers": {
+  offers: {
     "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
+    price: "0",
+    priceCurrency: "USD",
+  },
 };
 
 export default function BMICalculatorPage() {
@@ -100,7 +100,7 @@ export default function BMICalculatorPage() {
           <AdUnit
             adSlot="2674505389"
             adFormat=""
-            fullWidthResponsive={false}
+            dataFullWidthResponsive="false"
             style={{ display: "inline-block", width: "728px", height: "90px" }}
           />
         </div>
