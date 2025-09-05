@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import BMICalculator from "@/components/calculators/BMICalculator";
-import AdUnit from "@/components/ads/AdUnit";
 
 export const metadata: Metadata = {
   title: "BMI Calculator",
@@ -73,6 +72,7 @@ export default function BMICalculatorPage() {
   return (
     <div className="min-h-screen bg-primary-50">
       <div className="container-max section-padding">
+        {/* Back Link */}
         <div className="mb-8">
           <Link
             href="/calculators"
@@ -82,6 +82,7 @@ export default function BMICalculatorPage() {
           </Link>
         </div>
 
+        {/* Page Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-secondary-500 mb-4">
             BMI Calculator
@@ -95,15 +96,7 @@ export default function BMICalculatorPage() {
         {/* BMI Calculator Tool */}
         <BMICalculator />
 
-        {/* Fixed 728x90 Ad */}
-        <div className="my-8 flex justify-center">
-          <AdUnit
-            adSlot="2674505389"
-            adFormat=""
-            style={{ display: "inline-block", width: "728px", height: "90px" }}
-          />
-        </div>
-
+        {/* Educational Content */}
         <div className="mt-12 prose max-w-none">
           <h2>What is BMI?</h2>
           <p>
@@ -111,9 +104,6 @@ export default function BMICalculatorPage() {
             weight to estimate body fat. It's a useful screening tool to
             identify potential weight problems in adults.
           </p>
-
-          {/* Responsive Ad inside content */}
-          <AdUnit adSlot="1716130019" />
 
           <h3>BMI Categories</h3>
           <ul>
@@ -136,14 +126,12 @@ export default function BMICalculatorPage() {
             BMI is not a diagnostic tool and doesn't measure body fat directly.
             It may not be accurate for:
           </p>
-
           <ul>
             <li>Athletes with high muscle mass</li>
             <li>Pregnant women</li>
             <li>Children and teenagers</li>
             <li>Elderly individuals</li>
           </ul>
-
           <p>
             Always consult with a healthcare professional for personalized
             health advice.
