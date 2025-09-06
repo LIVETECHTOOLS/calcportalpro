@@ -1,227 +1,178 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeft, Calculator, Clock, Calendar, TrendingUp } from 'lucide-react';
-import TimeCalculator from '@/components/calculators/TimeCalculator';
-import AdUnit from '@/components/ads/AdUnit';
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { ArrowLeft, Calculator, Clock, Calendar, TrendingUp } from 'lucide-react'
+import TimeCalculator from '@/components/calculators/TimeCalculator'
 
 export const metadata: Metadata = {
-  title: 'Time Calculator - Calculate Time Differences & Duration | CalcPortal Pro',
-  description: 'Free time calculator to compute time differences, duration, and time conversions. Calculate working hours, project timelines, and time management with our accurate time tool.',
-  keywords: 'time calculator, time difference calculator, duration calculator, working hours calculator, project timeline calculator, time management tool',
+  title: 'Time Calculator',
+  description:
+    'Free online time calculator to compute elapsed time, working hours, travel duration, and time differences. Add or subtract hours and minutes for projects, schedules, or daily planning.',
+  keywords:
+    'time calculator, elapsed time calculator, working hours calculator, add time calculator, subtract time calculator, travel time calculator, duration calculator, date and time calculator, military time calculator, project timeline calculator, sleep time calculator, work hours calculator',
   openGraph: {
-    title: 'Time Calculator - Calculate Time Differences & Duration | CalcPortal Pro',
-    description: 'Free time calculator to compute time differences, duration, and time conversions. Calculate working hours, project timelines, and time management.',
+    title: 'Time Calculator - Calculate Hours, Duration, and Time Differences | CalcPortal Pro',
+    description:
+      'Use our free time calculator to calculate elapsed time, working hours, project timelines, and travel schedules. Add or subtract hours and minutes easily.',
     type: 'website',
     url: 'https://calcportalpro.com/calculators/time',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Time Calculator - Calculate Time Differences & Duration | CalcPortal Pro',
-    description: 'Free time calculator to compute time differences, duration, and time conversions. Calculate working hours, project timelines, and time management.',
+    title: 'Time Calculator - Calculate Hours, Duration, and Time Differences | CalcPortal Pro',
+    description:
+      'Free time calculator to compute differences, add or subtract hours, and manage work schedules or travel plans.',
   },
-};
+  alternates: {
+    canonical: 'https://calcportalpro.com/calculators/time',
+  },
+}
 
 export default function TimePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-secondary-50">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="container-max py-4">
-          <Link 
-            href="/calculators" 
-            className="inline-flex items-center text-accent-600 hover:text-accent-700 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Calculators
-          </Link>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="container-max py-8">
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          {/* Page Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-secondary-600 mb-4">
-              Time Calculator
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Calculate time differences, duration, and conversions with our comprehensive 
-              time calculator. Perfect for project planning, working hours, and time management.
+          {/* Header */}
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Time Calculator</h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Calculate elapsed time, working hours, travel schedules, or project duration. Add or subtract hours and minutes with accuracy.
             </p>
           </div>
 
           {/* Calculator */}
-          <div className="bg-white rounded-2xl shadow-soft p-8 mb-12">
-            <TimeCalculator />
-          </div>
-
-          <AdUnit adSlot="6578933531" />
+          <TimeCalculator />
 
           {/* Educational Content */}
-          <div className="prose prose-lg max-w-none">
-            <h2 className="text-3xl font-bold text-secondary-600 mb-6">
-              Understanding Time Calculations
-            </h2>
-            
-            <p className="text-gray-700 mb-6">
-              Time is one of our most valuable resources, and understanding how to calculate 
-              time differences, durations, and conversions is essential for effective planning 
-              and productivity. Whether you're managing projects, tracking work hours, or 
-              planning events, accurate time calculations can make all the difference.
-            </p>
-
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              Types of Time Calculations
-            </h3>
-            <ul className="list-disc pl-6 mb-6 text-gray-700">
-              <li><strong>Time Difference:</strong> Calculate the duration between two specific times</li>
-              <li><strong>Duration Addition:</strong> Add time periods to find end times</li>
-              <li><strong>Working Hours:</strong> Calculate total work time excluding breaks</li>
-              <li><strong>Project Timeline:</strong> Estimate project duration and deadlines</li>
-              <li><strong>Time Conversion:</strong> Convert between different time units</li>
-            </ul>
-
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              Common Time Calculation Scenarios
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-200">
-                <h4 className="text-lg font-semibold text-secondary-600 mb-3">Work Hours</h4>
-                <p className="text-gray-700 mb-3">
-                  Calculate total working hours, overtime, and break time for payroll and 
-                  productivity tracking.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Clock in/out times</li>
-                  <li>• Break deductions</li>
-                  <li>• Overtime calculations</li>
-                  <li>• Weekly/monthly totals</li>
-                </ul>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-200">
-                <h4 className="text-lg font-semibold text-secondary-600 mb-3">Project Planning</h4>
-                <p className="text-gray-700 mb-3">
-                  Estimate project duration, set realistic deadlines, and track progress 
-                  against timelines.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Task duration estimates</li>
-                  <li>• Critical path analysis</li>
-                  <li>• Resource allocation</li>
-                  <li>• Milestone tracking</li>
-                </ul>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-200">
-                <h4 className="text-lg font-semibold text-secondary-600 mb-3">Travel Planning</h4>
-                <p className="text-gray-700 mb-3">
-                  Calculate travel time, plan itineraries, and account for time zone differences 
-                  when scheduling.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Journey duration</li>
-                  <li>• Time zone conversions</li>
-                  <li>• Layover calculations</li>
-                  <li>• Arrival time estimates</li>
-                </ul>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-200">
-                <h4 className="text-lg font-semibold text-secondary-600 mb-3">Event Planning</h4>
-                <p className="text-gray-700 mb-3">
-                  Schedule events, calculate setup time, and ensure proper timing for 
-                  successful execution.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Event duration</li>
-                  <li>• Setup/teardown time</li>
-                  <li>• Buffer time planning</li>
-                  <li>• Schedule coordination</li>
-                </ul>
-              </div>
-            </div>
-
-            <AdUnit adSlot="6578933532" />
-
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              Time Management Best Practices
-            </h3>
-            <ol className="list-decimal pl-6 mb-6 text-gray-700">
-              <li><strong>Use Time Blocking:</strong> Allocate specific time slots for different tasks</li>
-              <li><strong>Account for Buffer Time:</strong> Include extra time for unexpected delays</li>
-              <li><strong>Track Actual vs. Estimated:</strong> Compare planned vs. actual time usage</li>
-              <li><strong>Consider Peak Hours:</strong> Schedule important tasks during your most productive times</li>
-              <li><strong>Regular Reviews:</strong> Periodically assess and adjust your time estimates</li>
-            </ol>
-
-            <div className="bg-accent-50 border-l-4 border-accent-500 p-6 rounded-lg my-8">
-              <h4 className="text-xl font-semibold text-accent-800 mb-3">
-                Pro Tip: Time Estimation
-              </h4>
-              <p className="text-accent-700">
-                When estimating time for tasks, use the "Pomodoro Technique" - break work into 
-                25-minute focused sessions with 5-minute breaks. This method helps improve 
-                accuracy in time estimation and boosts productivity.
+          <div className="mt-16 bg-white rounded-lg shadow-sm p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Understanding Time Calculations</h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-gray-700 mb-4">
+                A time calculator is a simple but powerful tool that helps you compute elapsed time,
+                schedule events, and manage projects efficiently. From planning work shifts to
+                calculating flight durations, accurate time calculation is essential in daily life.
               </p>
-            </div>
 
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              Time Calculation Formulas
-            </h3>
-            <div className="bg-gray-50 rounded-lg p-6 mb-8">
-              <h4 className="text-lg font-semibold text-gray-800 mb-4">Basic Time Calculations</h4>
-              <div className="space-y-3 text-sm">
-                <div>
-                  <strong>Time Difference:</strong> End Time - Start Time = Duration
-                </div>
-                <div>
-                  <strong>Adding Time:</strong> Start Time + Duration = End Time
-                </div>
-                <div>
-                  <strong>Working Hours:</strong> (End Time - Start Time) - Break Time = Net Work Time
-                </div>
-                <div>
-                  <strong>Percentage of Day:</strong> (Time Period / 24 hours) × 100 = Percentage
-                </div>
+              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Common Use Cases</h3>
+              <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
+                <li><strong>Work Hours:</strong> Track total hours worked by subtracting start and end times.</li>
+                <li><strong>Travel:</strong> Estimate arrival times by adding travel duration to departure time.</li>
+                <li><strong>Projects:</strong> Manage timelines by breaking down tasks into hours and minutes.</li>
+                <li><strong>Events:</strong> Plan meetings or activities across different time zones.</li>
+                <li><strong>Sleep:</strong> Use bedtime and wake-up calculations for better rest.</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="mt-16 bg-white rounded-lg shadow-sm p-8">
+            <h2 className="text-2xl font-bold text-secondary-600 mb-4">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold">⏱ How do I calculate elapsed time?</h3>
+                <p>Subtract the start time from the end time. For example, from 9:00 AM to 5:30 PM, the elapsed time is 8 hours 30 minutes.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">🛫 How do I calculate travel time?</h3>
+                <p>Enter your departure time and add your journey duration. This is useful for road trips, flight planning, and public transport schedules.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">💼 Can this work as a work hours calculator?</h3>
+                <p>Yes. Input clock-in and clock-out times, subtract breaks, and you’ll see the total work hours calculated instantly.</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">😴 Can I calculate my sleep schedule?</h3>
+                <p>Yes. Use the calculator to plan bedtime or wake-up time by adding or subtracting the recommended sleep hours.</p>
               </div>
             </div>
-
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              Common Time Calculation Mistakes
-            </h3>
-            <ul className="list-disc pl-6 mb-6 text-gray-700">
-              <li><strong>Ignoring Time Zones:</strong> Always account for time zone differences in calculations</li>
-              <li><strong>Forgetting Break Time:</strong> Include breaks and non-working periods in estimates</li>
-              <li><strong>Overlooking Context:</strong> Consider factors like traffic, weather, or dependencies</li>
-              <li><strong>Unrealistic Estimates:</strong> Base estimates on historical data, not wishful thinking</li>
-              <li><strong>Ignoring Dependencies:</strong> Account for tasks that must be completed before others</li>
-            </ul>
-
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              Tools for Better Time Management
-            </h3>
-            <p className="text-gray-700 mb-6">
-              Beyond basic calculations, consider using specialized tools and techniques:
-            </p>
-            <ul className="list-disc pl-6 mb-6 text-gray-700">
-              <li><strong>Time Tracking Apps:</strong> Monitor actual time spent on tasks</li>
-              <li><strong>Project Management Software:</strong> Visualize timelines and dependencies</li>
-              <li><strong>Calendar Integration:</strong> Sync calculations with your scheduling system</li>
-              <li><strong>Automation Tools:</strong> Automate repetitive time calculations</li>
-              <li><strong>Analytics:</strong> Analyze patterns to improve future estimates</li>
-            </ul>
-
-            <p className="text-gray-700 mb-8">
-              Mastering time calculations is a fundamental skill for effective time management. 
-              Use our time calculator to make accurate estimates, plan your schedule effectively, 
-              and maximize your productivity. Remember, time is the one resource you can't 
-              create more of, so use it wisely and efficiently.
-            </p>
           </div>
+
+          {/* Compare Calculators Section */}
+          <div className="mt-16 bg-gray-100 rounded-lg shadow-sm p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Compare with Other Calculators</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/calculators/date" className="flex items-center space-x-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition">
+                <Calendar className="w-6 h-6 text-primary-600" />
+                <span className="text-lg font-medium">Date Calculator</span>
+              </Link>
+              <Link href="/calculators/age" className="flex items-center space-x-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition">
+                <TrendingUp className="w-6 h-6 text-primary-600" />
+                <span className="text-lg font-medium">Age Calculator</span>
+              </Link>
+              <Link href="/calculators/bmi" className="flex items-center space-x-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition">
+                <Calculator className="w-6 h-6 text-primary-600" />
+                <span className="text-lg font-medium">BMI Calculator</span>
+              </Link>
+              <Link href="/calculators/investment" className="flex items-center space-x-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition">
+                <Clock className="w-6 h-6 text-primary-600" />
+                <span className="text-lg font-medium">Investment Calculator</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* JSON-LD Schema Markup */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'How do I calculate elapsed time?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Subtract the start time from the end time. Example: 9:00 AM to 5:30 PM is 8 hours 30 minutes.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'How do I calculate travel time?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Enter departure time and add journey duration to calculate arrival time.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Can this work as a work hours calculator?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Yes. Input clock-in and clock-out times, subtract breaks, and the tool will calculate total work hours.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Can I calculate my sleep schedule?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Yes. Add or subtract recommended sleep hours to plan bedtime or wake-up time.',
+                    },
+                  },
+                ],
+              }),
+            }}
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'HowTo',
+                name: 'How to Calculate Elapsed Time',
+                description: 'Step-by-step guide to calculating elapsed time.',
+                step: [
+                  { '@type': 'HowToStep', text: 'Note your start time.' },
+                  { '@type': 'HowToStep', text: 'Note your end time.' },
+                  { '@type': 'HowToStep', text: 'Subtract start time from end time.' },
+                  { '@type': 'HowToStep', text: 'Convert result into hours and minutes.' },
+                ],
+              }),
+            }}
+          />
         </div>
       </div>
     </div>
-  );
+  )
 }
