@@ -1,114 +1,239 @@
-import type { Metadata } from 'next'
-import RetirementCalculator from '@/components/calculators/RetirementCalculator'
-import AdUnit from '@/components/ads/AdUnit'
+import { Metadata } from "next";
+import Link from "next/link";
+import { ArrowLeft, Briefcase, Calendar, PiggyBank } from "lucide-react";
+import RetirementCalculator from "@/components/calculators/RetirementCalculator";
 
 export const metadata: Metadata = {
-  title: 'Retirement Calculator - Plan Your Financial Future | CalcPortal Pro',
-  description: 'Calculate how much you need to save for retirement. Plan your financial future with our comprehensive retirement planning calculator. Free, accurate, and easy to use.',
-  keywords: 'retirement calculator, retirement planning, 401k calculator, IRA calculator, retirement savings, financial planning',
+  title:
+    "Retirement Calculator",
+  description:
+    "Free Retirement Calculator to plan 401k, IRA, pensions, and Social Security. Estimate how much to save monthly for retirement, whether early, traditional, or with multiple income sources.",
+  keywords:
+    "retirement calculator, retirement planning, early retirement calculator, retirement calculator with pension, fers retirement calculator, social security retirement calculator, 401k retirement calculator, IRA retirement calculator, Dave Ramsey retirement calculator, Vanguard retirement calculator, military retirement calculator, retirement calculator for couples, best retirement calculator",
   openGraph: {
-    title: 'Retirement Calculator - Plan Your Financial Future | CalcPortal Pro',
-    description: 'Calculate how much you need to save for retirement. Plan your financial future with our comprehensive retirement planning calculator.',
-    url: 'https://calcportalpro.com/calculators/retirement',
-    type: 'website',
+    title:
+      "Retirement Calculator - Plan Your 401k, IRA, Pension & Savings | CalcPortal Pro",
+    description:
+      "Free Retirement Calculator to plan 401k, IRA, pensions, and Social Security. Estimate how much to save monthly for retirement, whether early, traditional, or with multiple income sources.",
+    type: "website",
+    url: "https://calcportalpro.com/calculators/retirement",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Retirement Calculator - Plan Your Financial Future | CalcPortal Pro',
-    description: 'Calculate how much you need to save for retirement. Plan your financial future with our comprehensive retirement planning calculator.',
+    card: "summary_large_image",
+    title:
+      "Retirement Calculator - Plan Your 401k, IRA, Pension & Savings | CalcPortal Pro",
+    description:
+      "Free Retirement Calculator to plan 401k, IRA, pensions, and Social Security. Estimate how much to save monthly for retirement, whether early, traditional, or with multiple income sources.",
   },
   alternates: {
-    canonical: 'https://calcportalpro.com/calculators/retirement',
+    canonical: "https://calcportalpro.com/calculators/retirement",
   },
-}
+};
 
 export default function RetirementCalculatorPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-secondary-50">
+      {/* Header */}
+      <div className="bg-white shadow-sm border-b">
+        <div className="container-max py-4">
+          <Link
+            href="/calculators"
+            className="inline-flex items-center text-accent-600 hover:text-accent-700 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Calculators
+          </Link>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="container-max py-8">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          {/* Page Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-secondary-600 mb-4">
               Retirement Calculator
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Plan your financial future with our comprehensive retirement planning calculator. 
-              See how much you need to save monthly to achieve your retirement goals.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Plan your financial future with our free retirement calculator.
+              Estimate how much you need to save monthly, factor in pensions,
+              Social Security, and investment returns, and build a roadmap to
+              retirement security.
             </p>
           </div>
 
-          <RetirementCalculator />
+          {/* Calculator */}
+          <div className="bg-white rounded-2xl shadow-soft p-8 mb-12">
+            <RetirementCalculator />
+          </div>
 
-          <AdUnit adSlot="6578933431" />
-
-          <div className="mt-16 bg-white rounded-lg shadow-sm p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          {/* Educational Content */}
+          <div className="prose prose-lg max-w-none">
+            <h2 className="text-3xl font-bold text-secondary-600 mb-6">
               Understanding Retirement Planning
             </h2>
-            
-            <div className="prose prose-lg max-w-none">
-              <p className="text-gray-700 mb-4">
-                Retirement planning is one of the most important financial decisions you'll make. 
-                Our retirement calculator helps you understand how much you need to save to maintain 
-                your desired lifestyle after you stop working.
-              </p>
+            <p>
+              Retirement planning is one of the most important financial
+              decisions you’ll make. Our calculator helps you see how much to
+              save monthly based on age, income, lifestyle, and retirement goals.
+            </p>
 
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
-                Key Factors in Retirement Planning
-              </h3>
-              <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
-                <li><strong>Current Age vs. Retirement Age:</strong> The longer you have to save, the less you need to save monthly</li>
-                <li><strong>Life Expectancy:</strong> Plan for a longer retirement to ensure you don't outlive your savings</li>
-                <li><strong>Desired Annual Income:</strong> Consider your lifestyle needs and inflation</li>
-                <li><strong>Investment Returns:</strong> Historical market returns average 7-10% annually</li>
-                <li><strong>Inflation:</strong> Plan for 2-3% annual inflation to maintain purchasing power</li>
-              </ul>
+            <h3>Key Factors in Retirement Planning</h3>
+            <ul>
+              <li>
+                <strong>Current Age vs. Retirement Age:</strong> The earlier you
+                start, the more time compounding works in your favor.
+              </li>
+              <li>
+                <strong>Life Expectancy:</strong> Plan for 20–30 years of
+                retirement to avoid outliving savings.
+              </li>
+              <li>
+                <strong>Desired Annual Income:</strong> Match your retirement
+                lifestyle to your budget.
+              </li>
+              <li>
+                <strong>Investment Returns:</strong> Historically 7–10% over the
+                long term.
+              </li>
+              <li>
+                <strong>Inflation:</strong> Factor in 2–3% yearly to maintain
+                purchasing power.
+              </li>
+            </ul>
 
-              <AdUnit adSlot="6578933432" />
+            <h3>Retirement Savings Strategies</h3>
+            <ol>
+              <li>Start saving early—even small contributions grow over time.</li>
+              <li>Maximize 401(k) or IRA contributions, especially with employer match.</li>
+              <li>Diversify investments across stocks, bonds, and cash equivalents.</li>
+              <li>Reassess your plan every few years as goals or income change.</li>
+              <li>Include multiple income sources like pensions or annuities.</li>
+            </ol>
 
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
-                Retirement Savings Strategies
-              </h3>
-              <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
-                <li><strong>Start Early:</strong> Even small amounts saved early can grow significantly over time</li>
-                <li><strong>Maximize Employer Contributions:</strong> Take advantage of 401(k) matching programs</li>
-                <li><strong>Diversify Investments:</strong> Spread risk across different asset classes</li>
-                <li><strong>Regular Reviews:</strong> Adjust your plan as your circumstances change</li>
-                <li><strong>Consider Multiple Income Sources:</strong> Social Security, pensions, and personal savings</li>
-              </ul>
+            <h3>Common Mistakes to Avoid</h3>
+            <ul>
+              <li>Underestimating healthcare costs in retirement.</li>
+              <li>Not accounting for inflation in long-term projections.</li>
+              <li>Investing too conservatively for decades-long horizons.</li>
+              <li>Overlooking taxes on 401(k)/IRA withdrawals.</li>
+              <li>Failing to plan for unexpected expenses.</li>
+            </ul>
 
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
-                Common Retirement Planning Mistakes
-              </h3>
-              <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
-                <li>Underestimating healthcare costs in retirement</li>
-                <li>Not accounting for inflation in long-term planning</li>
-                <li>Being too conservative with investment returns</li>
-                <li>Forgetting about taxes on retirement withdrawals</li>
-                <li>Not planning for unexpected expenses</li>
-              </ul>
-
-              <div className="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
-                <p className="text-blue-800">
-                  <strong>Pro Tip:</strong> Consider working with a financial advisor to create a comprehensive 
-                  retirement plan that includes tax strategies, estate planning, and healthcare considerations.
-                </p>
-              </div>
-
-              <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">
-                Retirement Account Types
-              </h3>
-              <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
-                <li><strong>401(k):</strong> Employer-sponsored plan with potential matching contributions</li>
-                <li><strong>Traditional IRA:</strong> Tax-deductible contributions, taxed on withdrawal</li>
-                <li><strong>Roth IRA:</strong> After-tax contributions, tax-free withdrawals</li>
-                <li><strong>SEP IRA:</strong> For self-employed individuals and small business owners</li>
-                <li><strong>Annuities:</strong> Provide guaranteed income for life</li>
-              </ul>
-            </div>
+            <h3>Retirement Account Types</h3>
+            <ul>
+              <li>
+                <strong>401(k):</strong> Employer-sponsored plan, often with
+                matching contributions.
+              </li>
+              <li>
+                <strong>Traditional IRA:</strong> Tax-deductible now, taxed on
+                withdrawals.
+              </li>
+              <li>
+                <strong>Roth IRA:</strong> Pay taxes upfront, withdraw tax-free
+                in retirement.
+              </li>
+              <li>
+                <strong>SEP IRA:</strong> Great for self-employed individuals.
+              </li>
+              <li>
+                <strong>Pensions & Annuities:</strong> Provide stable income in
+                retirement.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+
+      {/* Structured Data: FAQ + HowTo */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "How much do I need to retire?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "The amount depends on your desired lifestyle, expected expenses, and retirement age. A common rule is 70–80% of your pre-retirement income. Use our retirement calculator for a personalized estimate.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What’s the best retirement calculator?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "The best calculator depends on your needs. Ours allows you to include pensions, 401(k), IRA, Social Security, and monthly contributions to give a full picture of your retirement readiness.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "How much should I save monthly for retirement?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Your monthly savings depend on your target nest egg, expected investment returns, and years until retirement. Enter your details in our calculator to see the required amount.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Can I retire early?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, early retirement is possible if you save aggressively and control expenses. Use the calculator to see how much you’ll need to retire before 60.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Should I count Social Security in my retirement plan?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, Social Security can be an important income source, but benefits may change. Use it as a supplement, not your only retirement income.",
+                  },
+                },
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              name: "How to Calculate Retirement Savings Needs",
+              description:
+                "Step-by-step guide to estimating how much money you’ll need to retire comfortably.",
+              step: [
+                {
+                  "@type": "HowToStep",
+                  name: "Step 1: Set your retirement age",
+                  text: "Decide the age when you plan to stop working.",
+                },
+                {
+                  "@type": "HowToStep",
+                  name: "Step 2: Estimate annual expenses",
+                  text: "Calculate living costs, healthcare, travel, and lifestyle expenses.",
+                },
+                {
+                  "@type": "HowToStep",
+                  name: "Step 3: Factor in income sources",
+                  text: "Include Social Security, pensions, and investment accounts.",
+                },
+                {
+                  "@type": "HowToStep",
+                  name: "Step 4: Adjust for inflation",
+                  text: "Plan for 2–3% annual inflation to preserve purchasing power.",
+                },
+                {
+                  "@type": "HowToStep",
+                  name: "Step 5: Run the numbers",
+                  text: "Use our retirement calculator to estimate monthly contributions needed to reach your target.",
+                },
+              ],
+            },
+          ]),
+        }}
+      />
     </div>
-  )
+  );
 }
