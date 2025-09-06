@@ -132,7 +132,7 @@ export default function RetirementCalculatorPage() {
             </div>
           </div>
 
-          {/* Related Calculators */}
+          {/* Related Calculators (401k removed) */}
           <div className="mt-16 bg-white rounded-2xl shadow-soft p-8">
             <h2 className="text-2xl font-bold text-secondary-600 mb-6">
               Compare with Other Financial Calculators
@@ -151,9 +151,9 @@ export default function RetirementCalculatorPage() {
                 </Link>
               </li>
               <li>
-                <Link href="/calculators/401k" className="block p-4 border rounded-xl hover:bg-accent-50">
-                  <h3 className="font-semibold">401k Calculator</h3>
-                  <p>Project retirement savings with contributions + employer match.</p>
+                <Link href="/calculators/mortgage" className="block p-4 border rounded-xl hover:bg-accent-50">
+                  <h3 className="font-semibold">Mortgage Calculator</h3>
+                  <p>Estimate monthly payments for home loans.</p>
                 </Link>
               </li>
               <li>
@@ -167,12 +167,11 @@ export default function RetirementCalculatorPage() {
         </div>
       </div>
 
-      {/* Structured Data */}
+      {/* Structured Data (FAQ + HowTo stays unchanged) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            // FAQ Schema
             {
               '@context': 'https://schema.org',
               '@type': 'FAQPage',
@@ -215,7 +214,6 @@ export default function RetirementCalculatorPage() {
                 },
               ],
             },
-            // HowTo Schema
             {
               '@context': 'https://schema.org',
               '@type': 'HowTo',
