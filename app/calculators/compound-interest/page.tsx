@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import CompoundInterestCalculator from '@/components/calculators/CompoundInterestCalculator';
 
 export const metadata: Metadata = {
-  title: 'Compound Interest Calculator - Daily, Monthly, 401k & Retirement Growth | CalcPortal Pro',
+  title: 'Compound Interest Calculator',
   description:
     'Free compound interest calculator to see how your money grows daily, monthly, or annually. Calculate 401k, Roth IRA, CD, and retirement compound interest. Easy online tool with instant results.',
   keywords: [
