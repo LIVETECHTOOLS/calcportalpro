@@ -1,25 +1,32 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeft, Calculator, BookOpen, TrendingUp } from 'lucide-react';
-import GPACalculator from '@/components/calculators/GPACalculator';
-import AdUnit from '@/components/ads/AdUnit';
+import { Metadata } from 'next'
+import Link from 'next/link'
+import { ArrowLeft } from 'lucide-react'
+import GPACalculator from '@/components/calculators/GPACalculator'
 
 export const metadata: Metadata = {
-  title: 'GPA Calculator - Calculate Your Grade Point Average | CalcPortal Pro',
-  description: 'Free GPA calculator to compute your Grade Point Average. Calculate weighted and unweighted GPA, track academic progress, and plan your academic goals with our accurate GPA tool.',
-  keywords: 'GPA calculator, grade point average, weighted GPA, unweighted GPA, academic calculator, college GPA, high school GPA, grade calculator',
+  title: 'GPA Calculator',
+  description:
+    'Free GPA Calculator. Calculate college GPA, high school GPA, weighted and unweighted GPA, cumulative GPA, and semester GPA. Track academic progress and plan for admissions or scholarships.',
+  keywords:
+    'GPA calculator, college GPA calculator, high school GPA calculator, weighted GPA calculator, unweighted GPA calculator, cumulative GPA calculator, uf gpa calculator, semester GPA calculator, overall GPA calculator, GPA calculator from percentage, science GPA calculator, what if GPA calculator, calculate GPA online',
   openGraph: {
-    title: 'GPA Calculator - Calculate Your Grade Point Average | CalcPortal Pro',
-    description: 'Free GPA calculator to compute your Grade Point Average. Calculate weighted and unweighted GPA, track academic progress, and plan your academic goals.',
+    title:
+      'GPA Calculator 2024 - Weighted, Unweighted, Cumulative & Semester GPA',
+    description:
+      'Free GPA calculator to compute your Grade Point Average. Supports high school, college, weighted, unweighted, and cumulative GPA calculations.',
     type: 'website',
     url: 'https://calcportalpro.com/calculators/gpa',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GPA Calculator - Calculate Your Grade Point Average | CalcPortal Pro',
-    description: 'Free GPA calculator to compute your Grade Point Average. Calculate weighted and unweighted GPA, track academic progress, and plan your academic goals.',
+    title: 'GPA Calculator 2024 - Calculate College & High School GPA Online',
+    description:
+      'Easily calculate weighted and unweighted GPA. Free GPA calculator for students to track progress, scholarships, and academic goals.',
   },
-};
+  alternates: {
+    canonical: 'https://calcportalpro.com/calculators/gpa',
+  },
+}
 
 export default function GPAPage() {
   return (
@@ -27,8 +34,8 @@ export default function GPAPage() {
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="container-max py-4">
-          <Link 
-            href="/blog" 
+          <Link
+            href="/blog"
             className="inline-flex items-center text-accent-600 hover:text-accent-700 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -46,8 +53,9 @@ export default function GPAPage() {
               GPA Calculator
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Calculate your Grade Point Average (GPA) with our comprehensive GPA calculator. 
-              Track your academic progress, plan your studies, and achieve your educational goals.
+              Calculate your Grade Point Average (GPA) quickly and accurately.
+              Supports weighted, unweighted, cumulative, and semester GPA for
+              high school and college students.
             </p>
           </div>
 
@@ -56,88 +64,86 @@ export default function GPAPage() {
             <GPACalculator />
           </div>
 
-          <AdUnit adSlot="6578933511" />
-
           {/* Educational Content */}
           <div className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold text-secondary-600 mb-6">
               Understanding Your GPA
             </h2>
-            
-            <p className="text-gray-700 mb-6">
-              Your Grade Point Average (GPA) is one of the most important metrics used by colleges, 
-              universities, and employers to evaluate academic performance. Understanding how to calculate 
-              and improve your GPA is crucial for academic success.
-            </p>
 
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              What is GPA?
-            </h3>
             <p className="text-gray-700 mb-6">
-              GPA stands for Grade Point Average and is a numerical representation of your academic 
-              performance. It's calculated by converting letter grades to numerical values and then 
-              averaging them, often with weights applied for course difficulty.
+              Your Grade Point Average (GPA) is one of the most important
+              academic metrics. Colleges, universities, and employers use GPA to
+              evaluate performance. Knowing how GPA is calculated can help you
+              set goals and plan your academic path.
             </p>
 
             <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
               Types of GPA
             </h3>
             <ul className="list-disc pl-6 mb-6 text-gray-700">
-              <li><strong>Unweighted GPA:</strong> All classes are treated equally regardless of difficulty</li>
-              <li><strong>Weighted GPA:</strong> Honors, AP, and IB classes receive extra points</li>
-              <li><strong>Cumulative GPA:</strong> Overall GPA across all academic terms</li>
-              <li><strong>Major GPA:</strong> GPA for courses in your specific field of study</li>
+              <li>
+                <strong>Unweighted GPA:</strong> All classes counted equally on
+                a 4.0 scale
+              </li>
+              <li>
+                <strong>Weighted GPA:</strong> Honors, AP, and IB classes add
+                extra points
+              </li>
+              <li>
+                <strong>Cumulative GPA:</strong> Overall GPA across all terms
+              </li>
+              <li>
+                <strong>Semester GPA:</strong> GPA for a single term or semester
+              </li>
+              <li>
+                <strong>Major GPA:</strong> GPA for classes in your field of
+                study
+              </li>
             </ul>
 
             <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
               How GPA is Calculated
             </h3>
             <p className="text-gray-700 mb-6">
-              The standard 4.0 scale is most common, where A = 4.0, B = 3.0, C = 2.0, D = 1.0, and F = 0.0. 
-              For weighted GPAs, honors classes might add 0.5 points, and AP/IB classes might add 1.0 point.
+              Most schools use a 4.0 scale: A = 4.0, B = 3.0, C = 2.0, D = 1.0,
+              F = 0. Weighted GPAs may add 0.5–1.0 points for advanced courses.
+              Some institutions use 5.0 or percentage-based scales—always check
+              your school’s grading policy.
             </p>
 
             <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
               Why GPA Matters
             </h3>
             <ul className="list-disc pl-6 mb-6 text-gray-700">
-              <li><strong>College Admissions:</strong> Most colleges have minimum GPA requirements</li>
-              <li><strong>Scholarships:</strong> Many scholarships require maintaining a certain GPA</li>
-              <li><strong>Graduate School:</strong> Advanced degree programs often have strict GPA requirements</li>
-              <li><strong>Career Opportunities:</strong> Some employers consider GPA for entry-level positions</li>
+              <li>
+                <strong>College Admissions:</strong> Minimum GPA requirements
+                often apply
+              </li>
+              <li>
+                <strong>Scholarships:</strong> Many programs require a GPA
+                threshold
+              </li>
+              <li>
+                <strong>Graduate School:</strong> Admission is highly GPA-driven
+              </li>
+              <li>
+                <strong>Careers:</strong> Some employers consider GPA for
+                entry-level jobs
+              </li>
             </ul>
 
             <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              Tips for Improving Your GPA
+              Tips for Improving GPA
             </h3>
             <ol className="list-decimal pl-6 mb-6 text-gray-700">
-              <li><strong>Stay Organized:</strong> Use planners and calendars to track assignments and deadlines</li>
-              <li><strong>Attend All Classes:</strong> Regular attendance improves understanding and participation grades</li>
-              <li><strong>Seek Help Early:</strong> Don't wait until you're struggling to ask for assistance</li>
-              <li><strong>Study Smart:</strong> Use active learning techniques like practice problems and group study</li>
-              <li><strong>Balance Your Schedule:</strong> Don't overload with too many difficult classes at once</li>
+              <li>Stay consistent with study habits</li>
+              <li>Attend all classes and participate actively</li>
+              <li>Ask for help early when struggling</li>
+              <li>Use effective study methods (flashcards, practice tests)</li>
+              <li>Balance course loads strategically</li>
             </ol>
 
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              GPA Scale Variations
-            </h3>
-            <p className="text-gray-700 mb-6">
-              While the 4.0 scale is standard, some schools use different scales. Some use a 5.0 scale 
-              for weighted GPAs, while others might use percentage-based systems. Always check your 
-              school's specific grading policy.
-            </p>
-
-            <div className="bg-accent-50 border-l-4 border-accent-500 p-6 rounded-lg my-8">
-              <h4 className="text-xl font-semibold text-accent-800 mb-3">
-                Pro Tip: GPA Planning
-              </h4>
-              <p className="text-accent-700">
-                Use our GPA calculator to plan ahead! Calculate what grades you need in upcoming 
-                assignments to reach your target GPA. This proactive approach can help you stay on 
-                track and make informed decisions about your academic priorities.
-              </p>
-            </div>
-
+            {/* FAQ Section */}
             <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
               Common GPA Questions
             </h3>
@@ -147,8 +153,18 @@ export default function GPAPage() {
                   Can I recover from a low GPA?
                 </h4>
                 <p className="text-gray-700">
-                  Yes! While it takes time, you can improve your GPA by consistently earning higher 
-                  grades in future courses. Many colleges also look at grade trends and improvement over time.
+                  Yes. Improvement takes consistency, but higher grades in
+                  future semesters can raise your cumulative GPA. Many schools
+                  also consider GPA trends.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                  What’s a good GPA for college?
+                </h4>
+                <p className="text-gray-700">
+                  A GPA above 3.0 is generally considered good, while 3.5+ is
+                  excellent. Requirements vary by school and program.
                 </p>
               </div>
               <div>
@@ -156,32 +172,107 @@ export default function GPAPage() {
                   How often should I check my GPA?
                 </h4>
                 <p className="text-gray-700">
-                  Check your GPA after each grading period or semester. Regular monitoring helps you 
-                  identify trends and make adjustments before it's too late.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                  What's a good GPA for college?
-                </h4>
-                <p className="text-gray-700">
-                  A 3.0+ GPA is generally considered good, while 3.5+ is excellent. However, requirements 
-                  vary by institution and program, so research your target schools specifically.
+                  Check after each semester to track progress and adjust study
+                  strategies.
                 </p>
               </div>
             </div>
+          </div>
 
-            <p className="text-gray-700 mb-8">
-              Understanding and managing your GPA is a crucial skill for academic success. Use our 
-              GPA calculator regularly to track your progress, plan your studies, and stay motivated 
-              toward your educational goals. Remember, GPA is just one measure of academic achievement, 
-              but it's an important one that can open doors to opportunities.
-            </p>
+          {/* Compare Calculators */}
+          <div className="mt-16 bg-gray-100 rounded-lg shadow-sm p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              Compare Other Calculators
+            </h2>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-blue-600">
+              <li>
+                <Link href="/calculators/salary">Salary Calculator</Link>
+              </li>
+              <li>
+                <Link href="/calculators/tax">Tax Calculator</Link>
+              </li>
+              <li>
+                <Link href="/calculators/mortgage">Mortgage Calculator</Link>
+              </li>
+              <li>
+                <Link href="/calculators/bmi">BMI Calculator</Link>
+              </li>
+            </ul>
           </div>
         </div>
-
-        <AdUnit adSlot="6578933512" />
       </div>
+
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Can I recover from a low GPA?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Consistently earning higher grades in future semesters can raise your GPA. Many schools also consider GPA trends.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What’s a good GPA for college?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'A GPA above 3.0 is good, while 3.5+ is excellent. Requirements vary by institution.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How often should I check my GPA?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'It’s best to check your GPA after each semester to track progress and adjust study strategies.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'HowTo',
+            name: 'How to Calculate GPA',
+            description:
+              'Step-by-step guide for calculating GPA on a 4.0 scale using weighted or unweighted credits.',
+            step: [
+              {
+                '@type': 'HowToStep',
+                name: 'List Your Courses and Credits',
+                text: 'Write down each course with its corresponding credit hours.',
+              },
+              {
+                '@type': 'HowToStep',
+                name: 'Assign Grade Points',
+                text: 'Convert each letter grade to its grade point equivalent (A=4.0, B=3.0, etc.).',
+              },
+              {
+                '@type': 'HowToStep',
+                name: 'Multiply and Sum',
+                text: 'Multiply each grade point by course credits, then sum total grade points.',
+              },
+              {
+                '@type': 'HowToStep',
+                name: 'Divide by Total Credits',
+                text: 'Divide total grade points by total credits to get your GPA.',
+              },
+            ],
+          }),
+        }}
+      />
     </div>
-  );
+  )
 }
