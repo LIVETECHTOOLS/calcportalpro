@@ -1,14 +1,30 @@
 import { Metadata } from 'next';
 import CompoundInterestCalculator from '@/components/calculators/CompoundInterestCalculator';
-import AdUnit from '@/components/ads/AdUnit';
 
 export const metadata: Metadata = {
-  title: 'Compound Interest Calculator - Calculate Investment Growth | CalcPortal Pro',
-  description: 'Free compound interest calculator to see how your investments grow over time. Calculate compound interest with our easy-to-use tool. Plan your financial future today.',
-  keywords: 'compound interest calculator, investment calculator, interest calculator, compound growth calculator, financial calculator',
+  title: 'Compound Interest Calculator - Daily, Monthly, 401k & Retirement Growth | CalcPortal Pro',
+  description:
+    'Free compound interest calculator to see how your money grows daily, monthly, or annually. Calculate 401k, Roth IRA, CD, and retirement compound interest. Easy online tool with instant results.',
+  keywords: [
+    'compound interest calculator',
+    'daily compound interest calculator',
+    'monthly compound interest calculator',
+    'continuous compound interest calculator',
+    'annual compound interest calculator',
+    '401k compound interest calculator',
+    'roth IRA compound interest calculator',
+    'cd compound interest calculator',
+    'bankrate compound interest calculator',
+    'nerdwallet compound interest calculator',
+    'compound interest calculator with withdrawals',
+    'compound interest calculator excel',
+    'compound interest calculator india',
+    'compound interest calculator retirement',
+  ],
   openGraph: {
-    title: 'Compound Interest Calculator - Calculate Investment Growth | CalcPortal Pro',
-    description: 'Free compound interest calculator to see how your investments grow over time. Calculate compound interest with our easy-to-use tool.',
+    title: 'Compound Interest Calculator',
+    description:
+      'Free online compound interest calculator to calculate daily, monthly, and annual growth. See how your investments grow with 401k, Roth IRA, CDs, and retirement compounding.',
     url: 'https://calcportalpro.com/calculators/compound-interest',
   },
   alternates: {
@@ -26,7 +42,7 @@ export default function CompoundInterestPage() {
             Compound Interest Calculator
           </h1>
           <p className="text-xl text-secondary-100 max-w-3xl mx-auto">
-            See how your investments grow over time with compound interest. Calculate the future value of your money with our free, easy-to-use calculator.
+            Calculate compound interest daily, monthly, or annually. See how your savings, 401k, Roth IRA, or CD investment can grow over time with our free online calculator.
           </p>
         </div>
 
@@ -34,8 +50,6 @@ export default function CompoundInterestPage() {
         <div className="max-w-4xl mx-auto">
           <CompoundInterestCalculator />
         </div>
-
-        <AdUnit adSlot="6578933501" />
 
         {/* Educational Content */}
         <div className="mt-16 max-w-4xl mx-auto">
@@ -63,7 +77,7 @@ export default function CompoundInterestPage() {
                 <li><strong>Principal Amount:</strong> The initial amount you invest</li>
                 <li><strong>Interest Rate:</strong> The annual interest rate (APR)</li>
                 <li><strong>Time Period:</strong> How long you keep your money invested</li>
-                <li><strong>Compounding Frequency:</strong> How often interest is calculated (daily, monthly, annually)</li>
+                <li><strong>Compounding Frequency:</strong> Daily, monthly, annually, or continuously</li>
               </ul>
               
               <h3 className="text-xl font-bold text-secondary-500 mt-6 mb-3">
@@ -75,8 +89,6 @@ export default function CompoundInterestPage() {
             </div>
           </div>
         </div>
-
-        <AdUnit adSlot="6578933502" />
       </div>
     </div>
   );
