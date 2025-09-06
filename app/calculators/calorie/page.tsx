@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import CalorieCalculator from "@/components/calculators/CalorieCalculator";
-import AdUnit from "@/components/ads/AdUnit";
+
 
 export const metadata: Metadata = {
   title: "Calorie Calculator",
@@ -93,9 +93,6 @@ export default function CaloriePage() {
             <CalorieCalculator />
           </div>
 
-          {/* Fixed Ad */}
-          <AdUnit adSlot="2674505389" />
-
           {/* Educational Content */}
           <div className="prose prose-lg max-w-none">
             <h2>Maintenance Calorie Calculator</h2>
@@ -119,9 +116,6 @@ export default function CaloriePage() {
               <strong>recipe calorie calculator</strong> to estimate calories in
               homemade or restaurant meals.
             </p>
-
-            {/* Responsive Ad */}
-            <AdUnit adSlot="1716130019" />
 
             <h2>Exercise Calorie Calculators</h2>
             <p>
