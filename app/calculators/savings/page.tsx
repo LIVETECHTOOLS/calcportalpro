@@ -1,23 +1,37 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeft, Calculator, PiggyBank, TrendingUp, Target } from 'lucide-react';
-import SavingsCalculator from '@/components/calculators/SavingsCalculator';
-import AdUnit from '@/components/ads/AdUnit';
+import { Metadata } from "next";
+import Link from "next/link";
+import {
+  ArrowLeft,
+  PiggyBank,
+  TrendingUp,
+  Target,
+} from "lucide-react";
+import SavingsCalculator from "@/components/calculators/SavingsCalculator";
 
 export const metadata: Metadata = {
-  title: 'Savings Calculator - Calculate Interest & Growth | CalcPortal Pro',
-  description: 'Free savings calculator to compute compound interest, savings growth, and financial goals. Plan your savings strategy with our accurate compound interest calculator.',
-  keywords: 'savings calculator, compound interest calculator, savings growth calculator, financial planning calculator, investment calculator, compound interest',
+  title:
+    "Savings Calculator",
+  description:
+    "Free Savings Calculator to compute compound interest, monthly contributions, and savings growth. Plan for retirement, college, and financial goals with our easy savings tool.",
+  keywords:
+    "savings calculator, retirement savings calculator, high yield savings calculator, college savings calculator, savings calculator with interest, simple savings calculator, compound savings calculator, monthly savings calculator, apy savings calculator, online savings calculator",
   openGraph: {
-    title: 'Savings Calculator - Calculate Interest & Growth | CalcPortal Pro',
-    description: 'Free savings calculator to compute compound interest, savings growth, and financial goals. Plan your savings strategy with our accurate compound interest calculator.',
-    type: 'website',
-    url: 'https://calcportalpro.com/calculators/savings',
+    title:
+      "Savings Calculator",
+    description:
+      "Free Savings Calculator to compute compound interest, monthly contributions, and savings growth. Plan for retirement, college, and financial goals with our easy savings tool.",
+    type: "website",
+    url: "https://calcportalpro.com/calculators/savings",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Savings Calculator - Calculate Interest & Growth | CalcPortal Pro',
-    description: 'Free savings calculator to compute compound interest, savings growth, and financial goals. Plan your savings strategy with our accurate compound interest calculator.',
+    card: "summary_large_image",
+    title:
+      "Savings Calculator",
+    description:
+      "Free Savings Calculator to compute compound interest, monthly contributions, and savings growth. Plan for retirement, college, and financial goals with our easy savings tool.",
+  },
+  alternates: {
+    canonical: "https://calcportalpro.com/calculators/savings",
   },
 };
 
@@ -27,8 +41,8 @@ export default function SavingsPage() {
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="container-max py-4">
-          <Link 
-            href="/calculators" 
+          <Link
+            href="/calculators"
             className="inline-flex items-center text-accent-600 hover:text-accent-700 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -46,8 +60,9 @@ export default function SavingsPage() {
               Savings Calculator
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Calculate compound interest, savings growth, and plan your financial future 
-              with our comprehensive savings calculator. Understand how time and interest work for you.
+              Calculate compound interest, monthly contributions, and savings
+              growth with our free savings calculator. See how time, interest,
+              and deposits work together to grow your money.
             </p>
           </div>
 
@@ -56,235 +71,157 @@ export default function SavingsPage() {
             <SavingsCalculator />
           </div>
 
-          <AdUnit adSlot="6578933461" />
-
           {/* Educational Content */}
           <div className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold text-secondary-600 mb-6">
               Understanding Savings and Compound Interest
             </h2>
-            
-            <p className="text-gray-700 mb-6">
-              Saving money is one of the most fundamental financial habits, but understanding 
-              how compound interest works can transform your approach to wealth building. 
-              Compound interest is often called the "eighth wonder of the world" because it 
-              allows your money to work for you, generating earnings on both your principal 
-              and accumulated interest.
+            <p>
+              Saving money is one of the most fundamental financial habits. The
+              true power lies in <strong>compound interest</strong>—your savings
+              earning returns not just on your initial deposit but also on the
+              accumulated interest over time.
             </p>
 
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              How Compound Interest Works
-            </h3>
-            <p className="text-gray-700 mb-6">
-              Compound interest occurs when you earn interest not only on your initial 
-              investment (principal) but also on the accumulated interest from previous periods. 
-              This creates a snowball effect where your savings grow faster over time, especially 
-              when you have a long investment horizon.
+            <h3>How Compound Interest Works</h3>
+            <p>
+              Compound interest creates a snowball effect where your savings
+              accelerate the longer you save. The formula is based on principal,
+              interest rate, compounding frequency, and time.
             </p>
 
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              Key Savings Concepts
-            </h3>
-            <ul className="list-disc pl-6 mb-6 text-gray-700">
-              <li><strong>Principal:</strong> The initial amount of money you invest or save</li>
-              <li><strong>Interest Rate:</strong> The percentage return on your investment</li>
-              <li><strong>Compounding Frequency:</strong> How often interest is calculated and added</li>
-              <li><strong>Time Horizon:</strong> The length of time your money is invested</li>
-              <li><strong>Regular Contributions:</strong> Additional money added periodically</li>
+            <h3>Key Savings Scenarios</h3>
+            <ul>
+              <li>
+                <strong>Retirement Savings:</strong> Build long-term wealth
+                through consistent contributions.
+              </li>
+              <li>
+                <strong>College Savings:</strong> Use 529 accounts or regular
+                savings to fund education.
+              </li>
+              <li>
+                <strong>High-Yield Savings:</strong> Maximize growth with higher
+                APY accounts.
+              </li>
+              <li>
+                <strong>Emergency Fund:</strong> Maintain liquidity while still
+                earning interest.
+              </li>
             </ul>
 
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              Types of Savings Accounts
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-200">
-                <h4 className="text-lg font-semibold text-secondary-600 mb-3">Traditional Savings</h4>
-                <p className="text-gray-700 mb-3">
-                  Basic savings accounts with low interest rates but high liquidity.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Interest rates: 0.01% - 0.50%</li>
-                  <li>• FDIC insured up to $250,000</li>
-                  <li>• Easy access to funds</li>
-                  <li>• No minimum balance requirements</li>
-                </ul>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-200">
-                <h4 className="text-lg font-semibold text-secondary-600 mb-3">High-Yield Savings</h4>
-                <p className="text-gray-700 mb-3">
-                  Online savings accounts offering higher interest rates than traditional banks.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Interest rates: 3% - 5%</li>
-                  <li>• FDIC insured</li>
-                  <li>• Online-only access</li>
-                  <li>• May have minimum balance requirements</li>
-                </ul>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-200">
-                <h4 className="text-lg font-semibold text-secondary-600 mb-3">Money Market Accounts</h4>
-                <p className="text-gray-700 mb-3">
-                  Hybrid accounts combining features of savings and checking accounts.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Interest rates: 2% - 4%</li>
-                  <li>• Check-writing privileges</li>
-                  <li>• Higher minimum balance requirements</li>
-                  <li>• Limited monthly transactions</li>
-                </ul>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-soft border border-gray-200">
-                <h4 className="text-lg font-semibold text-secondary-600 mb-3">Certificates of Deposit (CDs)</h4>
-                <p className="text-gray-700 mb-3">
-                  Time deposits with fixed interest rates and maturity dates.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• Interest rates: 3% - 5%</li>
-                  <li>• Fixed terms (3 months to 5 years)</li>
-                  <li>• Early withdrawal penalties</li>
-                  <li>• Higher rates for longer terms</li>
-                </ul>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              The Power of Compound Interest
-            </h3>
-            <div className="space-y-4 mb-8">
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                  Time is Your Greatest Ally
-                </h4>
-                <p className="text-gray-700">
-                  The longer you save, the more dramatic the effect of compound interest becomes. 
-                  Starting early, even with small amounts, can lead to significant wealth over time. 
-                  For example, saving $100 per month at 7% interest for 30 years results in over $122,000.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                  Regular Contributions Amplify Growth
-                </h4>
-                <p className="text-gray-700">
-                  Consistent monthly or annual contributions can dramatically increase your final 
-                  savings amount. Even small regular contributions can add up to substantial sums 
-                  over long periods due to compound interest.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                  Interest Rate Impact
-                </h4>
-                <p className="text-gray-700">
-                  Small differences in interest rates can have enormous impacts over time. 
-                  A 1% higher interest rate can result in significantly more money over decades 
-                  of saving and investing.
-                </p>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              Savings Strategies
-            </h3>
-            <ol className="list-decimal pl-6 mb-6 text-gray-700">
-              <li><strong>Start Early:</strong> Begin saving as soon as possible to maximize compound interest</li>
-              <li><strong>Automate Savings:</strong> Set up automatic transfers to make saving effortless</li>
-              <li><strong>Increase Contributions:</strong> Gradually increase your savings rate over time</li>
-              <li><strong>Diversify Accounts:</strong> Use different types of accounts for different goals</li>
-              <li><strong>Reinvest Interest:</strong> Allow interest to compound rather than withdrawing it</li>
-              <li><strong>Regular Reviews:</strong> Periodically assess and adjust your savings strategy</li>
+            <h3>Tips for Maximizing Savings</h3>
+            <ol>
+              <li>Start saving early to leverage time and compounding.</li>
+              <li>Automate monthly deposits to stay consistent.</li>
+              <li>Choose accounts with higher APYs when possible.</li>
+              <li>Reinvest interest instead of withdrawing it.</li>
+              <li>Increase contributions as your income grows.</li>
             </ol>
 
-            <div className="bg-accent-50 border-l-4 border-accent-500 p-6 rounded-lg my-8">
-              <h4 className="text-xl font-semibold text-accent-800 mb-3">
-                Pro Tip: The Rule of 72
-              </h4>
-              <p className="text-accent-700">
-                Use the Rule of 72 to quickly estimate how long it takes for your money to double: 
-                Divide 72 by your annual interest rate. For example, at 7% interest, your money 
-                will double in approximately 10.3 years (72 ÷ 7 = 10.3).
-              </p>
-            </div>
-
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              Common Savings Mistakes to Avoid
-            </h3>
-            <ul className="list-disc pl-6 mb-6 text-gray-700">
-              <li><strong>Not Starting Early:</strong> Delaying savings significantly reduces compound interest benefits</li>
-              <li><strong>Keeping Too Much in Low-Interest Accounts:</strong> Inflation can erode purchasing power</li>
-              <li><strong>Frequent Withdrawals:</strong> Interrupting compound growth reduces long-term returns</li>
-              <li><strong>Ignoring Inflation:</strong> Real returns are what matter for long-term goals</li>
-              <li><strong>Not Automating:</strong> Manual saving is less reliable than automatic transfers</li>
-              <li><strong>Focusing Only on Interest:</strong> Regular contributions often matter more than rates</li>
+            <h3>Common Questions</h3>
+            <ul>
+              <li>How much will my savings grow with monthly contributions?</li>
+              <li>What’s the difference between simple and compound interest?</li>
+              <li>
+                Which account is better for long-term savings: high-yield vs
+                traditional?
+              </li>
+              <li>How do I calculate savings for retirement?</li>
+              <li>How much should I save monthly to reach my goal?</li>
             </ul>
-
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              When to Use Different Savings Vehicles
-            </h3>
-            <div className="space-y-4 mb-8">
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                  Emergency Fund
-                </h4>
-                <p className="text-gray-700">
-                  Use high-yield savings accounts for emergency funds. You need quick access 
-                  to funds, but want to earn some interest while maintaining liquidity.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                  Short-Term Goals (1-3 years)
-                </h4>
-                <p className="text-gray-700">
-                  High-yield savings accounts or money market accounts are ideal for 
-                  short-term goals like vacations, down payments, or major purchases.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                  Medium-Term Goals (3-10 years)
-                </h4>
-                <p className="text-gray-700">
-                  Consider CDs or conservative investment options for medium-term goals, 
-                  balancing growth potential with capital preservation.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                  Long-Term Goals (10+ years)
-                </h4>
-                <p className="text-gray-700">
-                  For long-term goals like retirement, consider investment accounts that 
-                  offer higher growth potential, accepting some risk for higher returns.
-                </p>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-semibold text-secondary-600 mb-4">
-              Inflation and Real Returns
-            </h3>
-            <p className="text-gray-700 mb-6">
-              When planning your savings strategy, consider inflation's impact on purchasing power. 
-              If your savings earn 2% interest but inflation is 3%, you're actually losing 
-              purchasing power. This is why it's important to seek returns that at least keep 
-              pace with inflation, and ideally exceed it for long-term growth.
-            </p>
-
-            <p className="text-gray-700 mb-8">
-              Understanding compound interest and developing a disciplined savings strategy 
-              are fundamental to building long-term wealth. Use our savings calculator to 
-              explore different scenarios, understand the impact of time and interest rates, 
-              and create a savings plan that aligns with your financial goals. Remember, 
-              the best time to start saving was yesterday, and the second-best time is today.
-            </p>
           </div>
         </div>
-
-        <AdUnit adSlot="6578933462" />
       </div>
+
+      {/* Structured Data: FAQ + HowTo */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "How much will my savings grow with monthly contributions?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Your savings growth depends on your contribution amount, interest rate, and time horizon. Our savings calculator shows exactly how much your balance will grow.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "What’s the difference between simple and compound interest?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Simple interest is calculated only on the original principal. Compound interest is calculated on both the principal and previously earned interest, leading to faster growth.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "Which account is better for long-term savings: high-yield vs traditional?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "High-yield savings accounts typically offer much higher interest rates, making them better for long-term growth compared to traditional savings accounts.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "How do I calculate savings for retirement?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Retirement savings calculations depend on your target amount, expected rate of return, and years until retirement. Use our savings calculator to plan your contributions.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "How much should I save monthly to reach my goal?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "The required monthly savings depend on your goal amount, interest rate, and time available. Enter your details in the calculator to see personalized results.",
+                  },
+                },
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              name: "How to Calculate Savings with Compound Interest",
+              description:
+                "Step-by-step guide to calculating savings growth using compound interest.",
+              step: [
+                {
+                  "@type": "HowToStep",
+                  name: "Step 1: Determine your inputs",
+                  text: "Collect your starting balance, monthly contribution, interest rate, and time horizon.",
+                },
+                {
+                  "@type": "HowToStep",
+                  name: "Step 2: Adjust for compounding",
+                  text: "Divide the annual interest rate by the compounding frequency (e.g., monthly = 12).",
+                },
+                {
+                  "@type": "HowToStep",
+                  name: "Step 3: Apply the formula",
+                  text: "Use the formula: A = P(1 + r/n)^(nt) + PMT × [((1 + r/n)^(nt) - 1) / (r/n)], where A = future value, P = principal, r = annual rate, n = periods per year, t = years, PMT = contribution.",
+                },
+                {
+                  "@type": "HowToStep",
+                  name: "Step 4: Calculate future value",
+                  text: "Plug in your values to estimate the final savings balance.",
+                },
+                {
+                  "@type": "HowToStep",
+                  name: "Step 5: Use the calculator for accuracy",
+                  text: "Our free savings calculator automatically applies the formula to show your savings growth instantly.",
+                },
+              ],
+            },
+          ]),
+        }}
+      />
     </div>
   );
 }
