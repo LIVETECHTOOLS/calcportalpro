@@ -12,7 +12,7 @@ const blogPosts = [
     author: 'Sarah Collins',
     readTime: '6 min',
     image: '/images/blog/emergency-fund.jpg',
-    href: '/blog/emergency-fund',
+    href: '/blog/how-to-start-emergency-fund',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const blogPosts = [
     author: 'CalcPortal Pro Team',
     readTime: '8 min',
     image: '/images/blog/high-yield-savings.jpg',
-    href: '/blog/high-yield-savings',
+    href: '/blog/high-yield-savings-account-guide',
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const blogPosts = [
     author: 'CalcPortal Pro Team',
     readTime: '7 min',
     image: '/images/blog/house-afford.jpg',
-    href: '/blog/house-afford',
+    href: '/blog/how-much-house-can-i-afford',
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const blogPosts = [
     author: 'CalcPortal Pro Team',
     readTime: '9 min',
     image: '/images/blog/cd-rates-2025.jpg',
-    href: '/blog/cd-rates-2025',
+    href: '/blog/cd-rates-guide-2025',
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ const blogPosts = [
     author: 'CalcPortal Pro Team',
     readTime: '8 min',
     image: '/images/blog/canada-fpt-gst-2025.jpg',
-    href: '/blog/canada-fpt-gst-2025',
+    href: '/blog/canada-fpt-gst-payment-dates-2025',
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const blogPosts = [
     author: 'Ziblim Abdulai',
     readTime: '5 min',
     image: '/images/blog/types-of-loans.jpg',
-    href: '/blog/types-of-loans',
+    href: '/blog/understanding-different-types-loans',
   },
 ];
 
