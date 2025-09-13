@@ -16,14 +16,16 @@ export default function Header() {
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
-      <div className="container-max">
+      <div className="max-w-screen-xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">C</span>
             </div>
-            <span className="text-xl font-bold text-secondary-500">CalcPortal Pro</span>
+            <span className="text-xl font-bold text-secondary-500">
+              CalcPortal Pro
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
