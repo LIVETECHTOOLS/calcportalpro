@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import AdUnit from '@/components/ads/AdUnit'
 
 export const metadata: Metadata = {
-  title: 'Zero-Based Budgeting: Process, Drawbacks, and When to Use It (2025 Guide)',
+  title: 'think about the process of zero-based budgeting. what might one drawback of this method be?',
   description: 'Think about the process of zero-based budgeting. What might one drawback of this method be? Learn the steps, advantages, drawbacks, and comparisons with traditional budgeting.',
   keywords: 'zero-based budgeting, zero-based budgeting drawbacks, process of zero-based budgeting, disadvantages of zero-based budgeting, traditional vs zero-based budgeting',
   openGraph: {
