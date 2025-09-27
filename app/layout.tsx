@@ -84,8 +84,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google:
-      process.env.GOOGLE_VERIFICATION_CODE || "your-google-verification-code",
+    google: "aacOslrxzVHy5P1E8enc82k2z6RpV68FTiDeG_QYunk",
   },
   other: {
     "msapplication-TileColor": "#2563eb",
@@ -111,6 +110,12 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         />
         <meta name="format-detection" content="telephone=no" />
+
+        {/* ✅ Impact Verification */}
+        <meta
+          name="impact-site-verification"
+          content="9744be3e-1e96-4922-8a31-80877fb2a027"
+        />
 
         {/* Favicons */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -140,10 +145,10 @@ export default function RootLayout({
         <meta name="msapplication-TileImage" content="/favicon-32x32.png" />
         <meta name="theme-color" content="#2563eb" />
 
-        {/* Google site verification */}
+        {/* ✅ Google site verification */}
         <meta
           name="google-site-verification"
-          content="your-google-verification-code"
+          content="aacOslrxzVHy5P1E8enc82k2z6RpV68FTiDeG_QYunk"
         />
         <meta name="google" content="notranslate" />
 

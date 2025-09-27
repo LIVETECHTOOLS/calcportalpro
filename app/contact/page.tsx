@@ -183,43 +183,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* FAQ Quick Links */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-secondary-500 mb-6">Quick Help</h2>
-              
-              <div className="space-y-4">
-                <div className="border-l-4 border-primary-500 pl-4">
-                  <h3 className="font-semibold text-secondary-500 mb-1">Calculator Not Working?</h3>
-                  <p className="text-secondary-100 text-sm mb-2">
-                    Check our troubleshooting guide for common issues and solutions.
-                  </p>
-                  <a href="/faq" className="text-primary-500 hover:text-primary-600 text-sm font-medium">
-                    View FAQ →
-                  </a>
-                </div>
-
-                <div className="border-l-4 border-primary-500 pl-4">
-                  <h3 className="font-semibold text-secondary-500 mb-1">Need a New Calculator?</h3>
-                  <p className="text-secondary-100 text-sm mb-2">
-                    Suggest a new calculator tool you'd like to see on our platform.
-                  </p>
-                  <a href="/suggestions" className="text-primary-500 hover:text-primary-600 text-sm font-medium">
-                    Make a Suggestion →
-                  </a>
-                </div>
-
-                <div className="border-l-4 border-primary-500 pl-4">
-                  <h3 className="font-semibold text-secondary-500 mb-1">Found a Bug?</h3>
-                  <p className="text-secondary-100 text-sm mb-2">
-                    Help us improve by reporting any issues you encounter.
-                  </p>
-                  <a href="/bug-report" className="text-primary-500 hover:text-primary-600 text-sm font-medium">
-                    Report Bug →
-                  </a>
-                </div>
-              </div>
-            </div>
-
             {/* Office Location */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h2 className="text-2xl font-bold text-secondary-500 mb-6">Office Location</h2>
