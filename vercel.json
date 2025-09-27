@@ -3,5 +3,11 @@
     "env": {
       "NODE_VERSION": "18"
     }
-  }
+  },
+  "routes": [
+    {
+      "src": "/vercel.json",
+      "status": 404
+    }
+  ]
 }
