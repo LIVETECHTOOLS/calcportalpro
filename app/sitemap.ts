@@ -1,11 +1,12 @@
 import { MetadataRoute } from "next";
-import { getLastModified } from "@/lib/getLastModified";
 import fs from "fs";
 import path from "path";
+import { getLastModified } from "@/lib/getLastModified";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://calcportalpro.com";
 
+  // Static pages
   const staticPages = [
     { url: "/", priority: 1.0, changefreq: "daily" },
     { url: "/about", priority: 0.7, changefreq: "weekly" },
@@ -15,41 +16,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "/disclaimer", priority: 0.3, changefreq: "yearly" },
   ];
 
-  const calculatorPages = [
-    { url: "/calculators/loan-calculator", priority: 0.9, changefreq: "weekly" },
-    { url: "/calculators/mortgage-calculator", priority: 0.9, changefreq: "weekly" },
-    { url: "/calculators/investment-calculator", priority: 0.9, changefreq: "weekly" },
-    { url: "/calculators/retirement-calculator", priority: 0.9, changefreq: "weekly" },
-  ];
+  // Blog pages -> read folders inside /app/blog
+  const blogDir = path.join(process.cwd(), "app/blog");
+  let blogPages: { url: string; priority: number; changefreq: "monthly" }[] = [];
 
-  const blogDir = path.join(process.cwd(), "components/blog");
-  let blogPages: { url: string; priority: number; changefreq: "daily" | "weekly" | "monthly" | "yearly" }[] = [];
+  if (fs.existsSync(blogDir)) {
+    const blogSlugs = fs
+      .readdirSync(blogDir, { withFileTypes: true })
+      .filter((dirent) => dirent.isDirectory())
+      .map((dirent) => dirent.name);
 
-  try {
-    const collectPosts = (dir: string, prefix = ""): string[] => {
-      const entries = fs.readdirSync(dir, { withFileTypes: true });
-      return entries.flatMap((entry) => {
-        const fullPath = path.join(dir, entry.name);
-        const slug = prefix ? `${prefix}/${entry.name}` : entry.name;
-
-        if (entry.isDirectory()) {
-          return collectPosts(fullPath, slug);
-        }
-        return [];
-      });
-    };
-
-    const posts = collectPosts(blogDir);
-    blogPages = posts.map((slug) => ({
+    blogPages = blogSlugs.map((slug) => ({
       url: `/blog/${slug}`,
       priority: 0.8,
       changefreq: "monthly",
     }));
-  } catch (err) {
-    console.warn("⚠️ Could not read blog directory:", err);
   }
 
-  const pages = [...staticPages, ...calculatorPages, ...blogPages];
+  // Calculator pages -> read folders inside /app/calculators
+  const calcDir = path.join(process.cwd(), "app/calculators");
+  let calculatorPages: { url: string; priority: number; changefreq: "weekly" }[] = [];
+
+  if (fs.existsSync(calcDir)) {
+    const calcSlugs = fs
+      .readdirSync(calcDir, { withFileTypes: true })
+      .filter((dirent) => dirent.isDirectory())
+      .map((dirent) => dirent.name);
+
+    calculatorPages = calcSlugs.map((slug) => ({
+      url: `/calculators/${slug}`,
+      priority: 0.9,
+      changefreq: "weekly",
+    }));
+  }
+
+  // Combine all
+  const pages = [...staticPages, ...blogPages, ...calculatorPages];
 
   return pages.map((page) => ({
     url: `${baseUrl}${page.url}`,
