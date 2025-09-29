@@ -116,8 +116,9 @@ export default function SmartCreditReview2025() {
               Home
             </a>{" "}
             ›{" "}
-            <a href="/reviews" className="hover:underline">
-              Reviews
+
+            <a href="/blog" className="hover:underline">
+              Blog
             </a>{" "}
             › <span>SmartCredit Review 2025</span>
           </nav>
