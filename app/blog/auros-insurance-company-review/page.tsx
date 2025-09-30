@@ -1,4 +1,3 @@
-// app/blog/auros-insurance-company-review/page.tsx
 import React from "react";
 
 export const metadata = {
