@@ -214,171 +214,171 @@ export default function AurasInsuranceReview2025() {
           </a>
         </div>
 
-        {/* Coverage */}
-        <h2 className="text-3xl font-bold text-teal-700 mt-12 mb-4">
-          What Does Auras Insurance Cover?
-        </h2>
+        {/* Expanded Sections */}
+        <h2>What Does Auras Insurance Cover?</h2>
         <p>
-          Travel insurance from Auras generally includes emergency medical care,
-          evacuation, repatriation, and trip protection. Most plans are tailored
-          for short-term stays abroad and include embassy-compliant language for
-          Schengen visa applications. Depending on the plan, coverage can also
-          extend to trip interruption, baggage loss, and accidental death
-          benefits.
+          Auras Insurance focuses on travel medical insurance, which is a
+          critical requirement for Schengen visas and for travelers looking for
+          peace of mind abroad. Coverage highlights include:
         </p>
-
         <ul>
-          <li><strong>Emergency Medical Treatment</strong>: Hospitalization, doctor visits, and prescriptions abroad.</li>
-          <li><strong>Emergency Evacuation</strong>: Transport to the nearest qualified medical facility.</li>
-          <li><strong>Repatriation</strong>: Return of remains in case of death.</li>
-          <li><strong>Travel Assistance</strong>: 24/7 helplines for emergencies.</li>
-          <li><strong>Optional Add-ons</strong>: Baggage loss, trip cancellation, adventure sports coverage.</li>
+          <li>
+            <strong>Emergency Medical Expenses:</strong> Doctor visits,
+            hospitalization, surgeries, and prescription drugs.
+          </li>
+          <li>
+            <strong>Emergency Evacuation:</strong> Transport to the nearest
+            adequate medical facility when local hospitals can’t provide care.
+          </li>
+          <li>
+            <strong>Repatriation of Remains:</strong> Coverage for transport
+            back to your home country in the unfortunate event of death.
+          </li>
+          <li>
+            <strong>Trip Interruption:</strong> Partial reimbursement for
+            non-refundable trip costs if you must return home early.
+          </li>
+          <li>
+            <strong>Baggage Coverage:</strong> Limited reimbursement for lost or
+            delayed luggage.
+          </li>
         </ul>
 
-        {/* Key Takeaways */}
-        <div className="bg-teal-50 border-l-4 border-teal-600 p-6 rounded-xl shadow-sm my-10">
-          <h2 className="text-2xl font-semibold mb-3">Key Takeaways</h2>
-          <ul className="list-disc pl-6">
-            <li>Auras provides <strong>Schengen visa-compliant coverage</strong> accepted by embassies.</li>
-            <li>Pricing starts around <strong>$1.50 per day</strong> for basic coverage.</li>
-            <li>Instant <strong>PDF documents</strong> for visa applications.</li>
-            <li>Coverage available for <strong>tourists, students, nomads, and groups</strong>.</li>
-            <li>Policies issued by reputable international underwriters.</li>
-          </ul>
-        </div>
-
-        {/* Audience */}
-        <h2 className="text-3xl font-bold text-teal-700 mt-12 mb-4">
-          Who Should Consider Auras Insurance?
-        </h2>
-        <ul>
-          <li>Tourists seeking affordable short-term medical coverage abroad</li>
-          <li>Students needing Schengen visa insurance for study programs</li>
-          <li>Digital nomads requiring flexible multi-trip plans</li>
-          <li>Travelers needing embassy-ready documents instantly</li>
-          <li>Families seeking emergency medical protection during vacations</li>
-        </ul>
-
-        {/* Pricing */}
-        <h2 className="text-3xl font-bold text-teal-700 mt-12 mb-4">Pricing</h2>
+        <h2>Schengen Visa Compliance</h2>
         <p>
-          Auras Insurance is competitively priced compared to global providers.
-          Daily rates start at <strong>~$1.50/day</strong> for basic medical
-          coverage, with Schengen visa-compliant plans priced slightly higher.
-          Multi-trip and annual coverage options are also available for frequent
-          travelers. Most plans allow you to generate embassy-ready certificates
-          instantly after purchase.
+          For travelers applying for a Schengen visa, insurance must meet
+          embassy requirements: a minimum of €30,000 coverage, no deductible, and
+          validity across all 27 Schengen countries. Auras Insurance policies
+          are designed to meet or exceed these requirements, making them
+          embassy-compliant. Policyholders receive instant PDF documents
+          formatted for visa applications.
         </p>
 
-        {/* Rotated CTA */}
+        <h2>Pricing and Affordability</h2>
+        <p>
+          Pricing varies based on traveler age, trip duration, and coverage
+          amount. For example:
+        </p>
+        <ul>
+          <li>7-day trip to France for a 30-year-old: around $18–$25.</li>
+          <li>30-day trip for a 40-year-old: around $45–$65.</li>
+          <li>90-day Schengen stay: typically $120–$180.</li>
+        </ul>
+        <p>
+          Compared to competitors like AXA and Allianz, Auras often comes out
+          more affordable for short and medium-term trips, while still meeting
+          embassy standards.
+        </p>
+
+        <h2>Legitimacy & Underwriters</h2>
+        <p>
+          One of the biggest concerns travelers have is whether Auras Insurance
+          is legitimate. The company partners with established underwriters and
+          global assistance networks. Policies are backed by insurers licensed
+          to operate internationally, ensuring that claims are processed
+          reliably. Always double-check the underwriter’s name on your policy
+          documents.
+        </p>
+
+        <h2>Pros and Cons</h2>
+        <h3>Pros</h3>
+        <ul>
+          <li>Schengen visa compliant documents delivered instantly.</li>
+          <li>Competitive pricing compared to major competitors.</li>
+          <li>Strong coverage for medical, evacuation, and repatriation.</li>
+          <li>Simple online purchase process with embassy-ready PDFs.</li>
+        </ul>
+        <h3>Cons</h3>
+        <ul>
+          <li>Limited trip cancellation benefits compared to premium insurers.</li>
+          <li>Brand is less well-known than Allianz or AXA.</li>
+          <li>Coverage options vary by nationality and destination.</li>
+        </ul>
+
+        <h2>Comparison with Competitors</h2>
+        <table className="table-auto border-collapse border border-gray-300 w-full text-sm">
+          <thead>
+            <tr className="bg-gray-100">
+              <th className="border p-2">Feature</th>
+              <th className="border p-2">Auras</th>
+              <th className="border p-2">AXA</th>
+              <th className="border p-2">Allianz</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border p-2">Schengen Visa Compliance</td>
+              <td className="border p-2">Yes</td>
+              <td className="border p-2">Yes</td>
+              <td className="border p-2">Yes</td>
+            </tr>
+            <tr>
+              <td className="border p-2">Price (30 days, age 30)</td>
+              <td className="border p-2">$45–$55</td>
+              <td className="border p-2">$60–$70</td>
+              <td className="border p-2">$65–$75</td>
+            </tr>
+            <tr>
+              <td className="border p-2">Emergency Evacuation</td>
+              <td className="border p-2">Included</td>
+              <td className="border p-2">Included</td>
+              <td className="border p-2">Included</td>
+            </tr>
+            <tr>
+              <td className="border p-2">Trip Cancellation</td>
+              <td className="border p-2">Basic</td>
+              <td className="border p-2">Strong</td>
+              <td className="border p-2">Strong</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>FAQs</h2>
+        <h3>Is Auras Insurance good for long-term stays?</h3>
+        <p>
+          Yes. Auras offers coverage up to 1 year for travelers staying abroad
+          for extended periods. Policies can often be renewed without returning
+          home.
+        </p>
+        <h3>Does Auras cover COVID-19?</h3>
+        <p>
+          Most current Auras policies include COVID-19 coverage for testing,
+          treatment, and hospitalization, provided it is not a pre-existing
+          condition.
+        </p>
+        <h3>Can I buy Auras Insurance after leaving my home country?</h3>
+        <p>
+          Some plans allow purchase after departure, though premiums may be
+          higher. Check eligibility before buying if you’re already abroad.
+        </p>
+        <h3>Does Auras Insurance reimburse visa rejection fees?</h3>
+        <p>
+          No, travel insurance generally does not cover visa application fees.
+          However, the embassy-compliant documents increase your chances of visa
+          approval.
+        </p>
+
+        <h2>Final Verdict</h2>
+        <p>
+          Auras Insurance is a strong choice for travelers in 2025 who need
+          embassy-compliant coverage at an affordable price. While not as famous
+          as Allianz or AXA, Auras balances reliability and affordability,
+          especially for Schengen visa applicants, students, and tourists. If
+          you want peace of mind without overpaying, Auras Insurance delivers
+          excellent value.
+        </p>
+
+        {/* Final CTA */}
         <div className="text-center my-6">
           <a
-            href={getRotatedLink(2)}
+            href={getRotatedLink(3)}
             target="_blank"
             rel="nofollow sponsored noopener"
-            className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold shadow hover:bg-indigo-700 transition"
+            className="inline-block bg-green-600 text-white px-6 py-3 rounded-xl font-semibold shadow hover:bg-green-700 transition"
           >
-            Compare Short-Term Travel Plans
+            Compare Plans & Buy Embassy-Ready Coverage
           </a>
         </div>
-
-        {/* Legitimacy */}
-        <h2 className="text-3xl font-bold text-teal-700 mt-12 mb-4">
-          Is Auras Insurance Legit?
-        </h2>
-        <p>
-          Yes. Auras Insurance works with established underwriters and brokers
-          who provide legally valid, embassy-compliant insurance. The brand is
-          primarily a reseller platform but the policies are issued by licensed
-          insurance providers. Always review your certificate of insurance to
-          confirm the underwriter.
-        </p>
-
-        {/* Pros & Cons */}
-        <h2 className="text-3xl font-bold text-teal-700 mt-12 mb-4">
-          Pros & Cons of Auras Insurance
-        </h2>
-        <div className="grid md:grid-cols-2 gap-6 my-6">
-          <div className="bg-green-50 p-6 rounded-xl shadow">
-            <h3 className="font-semibold text-green-700 mb-2">Pros</h3>
-            <ul className="list-disc pl-6">
-              <li>Instant embassy-ready PDF documents</li>
-              <li>Affordable pricing starting at $1.50/day</li>
-              <li>Coverage options for tourists, students, and nomads</li>
-              <li>Available in multiple currencies and regions</li>
-            </ul>
-          </div>
-          <div className="bg-red-50 p-6 rounded-xl shadow">
-            <h3 className="font-semibold text-red-700 mb-2">Cons</h3>
-            <ul className="list-disc pl-6">
-              <li>Coverage varies depending on underwriter</li>
-              <li>Some plans exclude pre-existing conditions</li>
-              <li>Limited brand recognition compared to global players</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Final Verdict */}
-        <h2 className="text-3xl font-bold text-teal-700 mt-12 mb-4">
-          Final Verdict: Should You Use Auras Insurance in 2025?
-        </h2>
-        <p>
-          If you are traveling to Europe or anywhere requiring embassy-ready
-          documents, Auras Insurance is a reliable and cost-effective choice. It
-          offers quick, compliant policies for Schengen visa applications,
-          competitive pricing for short-term coverage, and flexible options for
-          students and nomads. While it may not have the brand prestige of major
-          global insurers, its value lies in affordability and convenience.
-        </p>
-
-        {/* Evergreen CTA */}
-        <div className="text-center my-8">
-          <a
-            href={evergreenLink}
-            target="_blank"
-            rel="nofollow sponsored noopener"
-            className="inline-block bg-teal-700 text-white px-8 py-4 rounded-2xl font-bold shadow-lg hover:bg-teal-800 transition"
-          >
-            Buy Embassy-Ready Travel Insurance
-          </a>
-        </div>
-
-        {/* FAQ Section */}
-        <section className="my-16">
-          <h2 className="text-3xl font-bold text-teal-700 mb-6">
-            Frequently Asked Questions (FAQs)
-          </h2>
-          <div className="space-y-6">
-            <div>
-              <h3 className="font-semibold">Is Auras Insurance legit?</h3>
-              <p>
-                Yes, policies are backed by established underwriters. Always
-                verify the certificate of insurance.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold">Does Auras cover COVID-19?</h3>
-              <p>
-                Some plans include COVID-19 coverage for emergency medical care.
-                Review policy terms carefully before purchase.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold">How quickly can I get my documents?</h3>
-              <p>
-                Most plans deliver embassy-ready PDF certificates instantly
-                after checkout.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold">Does Auras offer long-term coverage?</h3>
-              <p>
-                Yes, multi-trip and annual plans are available for frequent
-                travelers and digital nomads.
-              </p>
-            </div>
-          </div>
-        </section>
 
         <section className="text-sm text-gray-600 mt-8">
           <p>
@@ -389,4 +389,14 @@ export default function AurasInsuranceReview2025() {
       </article>
 
       {/* Invisible pixel */}
-      <div style={{ display: "none
+      <div style={{ display: "none" }}>
+        <img
+          src="https://www.tqlkg.com/image-101546908-17117387"
+          width="1"
+          height="1"
+          alt=""
+        />
+      </div>
+    </main>
+  );
+}
