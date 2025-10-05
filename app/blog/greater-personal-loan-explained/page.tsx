@@ -42,7 +42,6 @@ const jsonLdBreadcrumb = {
     { "@type": "ListItem", position: 3, name: "Greater Personal Loan Explained", item: pageUrl }
   ]
 };
-
 const jsonLdFAQ = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
