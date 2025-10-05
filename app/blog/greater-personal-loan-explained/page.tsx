@@ -1,4 +1,3 @@
-// app/blog/greater-personal-loan-explained/page.tsx
 import React from "react";
 
 export const metadata = {
@@ -110,7 +109,7 @@ export default function GreaterPersonalLoanExplained() {
         {/* Top CTA */}
         <div className="text-center my-6">
           <a
-            href="/calculators/loan-calculator"
+            href="/calculators/loan"
             className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold shadow hover:bg-indigo-700 transition"
             rel="noopener noreferrer"
           >
@@ -118,7 +117,6 @@ export default function GreaterPersonalLoanExplained() {
           </a>
         </div>
 
-        {/* Introduction */}
         <section>
           <h2 className="text-2xl font-bold text-emerald-700 mt-6">What people mean by a “Greater Personal Loan”</h2>
           <p>
@@ -135,7 +133,6 @@ export default function GreaterPersonalLoanExplained() {
           </p>
         </section>
 
-        {/* Deep dive sections */}
         <section>
           <h2 className="text-2xl font-bold text-emerald-700 mt-8">Types of loans that can deliver a greater amount</h2>
           <p>
@@ -247,7 +244,7 @@ export default function GreaterPersonalLoanExplained() {
         {/* CTA mid-article */}
         <div className="text-center my-8">
           <a
-            href="/calculators/loan-calculator"
+            href="/calculators/loan"
             className="inline-block bg-emerald-600 text-white px-6 py-3 rounded-xl font-semibold shadow hover:bg-emerald-700 transition"
             rel="noopener noreferrer"
           >
@@ -338,126 +335,24 @@ export default function GreaterPersonalLoanExplained() {
             <li>Current utility & address verification if required</li>
           </ol>
           <p className="mt-3">
-            Having clean, organized documentation speeds underwriting and increases your chance of higher offers.
+            Having everything ready can cut approval time from days to hours.
           </p>
         </section>
 
-        <section>
-          <h2 className="text-2xl font-bold text-emerald-700 mt-8">Repayment strategies for large loans (how to keep cost down)</h2>
-          <ul>
-            <li><strong>Choose shorter terms if you can</strong> — paying more monthly reduces total interest.</li>
-            <li><strong>Make biweekly payments</strong> — this effectively adds one extra payment per year, reducing interest.</li>
-            <li><strong>Use windfalls to lower principal</strong> — apply bonuses or tax refunds to principal to shorten term and reduce interest expense.</li>
-            <li><strong>Refinance if rates fall</strong> — re-shop the market after 12–18 months if credit improves or rates drop.</li>
-          </ul>
-        </section>
-
-        {/* Key Takeaways box */}
-        <aside className="bg-emerald-50 border-l-4 border-emerald-600 p-6 rounded-xl my-10">
-          <h3 className="text-xl font-semibold mb-3">Key Takeaways</h3>
-          <ul className="list-disc pl-6">
-            <li>"Greater personal loan" means a larger or better personal loan — no single product exists by that name.</li>
-            <li>Improve credit score, lower DTI, and document income to qualify for higher unsecured limits.</li>
-            <li>Secured loans and home equity options provide the highest borrowing power at lower APRs.</li>
-            <li>Always compare APR, fees, and term length — the cheapest loan depends on your situation.</li>
-            <li>Watch for scams; never pay large upfront fees and confirm lender credentials.</li>
-          </ul>
-          <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-white p-4 rounded shadow">
-              <h4 className="font-semibold text-green-700">Pros</h4>
-              <ul className="pl-4 list-disc">
-                <li>Can unlock necessary funds quickly</li>
-                <li>Many lender options to shop</li>
-                <li>Secured options reduce APR</li>
-              </ul>
-            </div>
-            <div className="bg-white p-4 rounded shadow">
-              <h4 className="font-semibold text-red-700">Cons</h4>
-              <ul className="pl-4 list-disc">
-                <li>Higher limits can mean higher monthly payments</li>
-                <li>Secured loans risk your collateral</li>
-                <li>Bad credit limits your options</li>
-              </ul>
-            </div>
-          </div>
-        </aside>
-
-        <section>
-          <h2 className="text-2xl font-bold text-emerald-700 mt-8">Real-world examples & case studies</h2>
-
-          <h3 className="text-xl font-semibold mt-4">Case: Emily — Debt consolidation without home equity</h3>
-          <p>
-            Emily had $38k in high-interest credit card debt (avg APR 22%). With a 720 FICO and stable income, she qualified for a $40k unsecured personal loan at 9.8% APR for 5 years. Her monthly payment dropped and total interest over 5 years was ~ $10k less than paying minimums on cards.
-          </p>
-
-          <h3 className="text-xl font-semibold mt-4">Case: Marcus — Large renovation loan using a secured personal loan</h3>
-          <p>
-            Marcus had a strong income but limited home equity. He used his investment account as collateral to secure a $75k loan at 6.5% APR—cheaper than a contractor financing plan and faster than applying for a HELOC.
-          </p>
-
-          <p>
-            These examples show how smart product choice plus good documentation can deliver a greater loan with manageable cost.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-bold text-emerald-700 mt-8">Decision checklist: should you pursue a greater personal loan?</h2>
-          <p>Ask yourself:</p>
-          <ul>
-            <li>Do I need this money now or can I save and avoid interest?</li>
-            <li>Will the monthly payment fit comfortably within my budget?</li>
-            <li>Is there a cheaper collateralized option like a HELOC I can reasonably use?</li>
-            <li>Do I understand all fees and prepayment penalties?</li>
-            <li>Have I shopped rates from multiple lenders and prequalified where possible?</li>
-          </ul>
-          <p>
-            If you can answer these confidently and the loan meaningfully improves your financial situation (consolidates expensive debt, funds income-producing improvements, etc.), then a greater personal loan can be the right move.
-          </p>
-        </section>
-
-        {/* CTA & final verdict */}
-        <div className="text-center my-8">
+        {/* Bottom CTA */}
+        <div className="text-center mt-12">
           <a
-            href="/calculators/loan-calculator"
-            className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold shadow-lg hover:bg-indigo-700 transition"
-            rel="noopener noreferrer"
+            href="/calculators/loan"
+            className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold shadow hover:bg-indigo-700 transition"
           >
-            Calculate Your Ideal Loan
+            Compare Personal Loan Scenarios
           </a>
         </div>
 
-        <section>
-          <h2 className="text-2xl font-bold text-emerald-700 mt-8">Final verdict — Is a greater personal loan right for you?</h2>
+        <footer className="mt-12 text-sm text-gray-600">
           <p>
-            A “greater personal loan” is achievable if you prepare properly: improve credit, reduce DTI, and choose the right lender or secured product. For many borrowers, unsecured loans up to $50k are realistic with strong credit; homeowners and those with collateral can access much more at better rates. Always base your choice on total cost (APR and fees), monthly affordability, and long-term financial goals.
+            © {new Date().getFullYear()} {siteName}. This article is for informational purposes only and does not constitute financial advice. Always verify rates and terms directly with your lender before applying.
           </p>
-        </section>
-
-        {/* FAQ block */}
-        <section className="my-10">
-          <h2 className="text-2xl font-bold text-emerald-700">Frequently Asked Questions</h2>
-
-          <div className="mt-4">
-            <h3 className="font-semibold">What is a 'greater personal loan'?</h3>
-            <p>It's a colloquial way people search for larger or better personal loan offers — not a specific product.</p>
-          </div>
-
-          <div className="mt-4">
-            <h3 className="font-semibold">How do I check prequalified offers without harming my credit?</h3>
-            <p>Use lenders that offer soft-pull prequalification; it shows potential rates and amounts without a hard credit inquiry.</p>
-          </div>
-
-          <div className="mt-4">
-            <h3 className="font-semibold">Can I refinance a greater personal loan later?</h3>
-            <p>Yes. If your credit or rates improve, refinancing may lower your APR or extend the term. Do the math to ensure refinancing savings exceed fees.</p>
-          </div>
-        </section>
-
-        <footer className="text-sm text-gray-600 mt-8">
-          <p>
-            <strong>Disclosure:</strong> This article is for informational purposes only and does not constitute financial advice. Always confirm terms with lenders and consider consulting a financial advisor for major borrowing decisions.
-          </p>
-          <p className="mt-2">Published by {siteName} — helping you make smarter financial choices.</p>
         </footer>
       </article>
     </main>
