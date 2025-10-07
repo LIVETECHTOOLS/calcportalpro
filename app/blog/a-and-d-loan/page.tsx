@@ -42,7 +42,7 @@ const jsonLdBreadcrumb = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://calcportalpro.com/" },
     { "@type": "ListItem", position: 2, name: "Blog", item: "https://calcportalpro.com/blog" },
-    { "@type": "ListItem", position: 3, name: "Loans", item: "https://calcportalpro.com/blog/understanding-different-types-loans" },
+    { "@type": "ListItem", position: 3, name: "Loans", item: "https://calcportalpro.com/blog?category=Loans" },
     { "@type": "ListItem", position: 4, name: "A&D Loan Explained", item: pageUrl },
   ],
 };
