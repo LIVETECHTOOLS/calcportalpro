@@ -1,320 +1,385 @@
-// app/blog/can-i-get-a-mortgage-with-unfiled-taxes/page.tsx
+"use client";
+
 import React from "react";
+import Script from "next/script";
+import Image from "next/image";
+import Link from "next/link";
 
+// ✅ SEO metadata for Next.js
 export const metadata = {
-  title: "Can I Get a Mortgage with Unfiled Taxes? (2025 Guide)",
+  title: "Can I Get a Mortgage with Unfiled Taxes in 2025? | CalcPortal Pro",
   description:
-    "Can you get a mortgage if you have unfiled taxes? This 2025 guide explains lender requirements, timelines, documentation, real-world case studies, IRS transcript steps, and how to use tax filing help strategically.",
-  keywords: [
-    "can i get a mortgage with unfiled taxes",
-    "mortgage unfiled taxes",
-    "mortgage with unpaid taxes",
-    "liberty tax mortgage help",
-    "mortgage readiness 2025",
-  ],
-  alternates: { canonical: "https://calcportalpro.com/blog/can-i-get-a-mortgage-with-unfiled-taxes" },
+    "Learn how to get a mortgage with unfiled taxes in 2025. Real borrower strategies, lender requirements, FAQ, and tax solutions to help you qualify faster.",
   openGraph: {
-    title: "Can I Get a Mortgage with Unfiled Taxes? (2025 Guide)",
+    title: "Can I Get a Mortgage with Unfiled Taxes in 2025?",
     description:
-      "Learn whether lenders accept borrowers with unfiled taxes and the exact steps to restore eligibility: tax filing, documentation, tax relief options, lender flexibility, and timing.",
-    url: "https://calcportalpro.com/blog/can-i-get-a-mortgage-with-unfiled-taxes",
+      "Step-by-step guide to mortgage approval with unfiled taxes. Discover options, lender types, strategies, and IRS requirements.",
+    url: "https://calcportalpro.com/blog/can-i-get-a-mortgage-with-unfiled-taxes-2025",
+    siteName: "CalcPortal Pro",
+    images: [
+      {
+        url: "https://calcportalpro.com/blog/can-i-get-a-mortgage-with-unfiled-taxes/cover.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Mortgage approval illustration",
+      },
+    ],
+    locale: "en_US",
     type: "article",
-    siteName: "CalcPortalPro",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Can I Get a Mortgage with Unfiled Taxes? (2025 Guide)",
-    description:
-      "Step-by-step plan to become mortgage-ready if you have unfiled taxes. Timelines, transcripts, lender rules, and practical solutions.",
+  alternates: {
+    canonical:
+      "https://calcportalpro.com/blog/can-i-get-a-mortgage-with-unfiled-taxes-2025",
   },
-};
-
-const pageUrl = "https://calcportalpro.com/blog/can-i-get-a-mortgage-with-unfiled-taxes";
-const siteName = "CalcPortalPro";
-
-const libertyLinks = {
-  brandLogo: "https://www.anrdoezrs.net/click-101546908-17172306",
-  onlineFiling: "https://www.kqzyfj.com/click-101546908-15485942",
-  makeAppointment: "https://www.kqzyfj.com/click-101546908-17172302",
-  maxRefundGuarantee: "https://www.tkqlhce.com/click-101546908-13650957",
-};
-
-const jsonLdBlogPosting = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": pageUrl
-  },
-  "headline": "Can I Get a Mortgage with Unfiled Taxes? (2025 Guide)",
-  "description": metadata.description,
-  "image": "https://calcportalpro.com/images/can-i-get-mortgage-unfiled-taxes.jpg",
-  "author": {
-    "@type": "Organization",
-    "name": "CalcPortalPro Editorial Team"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "CalcPortalPro",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://calcportalpro.com/logo.png"
-    }
-  },
-  "datePublished": new Date().toISOString().split("T")[0],
-  "dateModified": new Date().toISOString().split("T")[0]
-};
-
-const jsonLdBreadcrumb = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://calcportalpro.com/" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://calcportalpro.com/blog" },
-    { "@type": "ListItem", position: 3, name: "Can I Get a Mortgage with Unfiled Taxes?", item: pageUrl }
-  ]
-};
-
-const jsonLdFAQ = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Can I get a mortgage with unfiled taxes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "In most cases, lenders will require tax compliance or proof of payment arrangements before approving your mortgage. Some alternative lenders may allow approval with conditions."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "Can I get a mortgage if I owe the IRS money?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, but only if you have a formal payment plan in place and can prove that you’re current on payments."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "How long after filing taxes can I apply for a mortgage?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Many lenders can proceed 2–4 weeks after filing once transcripts are available. Timing depends on how quickly the IRS processes your returns."
-      }
-    },
-    {
-      "@type": "Question",
-      name: "Does the IRS notify mortgage lenders?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No, the IRS doesn’t contact lenders directly, but lenders verify your tax status through transcripts and public records."
-      }
-    }
-  ]
 };
 
 export default function CanIGetMortgageWithUnfiledTaxes() {
+  // ✅ JSON-LD Schemas
+  const jsonLdBlogPosting = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: "Can I Get a Mortgage with Unfiled Taxes in 2025?",
+    description:
+      "Learn the truth about getting a mortgage with unfiled taxes in 2025 — including eligibility requirements, lender considerations, and real steps you can take to improve approval chances.",
+    image:
+      "https://calcportalpro.com/blog/can-i-get-a-mortgage-with-unfiled-taxes/cover.jpg",
+    author: {
+      "@type": "Person",
+      name: "CalcPortal Pro",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "CalcPortal Pro",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://calcportalpro.com/logo.png",
+      },
+    },
+    datePublished: "2025-10-09",
+    dateModified: "2025-10-09",
+  };
+
+  const jsonLdBreadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://calcportalpro.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://calcportalpro.com/blog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Can I Get a Mortgage with Unfiled Taxes?",
+        item: "https://calcportalpro.com/blog/can-i-get-a-mortgage-with-unfiled-taxes-2025",
+      },
+    ],
+  };
+
+  const jsonLdFAQ = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Can I get a mortgage if I haven’t filed my taxes?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, but it’s more challenging. Most lenders require recent tax returns to verify your income. However, certain loan programs or alternative documentation options may still be available.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Will lenders know if I haven’t filed my taxes?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Most lenders verify income through IRS transcripts (Form 4506-T). If no records exist, they’ll know your taxes aren’t filed.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What are my options if I need a mortgage but haven’t filed taxes?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "You can file your taxes quickly to meet lender requirements, or explore non-traditional loan programs that use alternative income verification.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBlogPosting) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFAQ) }} />
+      {/* ✅ Inject JSON-LD cleanly with <Script> */}
+      <Script
+        id="ld-blog"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBlogPosting) }}
+      />
+      <Script
+        id="ld-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+      <Script
+        id="ld-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFAQ) }}
+      />
 
       <main className="flex justify-center bg-gradient-to-b from-gray-50 to-white py-12 px-4">
-        <article className="w-full max-w-4xl bg-white rounded-2xl shadow-2xl p-10 prose prose-lg">
-          {/* Breadcrumbs */}
-          <nav className="text-sm text-gray-600 mb-4" aria-label="Breadcrumb">
-            <a href="/" className="hover:underline">Home</a> ›{" "}
-            <a href="/blog" className="hover:underline">Blog</a> ›{" "}
-            <span>Can I Get a Mortgage with Unfiled Taxes?</span>
+        <article className="prose prose-lg max-w-4xl text-gray-800 w-full">
+          {/* ✅ Featured Cover Image */}
+          <div className="w-full mb-6 flex justify-center">
+            <Image
+              src="/blog/can-i-get-a-mortgage-with-unfiled-taxes/cover.jpg"
+              alt="Mortgage approval and tax filing illustration"
+              width={900}
+              height={400}
+              className="rounded-2xl shadow-lg object-cover"
+              priority
+            />
+          </div>
+
+          {/* ✅ Breadcrumbs */}
+          <nav className="text-sm mb-6 text-gray-500">
+            <Link href="/" className="hover:underline">
+              Home
+            </Link>{" "}
+            /{" "}
+            <Link href="/blog" className="hover:underline">
+              Blog
+            </Link>{" "}
+            / <span>Can I Get a Mortgage with Unfiled Taxes?</span>
           </nav>
 
-          <header className="text-center mb-6">
-            <h1 className="text-4xl font-extrabold text-emerald-800">
-              Can I Get a Mortgage with Unfiled Taxes? <span className="text-neutral-600">(2025 Action Plan)</span>
-            </h1>
-            <p className="mt-3 max-w-2xl mx-auto text-gray-700">
-              Unfiled tax returns can stall or even derail mortgage approvals — but it doesn’t have to end your homeownership goals. This in-depth 2025 guide walks you through lender expectations, IRS transcript steps, timelines, and how to get back on track quickly.
-            </p>
-          </header>
+          {/* 📝 Title and Intro */}
+          <h1 className="text-4xl font-bold mb-4 text-center">
+            Can I Get a Mortgage with Unfiled Taxes in 2025?
+          </h1>
+          <p className="text-lg text-gray-600 text-center mb-10">
+            Discover the requirements, challenges, and practical solutions if
+            you’re trying to buy a home without having filed your taxes.
+          </p>
 
-          <div className="text-center my-6">
+          {/* ✅ Long-form Content — Intro Section */}
+          <h2>Why Tax Returns Matter to Mortgage Lenders</h2>
+          <p>
+            When applying for a mortgage, lenders rely heavily on tax returns
+            because they provide verified proof of income. This isn’t just
+            paperwork; it’s a core part of risk assessment. If a borrower
+            doesn’t have recent tax filings, the lender can’t properly calculate
+            their income or assess their ability to repay. As a result, your
+            application might face serious delays — or outright rejection.
+          </p>
+          <p>
+            Typically, lenders will request at least one or two years of filed
+            tax returns to verify your earnings. This is particularly true for
+            self-employed borrowers, freelancers, and small business owners who
+            don’t receive W-2 income. If your taxes are unfiled, it raises red
+            flags about financial stability, accuracy of income, and
+            creditworthiness.
+          </p>
+
+          <h2>Can You Still Qualify for a Mortgage Without Tax Returns?</h2>
+          <p>
+            Yes — but your options may be narrower. Traditional mortgage
+            programs like conventional loans, FHA, and VA loans typically
+            require filed tax returns. However, there are alternative loan
+            programs available for borrowers who can prove income through other
+            documentation, such as bank statements, profit and loss statements,
+            or verified deposits.
+          </p>
+          <ul>
+            <li>✅ Non-QM (non-qualified mortgage) lenders may accept bank statements.</li>
+            <li>✅ Hard money lenders often don’t require tax transcripts.</li>
+            <li>✅ Some FHA or VA loan scenarios allow recent filings if resolved quickly.</li>
+          </ul>
+
+          {/* Affiliate Callout */}
+          <div className="my-8 p-6 bg-blue-50 border-l-4 border-blue-500 rounded-xl">
+            <p className="mb-3 font-semibold text-lg">
+              💡 Tip: Filing your taxes quickly can help you secure lower mortgage rates.
+            </p>
             <a
-              href={libertyLinks.onlineFiling}
+              href="https://www.tkqlhce.com/click-101546908-15485942"
               target="_blank"
-              rel="nofollow sponsored noopener"
-              className="inline-block bg-emerald-600 text-white px-6 py-3 rounded-xl font-semibold shadow hover:bg-emerald-700 transition"
+              rel="nofollow noopener noreferrer"
+              className="inline-block bg-blue-600 text-white font-semibold px-5 py-3 rounded-lg shadow hover:bg-blue-700 transition"
             >
-              File Missing Returns Online — Liberty Tax
+              File Taxes Online with Liberty Tax →
             </a>
           </div>
 
-          <section>
-            <h2 className="text-2xl font-bold text-emerald-700">Can you really get approved with unfiled taxes?</h2>
-            <p>
-              In a strict sense, no mainstream mortgage lender wants to approve a loan when a borrower has unfiled tax returns. Why? Because unfiled returns create uncertainty around two key underwriting pillars: income verification and liability assessment.  
+          <h2>Steps to Take if You Haven’t Filed Taxes Yet</h2>
+          <ol>
+            <li>
+              <strong>File your taxes as soon as possible.</strong> Even late
+              filings can satisfy lender requirements.
+            </li>
+            <li>
+              <strong>Request IRS transcripts.</strong> This verifies your
+              filing status.
+            </li>
+            <li>
+              <strong>Work with a mortgage broker.</strong> They can match you
+              with flexible loan programs.
+            </li>
+            <li>
+              <strong>Organize supporting documentation.</strong> Lenders may
+              accept alternatives like bank statements or P&L reports.
+            </li>
+          </ol>
+
+          <h2>How Unfiled Taxes Affect Your Debt-to-Income Ratio</h2>
+          <p>
+            Without documented income, lenders can’t calculate your
+            debt-to-income (DTI) ratio accurately. This ratio is one of the most
+            critical factors in mortgage approval. If it’s too high or
+            unverifiable, lenders are likely to deny or delay your application.
+          </p>
+          <ul>
+            <li>❌ Loan application delays</li>
+            <li>❌ Higher interest rates</li>
+            <li>❌ Denial of loan</li>
+          </ul>
+
+          <h2>Best Loan Options If You Haven’t Filed Taxes</h2>
+          <p>
+            If you’re in this situation, you’re not alone. Thousands of
+            Americans each year pursue homeownership while catching up on
+            back-tax obligations. Several loan programs cater specifically to
+            borrowers in this position:
+          </p>
+          <ul>
+            <li>📄 Stated income loans (for self-employed borrowers)</li>
+            <li>🏦 Hard money loans (short-term but fast)</li>
+            <li>🧾 Bank statement programs (verify income through deposits)</li>
+          </ul>
+
+          <h2>How Lenders Verify Your Income Without Tax Returns</h2>
+          <p>
+            Even if you haven’t filed, lenders need a clear picture of your
+            financial health. They may look at 12–24 months of bank statements,
+            proof of consistent income deposits, or signed CPA letters verifying
+            your business income. This extra documentation can make the
+            underwriting process longer, but it can still result in approval.
+          </p>
+
+          <h2>Creditworthiness and Unfiled Taxes</h2>
+          <p>
+            Many borrowers believe that not filing taxes doesn’t affect credit
+            scores directly — and technically, that’s true. The IRS does not
+            report non-filing to credit bureaus. However, if unpaid taxes lead
+            to liens, collections, or judgments, your credit profile can take a
+            significant hit, which in turn impacts mortgage eligibility.
+          </p>
+
+          <h2>IRS Liens, Tax Debt & Mortgage Approval</h2>
+          <p>
+            If your unfiled taxes have led to IRS liens, lenders may still
+            consider your application — but only if the lien is in a repayment
+            plan or fully resolved. Most mortgage programs require at least
+            three consecutive on-time payments in an IRS payment plan before
+            approving a loan.
+          </p>
+
+          <h2>Mortgage Programs That May Work With Unfiled or Late Taxes</h2>
+          <ul>
+            <li>✅ Bank Statement Mortgage Programs</li>
+            <li>✅ Non-QM Loans</li>
+            <li>✅ Hard Money or Private Lender Loans</li>
+            <li>✅ FHA or VA (if taxes are filed quickly and debt resolved)</li>
+          </ul>
+
+          <h2>Why Filing Before Applying Is Usually Best</h2>
+          <p>
+            Even if you qualify without filing, it’s often smarter to resolve
+            your tax situation first. Doing so can:
+          </p>
+          <ul>
+            <li>✔ Unlock more loan options</li>
+            <li>✔ Lower your interest rate</li>
+            <li>✔ Speed up underwriting</li>
+            <li>✔ Reduce stress during closing</li>
+          </ul>
+
+          <div className="mt-10 text-center bg-green-50 py-8 rounded-xl shadow-inner">
+            <h2 className="text-2xl font-bold mb-4">
+              📝 Ready to Fix Your Taxes and Get Approved?
+            </h2>
+            <p className="mb-6 text-gray-700">
+              Filing your taxes with a trusted provider can speed up your
+              mortgage approval and help you qualify for better rates.
             </p>
-            <p>
-              But in real-world lending, the answer is often: “Yes, with the right paperwork and timing.” Portfolio lenders, certain FHA or VA loan programs, and even some private lenders will approve you once:
-            </p>
-            <ul>
-              <li>You’ve filed the missing returns or set up a payment plan.</li>
-              <li>IRS tax transcripts are available to verify those filings.</li>
-              <li>There are no active unresolved tax liens that could cloud title.</li>
-            </ul>
-          </section>
+            <a
+              href="https://www.anrdoezrs.net/click-101546908-17172306"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="inline-block bg-green-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-700 transition"
+            >
+              Start Filing with Liberty Tax
+            </a>
+          </div>
 
-          <section className="mt-8">
-            <h2 className="text-3xl font-bold text-emerald-700">Why lenders care so much about taxes</h2>
-            <p>
-              When you apply for a mortgage, the lender isn’t just checking your credit score. They’re calculating what’s called your “ability to repay.” Tax returns are central to that — especially for self-employed borrowers or anyone with fluctuating income.
-            </p>
-            <p>
-              Missing returns raise three red flags:
-            </p>
-            <ul>
-              <li><strong>Unverified income:</strong> Without returns, your stated income can’t be confirmed.</li>
-              <li><strong>Potential IRS liens:</strong> Unpaid taxes can attach to the property.</li>
-              <li><strong>Manual underwriting friction:</strong> Missing transcripts often trigger file suspensions or denials.</li>
-            </ul>
-          </section>
+          {/* 🧾 FAQ Section */}
+          <h2>Frequently Asked Questions</h2>
+          <h3>Can I get pre-approved without tax returns?</h3>
+          <p>
+            Yes, but usually through non-QM lenders or alternative mortgage
+            programs. Traditional lenders typically require tax returns.
+          </p>
 
-          <section className="mt-8">
-            <h2 className="text-3xl font-bold text-emerald-700">How lenders check your tax filing status</h2>
-            <p>
-              Lenders don’t call the IRS directly. Instead, they ask you to sign <strong>IRS Form 4506-C</strong> (previously 4506-T). This authorizes them to pull transcripts directly from the IRS. If there’s no transcript for a tax year, underwriting pauses until you file.
-            </p>
-            <p>
-              Even if you file the return today, it can take up to <strong>10–21 days</strong> before it shows up in IRS systems — and longer if filed on paper. That’s why filing early is crucial if you plan to buy a home soon.
-            </p>
-          </section>
+          <h3>Will the IRS stop me from getting a mortgage?</h3>
+          <p>
+            The IRS doesn’t block mortgage approvals directly, but unpaid or
+            unfiled taxes can make lenders view your application as high risk.
+          </p>
 
-          <section className="mt-8">
-            <h2 className="text-3xl font-bold text-emerald-700">IRS transcript retrieval — practical walkthrough</h2>
-            <p>
-              You can request your own transcripts through the IRS:
-            </p>
-            <ol>
-              <li>Go to <a href="https://www.irs.gov/individuals/get-transcript" target="_blank" className="underline text-emerald-700">Get Transcript Online</a>.</li>
-              <li>Verify your identity (SSN, mobile, email, tax info).</li>
-              <li>Download transcripts for the required years (usually 2 years for W-2 borrowers, 2–3 for self-employed).</li>
-              <li>Send the PDFs to your lender or loan officer.</li>
-            </ol>
-            <p>
-              If you prefer professional help filing before pulling transcripts, you can file fast online through <a href={libertyLinks.onlineFiling} target="_blank" rel="nofollow sponsored noopener" className="underline text-emerald-700">Liberty Tax’s filing service</a>.
-            </p>
-          </section>
+          <h3>How fast can I fix my tax situation?</h3>
+          <p>
+            Many borrowers file back taxes within a few weeks. Once IRS
+            transcripts are available, your lender can resume processing your
+            loan.
+          </p>
 
-          <section className="mt-8">
-            <h2 className="text-3xl font-bold text-emerald-700">Real lender scenarios (2025 underwriting patterns)</h2>
+          <h3>Can I buy a house while in an IRS payment plan?</h3>
+          <p>
+            Yes — as long as your plan is active and you’ve made several
+            consecutive payments, most lenders will proceed with the mortgage
+            application.
+          </p>
 
-            <h3 className="mt-4 font-semibold">Scenario 1 — Conventional Loan, W-2 Borrower</h3>
-            <p>
-              Emma works full-time and forgot to file her previous year’s return due to a family emergency. Her lender flags the missing year after pulling transcripts. Emma files electronically, waits 14 days, provides the transcript, and her file clears underwriting without issue.
-            </p>
+          <h3>Do self-employed borrowers face more challenges?</h3>
+          <p>
+            Yes. Because your income isn’t W-2 verified, lenders rely more
+            heavily on tax returns and bank statements. Filing taxes quickly can
+            improve your odds significantly.
+          </p>
 
-            <h3 className="mt-4 font-semibold">Scenario 2 — FHA Loan, Self-Employed</h3>
-            <p>
-              Carlos is self-employed with 3 missing returns. His file is suspended by the AUS engine. After working with a tax pro, he files the missing years and sets up a payment plan for back taxes. Within 6 weeks, transcripts show up, and the lender resumes underwriting. FHA accepts the documented installment plan and approves the loan.
-            </p>
-
-            <h3 className="mt-4 font-semibold">Scenario 3 — Portfolio Loan</h3>
-            <p>
-              Maya works with a small community bank. She’s missing one return but has clean W-2s and an IRS installment agreement. Because the bank services its own loans, it approves her mortgage with a letter of explanation and proof of payment plan.
-            </p>
-          </section>
-
-          <section className="mt-8">
-            <h2 className="text-3xl font-bold text-emerald-700">How long after filing can you close?</h2>
-            <ul>
-              <li>✅ **1–3 weeks** for a single missing return, e-filed</li>
-              <li>✅ **4–8 weeks** for multiple years and payment plan setup</li>
-              <li>✅ **3+ months** if negotiating lien releases or an Offer in Compromise</li>
-            </ul>
-            <p>
-              Lenders generally want transcripts in hand before final underwriting. Some may clear you with IRS confirmation letters, but most prefer official transcripts.
-            </p>
-          </section>
-
-          <section className="mt-8">
-            <h2 className="text-3xl font-bold text-emerald-700">Smart timing strategy if you want to buy this year</h2>
-            <ol>
-              <li>File missing returns now — not when you’re already in contract.</li>
-              <li>Wait for transcripts to update (2–3 weeks minimum).</li>
-              <li>Get pre-approved once transcripts reflect compliance.</li>
-              <li>Work with a lender familiar with tax-related underwriting.</li>
-            </ol>
-            <p>
-              If you need assistance filing quickly, using an e-filing service like <a href={libertyLinks.onlineFiling} target="_blank" rel="nofollow sponsored noopener" className="underline text-emerald-700">Liberty Tax Online</a> can save weeks.
-            </p>
-          </section>
-
-          <section className="mt-8">
-            <h2 className="text-3xl font-bold text-emerald-700">Alternatives if you can't wait</h2>
-            <ul>
-              <li><strong>Bridge or hard money loans:</strong> Faster, but higher interest rates.</li>
-              <li><strong>Non-QM lenders:</strong> May accept bank statements or P&L instead of returns.</li>
-              <li><strong>Portfolio lenders:</strong> Flexible underwriting for known customers.</li>
-              <li><strong>Postpone closing:</strong> Sometimes the cheapest and most stable path.</li>
-            </ul>
-          </section>
-
-          <section className="mt-8">
-            <h2 className="text-3xl font-bold text-emerald-700">When to use professional help</h2>
-            <p>
-              If you’re dealing with multiple years of missing returns, self-employment, or IRS notices, professional help is usually worth it. Tax professionals can:
-            </p>
-            <ul>
-              <li>Prepare and e-file missing returns accurately</li>
-              <li>Set up installment agreements or negotiate tax relief</li>
-              <li>Communicate with the IRS on your behalf</li>
-              <li>Provide transcripts directly to your lender</li>
-            </ul>
-            <div className="my-4">
-              <a
-                href={libertyLinks.makeAppointment}
-                target="_blank"
-                rel="nofollow sponsored noopener"
-                className="inline-block bg-emerald-700 text-white px-8 py-4 rounded-2xl font-bold shadow-lg hover:bg-emerald-800 transition"
-              >
-                Schedule a Tax Help Appointment — Liberty Tax
-              </a>
-            </div>
-          </section>
-
-          <section className="mt-12">
-            <h2 className="text-3xl font-bold text-emerald-700 mb-4">Frequently Asked Questions</h2>
-
-            <div className="mb-6">
-              <h3 className="font-semibold">Will an IRS lien block my mortgage?</h3>
-              <p>
-                Usually yes, unless you can pay it off or subordinate it. Subordination means the IRS agrees your mortgage gets priority over the lien.
-              </p>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-semibold">Can I apply for an FHA loan with unfiled taxes?</h3>
-              <p>
-                FHA loans require at least two years of tax transcripts for self-employed borrowers. For W-2 borrowers, the lender may allow approval once missing returns are filed and transcripts are pending, but it depends on the underwriter.
-              </p>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-semibold">Do I need to pay off all taxes before closing?</h3>
-              <p>
-                Not always. Many lenders accept a formal installment agreement with proof of on-time payments for at least 3 months.
-              </p>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-semibold">Can the lender find out if I didn’t file?</h3>
-              <p>
-                Yes. If the IRS has no transcript for the year, the lender knows the return hasn’t been filed. They can’t close the loan until that’s resolved.
-              </p>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-semibold">How can I file quickly?</h3>
-              <p>
-                E-filing is fastest. Services like <a href={libertyLinks.onlineFiling} target="_blank" rel="nofollow sponsored noopener" className="underline text-emerald-700">Liberty Tax Online</a> can file quickly, making transcripts available in as little
+          <h2>Final Thoughts</h2>
+          <p>
+            Getting a mortgage with unfiled taxes is absolutely possible — but
+            it requires strategy, preparation, and often professional help. The
+            fastest way to smooth your path to homeownership is to file your
+            taxes and work with lenders who understand your unique situation.
+            Whether you’re self-employed, dealing with IRS debt, or simply
+            behind, there are solutions tailored for your case.
+          </p>
+          <p>
+            Don’t let unfiled taxes keep you from achieving your homeownership
+            dreams. With the right strategy, guidance, and documentation, you
+            can absolutely qualify for the mortgage you need in 2025.
+          </p>
+        </article>
+      </main>
+    </>
+  );
+}
