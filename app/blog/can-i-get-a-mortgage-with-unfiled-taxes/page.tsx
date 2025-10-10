@@ -16,7 +16,7 @@ export const metadata = {
     siteName: "CalcPortal Pro",
     images: [
       {
-        url: "https://calcportalpro.com/blog/can-i-get-a-mortgage-with-unfiled-taxes/cover.jpg",
+        url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa",
         width: 1200,
         height: 630,
         alt: "Mortgage approval illustration",
