@@ -140,17 +140,17 @@ export default function CanYouGetHomeLoanIfYouOweTaxes2025() {
             </p>
           </header>
 
-          {/* Featured image */}
-          <div className="mb-6 flex justify-center">
-            <Image
-              src="/blog/can-you-get-a-home-loan-if-you-owe-taxes-2025/cover.jpg"
-              alt="House model and keys on desk — mortgage concept"
-              width={900}
-              height={420}
-              className="rounded-2xl shadow"
-              priority
-            />
-          </div>
+           {/* Featured Image */}
+        <div className="my-8">
+          <Image
+            src="https://images.unsplash.com/photo-1729505305192-610539203144"
+            alt="House keys and mortgage application"
+            width={1200}
+            height={630}
+            className="mx-auto rounded-lg shadow-lg object-cover"
+            priority
+          />
+        </div>
 
           {/* Intro / TL;DR */}
           <section>
