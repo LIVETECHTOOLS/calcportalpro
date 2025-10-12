@@ -120,7 +120,7 @@ export default function CanYouUseHelocToBuyLand() {
   };
 
   // Affiliate link (selected, not spammy)
-  const libertyTaxLink = "https://www.kqzyfj.com/click-101546908-15485942";
+  const libertyTaxLink = "https://www.tkqlhce.com/click-101546908-15485942";
 
   return (
     <>
@@ -165,303 +165,330 @@ export default function CanYouUseHelocToBuyLand() {
           {/* --- Article content (long-form, 3000+ words) --- */}
 
           <section>
-            <h2 className="text-blue-900">Quick answer</h2>
+            <h2 className="text-blue-900">Quick answer — short summary</h2>
             <p>
-              <strong>Short answer:</strong> <em>Yes — sometimes.</em> You can use a HELOC to buy land in 2025, but whether you should depends on your home equity, lender policies, the land’s characteristics (zoning, utilities, access), and your long-term plan. HELOCs can be a fast, cost-effective bridge for land purchases — but they convert an already risky land investment into a potential risk for your primary residence.
+              <strong>Short answer:</strong> <em>Yes — sometimes.</em> You can use a HELOC to buy land in 2025, but whether you should depends on your home equity, lender policies, the land’s characteristics (zoning, utilities, access), and your long-term plan. HELOCs provide flexible, often lower-cost access to cash compared with many specialized land loans, but they also put your primary residence at greater risk because your home serves as collateral.
             </p>
             <p>
-              This guide explains the details: when lenders typically allow HELOC proceeds for land, how underwriting works, the tax and legal implications to watch for, realistic borrower scenarios, and safer alternatives.
+              This article will walk you through every major consideration, with concrete examples and a step-by-step playbook you can follow — plus the tax, legal, and lender-specific questions you should ask before drawing funds.
             </p>
           </section>
 
           <section>
-            <h2 className="text-blue-900">What is a HELOC (Home Equity Line of Credit)?</h2>
+            <h2 className="text-blue-900">Market context for 2025 — why this matters now</h2>
             <p>
-              A HELOC is a revolving line of credit secured by your home’s equity. During the draw period (often 5–10 years), you can borrow, repay, and borrow again up to the credit limit. Interest is charged only on outstanding draws. After the draw period ends, most HELOCs convert to a repayment period where principal and interest payments are required, or they may require balloon payment depending on the product.
+              Interest-rate environments and lending appetites change over time. In 2025 many borrowers face a mixed market: prime rates have stabilized compared to the rapid increases seen earlier, but variable-rate products like HELOCs can still shift if indices move. Lenders are more cautious than pre-2020 in many regions, and underwriting is more document-driven. All this means using a HELOC may be practical for buyers with disciplined plans and strong home equity — but not for speculative purchases without a clear exit strategy.
             </p>
             <p>
-              Important HELOC features:
+              Also, land prices and development costs vary drastically by geography. In suburban growth corridors, a buildable lot may appreciate quickly and be relatively easy to finance; in remote areas the risk of illiquidity and high site-prep costs makes HELOC-funded purchases much riskier.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-blue-900">What is a HELOC — deep dive</h2>
+            <p>
+              A Home Equity Line of Credit (HELOC) is a revolving line of credit secured by your home’s equity. It functions similarly to a credit card but uses your house as collateral. HELOCs typically have two phases:
             </p>
             <ul>
-              <li><strong>Secured by home equity:</strong> the lender places a lien on your property.</li>
-              <li><strong>Variable interest rates:</strong> HELOC rates are commonly variable and tied to an index plus margin.</li>
-              <li><strong>Flexible draws:</strong> you can access money as needed during the draw period.</li>
-              <li><strong>Lower initial costs:</strong> cheaper and faster than many specialized lending options.</li>
+              <li><strong>Draw period:</strong> usually 5–10 years — you can borrow, repay, and borrow again up to the limit; often interest-only payments are allowed during this time.</li>
+              <li><strong>Repayment period:</strong> after the draw period ends, you must repay principal and interest; timelines vary (10–20 years common), and some HELOCs may require balloon payments.</li>
             </ul>
-          </section>
-
-          <section>
-            <h2 className="text-blue-900">Why buyers consider using a HELOC to purchase land</h2>
             <p>
-              Land loans (for raw or unimproved lots) can be more expensive and require stricter underwriting than mortgages on residential properties. HELOCs are attractive for several reasons:
+              Key HELOC characteristics explained:
             </p>
             <ul>
-              <li><strong>Speed:</strong> HELOC funds are often available quickly once you have an open line.</li>
-              <li><strong>Lower rate (possibly):</strong> if you have strong credit and equity, HELOC rates may be lower than specialized land loan rates.</li>
-              <li><strong>Flexibility:</strong> you can draw what you need for purchase, utilities, or site improvements.</li>
-              <li><strong>Bridge financing:</strong> use HELOC as temporary financing until a construction or land loan is obtained.</li>
+              <li><strong>LTV and combined LTV (CLTV):</strong> Lenders calculate the combined loan-to-value ratio based on your first mortgage plus any HELOC outstanding relative to the home’s value. Many lenders cap CLTV at 80% (conservative) or higher for qualified borrowers.</li>
+              <li><strong>Variable interest:</strong> HELOC interest rates are commonly variable and tied to an index (like prime) plus a margin. That means payments can increase if the index rises.</li>
+              <li><strong>Costs:</strong> opening fees, appraisal fees, and possible annual fees. Some lenders waive fees to be competitive.</li>
+              <li><strong>Repayment flexibility:</strong> draw/repay convenience is valuable for phased projects such as phased land development.</li>
             </ul>
             <p>
-              But the convenience comes with trade-offs — chiefly that you put your home at stake for an asset (land) that may not generate immediate cash or occupy that same value.
+              How much you can borrow depends on home value, mortgage balance, lender rules, and your creditworthiness.
             </p>
           </section>
 
           <section>
-            <h2 className="text-blue-900">When lenders will (and won't) allow HELOCs for land purchases</h2>
+            <h2 className="text-blue-900">Why buyers consider using a HELOC for land purchases</h2>
             <p>
-              Policies vary widely by lender. Factors that determine acceptance:
+              HELOCs are often considered for land purchases because:
+            </p>
+            <ul>
+              <li><strong>Speed:</strong> funds are typically accessible faster than applying for a specialized land loan.</li>
+              <li><strong>Potentially lower cost:</strong> if you have excellent credit and equity, HELOC rates can be lower than land loan rates.</li>
+              <li><strong>Flexibility:</strong> draw only what you need, which is helpful for phased purchases or paying for utility hookups in stages.</li>
+              <li><strong>Bridge financing:</strong> use a HELOC to buy the lot and start work, then refinance to a construction or land loan when permits and bids are in place.</li>
+            </ul>
+            <p>
+              Many successful owner-builders use HELOCs as interim financing — but it’s important to treat the HELOC as a short-to-medium term tool with a defined exit strategy.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-blue-900">HELOC vs. Land loan vs. Cash-out refinance — comparison</h2>
+            <p>
+              Choosing between a HELOC, a dedicated land loan, or a cash-out refinance depends on your goals and constraints. Here’s a practical breakdown:
+            </p>
+
+            <h3>HELOC</h3>
+            <ul>
+              <li>Best for: buyers with significant equity who need flexibility or fast access.</li>
+              <li>Pros: speed, flexible draws, potentially lower upfront costs.</li>
+              <li>Cons: variable rates, ties your home to the new asset, lenders may restrict use.</li>
+            </ul>
+
+            <h3>Land loan (specialized)</h3>
+            <ul>
+              <li>Best for: buyers with limited home equity or those purchasing unimproved, speculative acreage.</li>
+              <li>Pros: purpose-built for land, more suitable for remote parcels.</li>
+              <li>Cons: higher rates, larger down payments, shorter terms.</li>
+            </ul>
+
+            <h3>Cash-out refinance</h3>
+            <ul>
+              <li>Best for: borrowers who want a fixed rate and can afford closing costs.</li>
+              <li>Pros: fixed-rate borrowing, potential to replace mortgage with lower rate (if available).</li>
+              <li>Cons: closing costs, resets mortgage terms, may be slower than HELOC.</li>
+            </ul>
+
+            <p>
+              In summary: if you need speed and have a plan to refinance later, HELOC can make sense. If the purchase is speculative or the land is remote/unimprovable, a land loan or seller financing is usually safer.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-blue-900">When lenders will allow HELOC proceeds to buy land</h2>
+            <p>
+              Policies differ. Lenders evaluate:
             </p>
             <ol>
-              <li><strong>Loan agreement terms:</strong> Some HELOC agreements explicitly limit or prohibit using proceeds for land speculation or commercial uses. Check your HELOC contract.</li>
-              <li><strong>Type of land:</strong> Improved, buildable lots are far more acceptable than raw, inaccessible, or unbuildable acreage.</li>
-              <li><strong>Lender risk tolerance:</strong> community banks and credit unions may be more flexible; national banks often restrict use more strictly.</li>
-              <li><strong>Your credit and equity:</strong> high LTVs reduce the lender’s willingness to share risk by financing land purchases.</li>
-              <li><strong>Local zoning and environmental issues:</strong> lenders dislike parcels with significant unknown costs or zoning hurdles.</li>
+              <li><strong>HELOC agreement terms:</strong> some contracts explicitly restrict certain uses (e.g., commercial speculation). Review your agreement.</li>
+              <li><strong>Type and condition of land:</strong> improved, buildable lots are favored over raw, remote acreage without access.</li>
+              <li><strong>Your equity and CLTV:</strong> lower CLTV = more likely lender acceptance.</li>
+              <li><strong>Borrower profile:</strong> high credit score, low DTI, and documented income improve chances.</li>
+              <li><strong>Purpose / plan:</strong> owner-builder plans to occupy or begin construction soon are looked on more favorably.</li>
             </ol>
             <p>
-              Practical rule: lenders are more comfortable with HELOC-funded land purchases when the land is <em>intended for owner-occupied construction</em> (you will build a house) rather than speculative hold.
+              Always ask your lender to confirm the permissibility in writing before relying on HELOC funds for a purchase.
             </p>
           </section>
 
           <section>
-            <h2 className="text-blue-900">Underwriting checklist: what lenders want to see</h2>
+            <h2 className="text-blue-900">Underwriting checklist — what lenders typically ask for</h2>
             <p>
-              If you're planning to use HELOC funds for land, be ready to provide:
+              When you request a draw for a land purchase, expect to provide:
             </p>
             <ul>
-              <li>Evidence of your **home equity** (current valuation and outstanding mortgage balances)</li>
-              <li>Recent **credit report** with a strong score (typically 700+ for best pricing)</li>
-              <li>Low **debt-to-income (DTI)** ratio; lenders prefer DTI < 43% though criteria vary</li>
-              <li>Proof of income (W-2s, pay stubs, tax returns, or for self-employed — P&L and bank statements)</li>
-              <li>Detailed **land information** — plat maps, survey, zoning classification, assessed value, and any easements</li>
-              <li>Evidence of a plan: build permit applications, construction estimates, or seller contracts if you intend to build</li>
+              <li>Updated home appraisal or broker price opinion</li>
+              <li>Recent statements showing mortgage balance and HELOC limit</li>
+              <li>Credit report and score</li>
+              <li>Proof of income (W-2s, pay stubs, tax returns) or bank statements for self-employed borrowers</li>
+              <li>Land-specific documents: plat map, tax parcel ID, recorded legal description, zoning designation, survey</li>
+              <li>Evidence of a build plan or permit applications if available</li>
             </ul>
             <p>
-              Also be prepared for lenders to ask whether the HELOC draw will be used for the purchase price, improvements, or both — each purpose has different risk implications.
+              Lenders may also ask whether the draw will be used to purchase or improve the land — improving the land (utilities, septic) may be more favorably treated than pure speculation.
             </p>
           </section>
 
           <section>
-            <h2 className="text-blue-900">How to structure a HELOC-funded land purchase (common approaches)</h2>
+            <h2 className="text-blue-900">How to structure a HELOC-funded land purchase — practical approaches</h2>
             <p>
-              Here are realistic ways buyers use HELOCs for land, depending on goals:
+              Several common structures make sense depending on risk tolerance:
             </p>
             <ul>
-              <li><strong>Full purchase with HELOC draw:</strong> you draw the full purchase price and close quickly. Use if you have ample equity and the seller accepts quick close with funds verified.</li>
-              <li><strong>Partial HELOC + cash down:</strong> reduce risk by combining HELOC with cash; lowers draw amount and interest exposure.</li>
-              <li><strong>HELOC as bridge to construction loan:</strong> use HELOC to buy and start sitework; then refinance into construction or land loan when permits and contractor bids are in place.</li>
-              <li><strong>Incremental draws:</strong> for phased purchases or paying for utility hookups and site prep as funds are needed.</li>
+              <li><strong>Full purchase via HELOC:</strong> Draw the full purchase price. Fast, simple — but increases exposure.</li>
+              <li><strong>Partial HELOC + cash:</strong> Reduce HELOC draw and interest exposure by combining with savings or sale proceeds.</li>
+              <li><strong>HELOC as bridge:</strong> Buy the lot, begin site work, then refinance into construction financing.</li>
+              <li><strong>Incremental draws:</strong> Draw only what you need for deposit, survey, utilities, which reduces ongoing interest.</li>
             </ul>
-          </section>
-
-          <section>
-            <h2 className="text-blue-900">Pros & cons — a practical summary</h2>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-blue-50 rounded-xl p-4">
-                <h3 className="text-blue-800 font-semibold">Pros</h3>
-                <ul>
-                  <li>Potentially lower interest than specialized land loans</li>
-                  <li>Speed and flexibility</li>
-                  <li>May avoid special-purpose lender underwriting</li>
-                  <li>Useful when you plan to refinance into construction financing</li>
-                </ul>
-              </div>
-
-              <div className="bg-red-50 rounded-xl p-4">
-                <h3 className="text-red-800 font-semibold">Cons / Risks</h3>
-                <ul>
-                  <li>Your primary residence is on the line</li>
-                  <li>Usually variable interest rates (rate risk)</li>
-                  <li>Carrying costs for unimproved land (taxes, insurance)</li>
-                  <li>Possible restriction in HELOC agreement</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <h2 className="text-blue-900">Tax, insurance, and legal considerations</h2>
             <p>
-              Using a HELOC for land raises a few important tax and legal considerations:
+              The “bridge” approach is frequently used by owner-builders who can document construction timelines and contractor bids.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-blue-900">Detailed borrower scenarios — realistic examples</h2>
+
+            <h3>Scenario 1 — Owner-builder with a plan</h3>
+            <p>
+              Maria owns a $600k house with a $200k mortgage. Her HELOC limit is $150k and she finds a $80k buildable lot near her lot. She plans to build a home within 12–18 months. Because she intends to occupy and build, lenders are more comfortable: Maria uses HELOC for the purchase, pays for initial sitework, then applies for a construction loan once permits and contractor bids are in place.
+            </p>
+
+            <h3>Scenario 2 — Investor buying remote raw acreage</h3>
+            <p>
+              John has access to HELOC, but the acreage is remote, no utilities, and zoning uncertain. The lender disapproves using HELOC proceeds for this speculative purchase. John decides to seek seller financing or a private investor loan instead.
+            </p>
+
+            <h3>Scenario 3 — Hybrid approach</h3>
+            <p>
+              Anita uses 30% cash and 70% HELOC to secure a lot adjoining family property. The smaller HELOC draw reduces risk and interest costs, while cash mitigates immediate exposure for her primary residence.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-blue-900">Tax, insurance, and legal considerations (practical guidance)</h2>
+            <p>
+              Before you draw, consider:
             </p>
             <ul>
-              <li><strong>Interest deductibility:</strong> under current tax rules (as of 2025), mortgage interest deductibility depends on how funds are used. Interest on HELOC funds used to buy, build, or substantially improve your main home or second home may be deductible, but interest used for investment land may not be. Always confirm current IRS guidance or consult a tax strategist.</li>
-              <li><strong>Property tax changes:</strong> acquiring raw land can increase your property tax burden.</li>
-              <li><strong>Insurance:</strong> unimproved land insurance differs from homeowner’s insurance; ensure adequate coverage for liability.</li>
-              <li><strong>Title & liens:</strong> ensure clear title and understand that HELOC creates additional lien on the property — check subordination clauses if you have an existing mortgage.</li>
+              <li><strong>Mortgage interest deductibility:</strong> In 2025, deductibility for HELOC interest can hinge on how funds are used. Interest used to buy, build, or substantially improve your home may be deductible; purely investment land may not. Always check current IRS rules or consult a tax professional.</li>
+              <li><strong>Property taxes:</strong> Buying land adds potential property taxes even if unimproved; factor this into carrying costs.</li>
+              <li><strong>Insurance:</strong> liability insurance for unimproved land differs from homeowner policies.</li>
+              <li><strong>Title & liens:</strong> perform a title search and confirm seller authority. Adding a HELOC creates another lien on your residence; be mindful of subordination clauses.</li>
             </ul>
             <p>
-              For tax-specific questions, consider consulting a licensed CPA or tax strategist before proceeding. (If you need tax filing help, Liberty Tax is one option that provides both online filing and in-person support.)
+              These items can materially affect the total cost and risk profile of the purchase.
             </p>
           </section>
 
           <section>
-            <h2 className="text-blue-900">Borrower scenarios — real examples</h2>
-
-            <h3 className="mt-4">Scenario A — Owner-builder who will live on new lot</h3>
+            <h2 className="text-blue-900">Costs you might overlook</h2>
             <p>
-              Maria has a home worth $600k with a $200k mortgage. She has a HELOC with a $150k limit and 55% combined LTV available. She finds a buildable lot for $80k. Because Maria plans to build and occupy the new home, lenders are more willing to support HELOC funding as part of a bridge to construction financing. Maria draws $80k, uses it for the purchase, starts site prep, then applies for a construction loan to refinance the HELOC once she has permits and contractor bids.
+              In addition to interest, prepare for:
             </p>
-
-            <h3 className="mt-4">Scenario B — Investor buying remote raw acreage</h3>
+            <ul>
+              <li>Survey and boundary costs</li>
+              <li>Title insurance and escrow fees</li>
+              <li>Utility hookup, driveway or access costs</li>
+              <li>Permitting and environmental studies</li>
+              <li>Property taxes during holding period</li>
+            </ul>
             <p>
-              John has equity but the land is remote with uncertain access and no utilities. Even though he can technically draw from a HELOC, most lenders will discourage using home equity for speculative purchases. John would likely be better off with an investment property loan or seller financing.
-            </p>
-
-            <h3 className="mt-4">Scenario C — Partial down payment strategy</h3>
-            <p>
-              Anita uses a mix of savings and a HELOC draw for a lot near her family property. This lowers the HELOC draw amount, keeps interest costs manageable, and reduces overall risk to her primary home while allowing a quick purchase.
+              Underestimating these can turn a seemingly cheap HELOC-funded purchase into an expensive holding period.
             </p>
           </section>
 
           <section>
-            <h2 className="text-blue-900">Step-by-step playbook: How to do this the smart way</h2>
-
+            <h2 className="text-blue-900">Step-by-step playbook — what to do before you draw</h2>
             <ol className="list-decimal pl-5 space-y-3">
               <li>
-                <strong>Check your HELOC agreement:</strong> confirm there are no restrictions on using proceeds for land purchases.
+                <strong>Review your HELOC agreement:</strong> confirm use-of-proceeds language and any prohibitions.
               </li>
               <li>
-                <strong>Calculate combined LTV:</strong> lenders often want combined loan-to-value (mortgage + HELOC) below a threshold (commonly 80% or lower for conservative underwriting).
+                <strong>Get an updated appraisal:</strong> know your true home value and available equity.
               </li>
               <li>
-                <strong>Evaluate the land:</strong> verify zoning, access, flood risk, environmental issues, and buildability before spending HELOC funds.
+                <strong>Run the numbers:</strong> model interest-only payments vs amortizing payments and how they affect cash flow.
               </li>
               <li>
-                <strong>Get pre-approval / lender guidance:</strong> talk with your HELOC provider or a mortgage broker to confirm acceptability and structure of draw.
+                <strong>Verify the land:</strong> get a survey, zoning check, and basic environmental review (wetlands, floodplain).
               </li>
               <li>
-                <strong>Plan your exit strategy:</strong> will you refinance into a construction loan? Sell the land later? Make sure the plan is realistic.
+                <strong>Talk to the lender:</strong> get written confirmation that the draw is allowed and what documentation they need.
               </li>
               <li>
-                <strong>Budget for carrying costs:</strong> property taxes, insurance, and site maintenance can add up while the lot sits unimproved.
+                <strong>Plan your exit:</strong> have a refinance or construction-loan timeline and be realistic about market and permit timing.
               </li>
             </ol>
           </section>
 
           <section>
-            <h2 className="text-blue-900">Alternatives to using HELOC for land</h2>
+            <h2 className="text-blue-900">Alternatives to using a HELOC</h2>
             <p>
-              If putting your home at risk isn’t appealing, consider alternatives:
+              If using your home as collateral for land makes you uncomfortable, consider:
             </p>
             <ul>
-              <li><strong>Traditional land loans:</strong> purpose-built but may have higher rates and shorter terms.</li>
-              <li><strong>Seller financing / land contract:</strong> flexible, sometimes cheaper, and negotiated directly with seller.</li>
-              <li><strong>Construction loan:</strong> used when building; typically requires more documentation but provides a structured path.</li>
-              <li><strong>Private or hard-money lenders:</strong> faster but more expensive — useful for investors with exit strategy.</li>
+              <li><strong>Traditional land financing:</strong> long-term solution for buyers with little home equity.</li>
+              <li><strong>Seller financing / land contract:</strong> flexible terms negotiated with the seller, sometimes with lower upfront costs.</li>
+              <li><strong>Construction loan:</strong> better if you intend to build soon; ties financing to the project progress.</li>
+              <li><strong>Private / hard-money lenders:</strong> useful for investors with clear exit strategy but costly.</li>
+            </ul>
+            <p>
+              Each alternative has trade-offs in cost, accessibility, and risk.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-blue-900">How using a HELOC affects future mortgage eligibility</h2>
+            <p>
+              Drawing a HELOC increases monthly obligations and reduces available equity. When you apply for future mortgages or refinancing, underwriters include HELOC balances and required payments in your debt-to-income calculations. Large HELOC draws can reduce borrowing capacity or increase rates on subsequent loans.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-blue-900">Common lender questions — be prepared</h2>
+            <ul>
+              <li>Exact parcel number and street address of land</li>
+              <li>Zoning classification and whether a septic or well is permissible</li>
+              <li>Planned timeline for building or selling</li>
+              <li>Remaining home equity after draw (illustrated with current appraisal)</li>
+              <li>Proof of income and reserves for carrying costs</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-blue-900">How using a HELOC to buy land affects mortgage qualification later</h2>
-            <p>
-              Once you draw your HELOC, your total monthly obligations (interest-only payments or amortization payments) will affect your DTI. If you apply for a mortgage or refinance later, underwriters will include the HELOC balance and required payments in your debt calculations. Plan accordingly — large draws can reduce your future borrowing capacity.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-blue-900">Common lender questions to prepare for</h2>
-            <ul>
-              <li>What is the exact address and parcel number of the land?</li>
-              <li>Is the land buildable and what zoning applies?</li>
-              <li>Do you plan to occupy the new property or is it for investment?</li>
-              <li>How much equity will remain in the home after the draw?</li>
-              <li>What is your realistic timeline for developing or refinancing?</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-blue-900">Costs you may not have budgeted for</h2>
-            <p>
-              Beyond interest, consider:
-            </p>
-            <ul>
-              <li>Title searches and closing costs for the land purchase</li>
-              <li>Survey costs, boundary disputes</li>
-              <li>Utility hookup or road access expenses</li>
-              <li>Property taxes and insurance while land is unimproved</li>
-              <li>Possible HOA or community dues if purchase is in a planned area</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-blue-900">Practical checklist before you draw HELOC funds</h2>
-            <ol className="list-decimal pl-5">
-              <li>Read your HELOC agreement terms; confirm allowable use.</li>
-              <li>Get an updated home appraisal to confirm available equity.</li>
-              <li>Obtain title search on the land and verify seller authority.</li>
-              <li>Collect zoning, survey, and basic site condition info.</li>
-              <li>Have a written plan for exit (construction loan, refinance, sale).</li>
-            </ol>
-          </section>
-
-          <section>
-            <h2 className="text-blue-900">How to discuss the idea with your lender (script)</h2>
-            <p>
-              Use this short script when you call your HELOC lender or mortgage broker:
-            </p>
-            <blockquote>
-              "Hi — I’m considering using funds from my existing HELOC to purchase a buildable lot at [address]. I want to confirm whether my HELOC agreement permits that use, and what documentation you’d need to approve a draw for purchase and site work. I plan to refinance into a construction loan within [X months]. Can you advise on required LTV, documentation, and any restrictions?"
-            </blockquote>
-            <p>
-              This concise approach helps lenders answer efficiently and sets expectations on documentation.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-blue-900">Frequently Asked Questions (expanded)</h2>
+            <h2 className="text-blue-900">FAQ — expanded answers</h2>
 
             <div>
-              <h3>Can I use HELOC funds to put down a deposit on land?</h3>
+              <h3>Can I use a HELOC to put a deposit on land?</h3>
               <p>
-                Yes. Many sellers accept HELOC-funded deposits, but you must show the source of funds and confirm the lender’s willingness to disburse funds for land purchases. Escrow instructions must be clear about the source and method of funding.
+                Yes — many buyers use HELOC funds for deposits. However, escrow instructions must clearly document source of funds and lender approval. Some sellers may prefer certified funds or proof of available funds at contract signing.
               </p>
             </div>
 
             <div>
-              <h3>Will my HELOC payment change after I draw for land?</h3>
+              <h3>Will my HELOC payment change after I draw funds for land?</h3>
               <p>
-                Possibly. If you're in the draw period and your HELOC requires interest-only payments, you may pay interest only on the drawn balance. After the draw period, repayment terms could increase monthly payments significantly if principal amortization is required.
-              </p>
-            </div>
-
-            <div>
-              <h3>Is there a difference between draw for land and draw for home improvements?</h3>
-              <p>
-                Lenders often prefer draws for home improvements because they increase property value and reduce risk to collateral. Land purchases do not directly enhance the existing home’s value, so lenders scrutinize them more.
+                It depends. During draw periods you may pay interest-only on the outstanding balance; once the repayment phase begins, you’ll pay principal and interest, raising monthly costs. If your HELOC has a variable rate, payments may also change with market rates.
               </p>
             </div>
 
             <div>
               <h3>What if my HELOC contract forbids buying land?</h3>
               <p>
-                If the contract prohibits land purchases, you must not use the HELOC for that purpose. Violating the agreement could trigger penalties or demand for immediate repayment. Consider alternatives (land loan, seller finance).
+                If the contract forbids it, you must not use the HELOC for that purpose. Violating terms can trigger penalty clauses or lender demand for repayment. Consider alternatives like a land loan or seller financing instead.
+              </p>
+            </div>
+
+            <div>
+              <h3>Is it safer to use a second mortgage instead of a HELOC?</h3>
+              <p>
+                A fixed-rate second mortgage may be safer (predictable payments) but less flexible. If you want predictable long-term payments, a second mortgage may be preferable to a variable-rate HELOC.
+              </p>
+            </div>
+
+            <div>
+              <h3>Can I refinance a HELOC draw into construction financing?</h3>
+              <p>
+                Yes. Many buyers use HELOCs as bridge financing and refinance into construction loans once permits and contractor agreements are in place. Lenders prefer to see realistic timelines and progress (permits, bids).
               </p>
             </div>
           </section>
 
           <section>
-            <h2 className="text-blue-900">Decision checklist — should you use a HELOC to buy land?</h2>
+            <h2 className="text-blue-900">Decision checklist — should you use HELOC funds for land?</h2>
             <ul>
-              <li>Do you have sufficient equity without compromising your home's security?</li>
-              <li>Is the land buildable and free of major legal or environmental issues?</li>
-              <li>Is your plan to occupy or develop the lot within a reasonable timeframe?</li>
-              <li>Do you have a refinance or exit plan (construction loan or sale)?</li>
+              <li>Do you have sufficient equity to leave reserves and still maintain CLTV targets?</li>
+              <li>Is the land buildable and free from major legal or environmental obstacles?</li>
+              <li>Do you have a realistic refinance or construction plan within a clear timeframe?</li>
               <li>Are you comfortable with variable-rate interest risk?</li>
+              <li>Can you afford carrying costs if the lot remains unimproved for months or years?</li>
             </ul>
             <p>
-              If you can confidently answer “yes” to most questions, a HELOC may be a sensible bridge or part of a blended financing strategy.
+              If your answers are mostly “yes” and you have documented plans, a HELOC can be a smart bridge. If many answers are “no,” pause and consider alternatives.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-blue-900">Practical script for talking to lenders</h2>
+            <p>
+              Use this script when calling your HELOC provider or mortgage broker:
+            </p>
+            <blockquote>
+              "Hello — I’m considering using my HELOC to purchase a buildable lot at [address]. I want to confirm whether my HELOC agreement permits this use, and what documentation you’ll need to approve a draw for purchase and site work. My plan is to refinance into a construction loan within [X months]. Can you advise on required CLTV, documentation, and any restrictions?"
+            </blockquote>
+            <p>
+              Asking these focused questions will save time and ensure you get definitive guidance.
             </p>
           </section>
 
           <section>
             <h2 className="text-blue-900">Final verdict — practical guidance</h2>
             <p>
-              Using a HELOC to buy land can be smart for owner-builders or buyers with clear development plans and plenty of equity. It is less suitable for speculative purchases or buyers without a clear refinance path. Prioritize confirming contract terms, understanding carrying costs, and ensuring your exit strategy is realistic.
+              Using a HELOC to buy land in 2025 is a viable and often sensible strategy for owner-builders and well-capitalized buyers who have a clear plan and timeline. It’s less appropriate for speculative purchases or buyers lacking an exit strategy. Confirm contract terms, account for carrying costs, and secure written lender confirmation before you proceed.
             </p>
             <p>
-              If you’re unsure about tax implications or how the transaction affects your broader finances, consult a mortgage professional, real estate attorney, and a tax advisor.
+              If you need help with taxes or documentation prior to drawing equity — for example, clarifying income or filing back taxes — consider professional tax assistance that can speed lender approvals. (Liberty Tax is one option to help with filing; click the contextual CTA below if relevant.)
             </p>
           </section>
 
