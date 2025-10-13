@@ -1,113 +1,112 @@
 import fs from "fs";
 import path from "path";
 
-// 🏷️ Keyword mapping for categories
-const categoryKeywords: Record<string, string[]> = {
-  taxes: ["tax", "irs", "gst", "fpt", "bracket", "fica"],
-  loans: ["loan", "credit", "debt", "mortgage", "refinance", "heloc"],
-  investing: ["invest", "etf", "portfolio", "stocks", "bonds", "investment"],
-  savings: ["save", "budget", "cd", "rate", "emergency fund", "cash"],
-  "real estate": ["real-estate", "rent", "house", "home", "property"],
-  retirement: ["retire", "pension", "401k", "rrsp"],
-  insurance: ["insurance", "coverage", "policy"],
-  education: ["gpa", "college", "study", "student", "tuition"],
-};
-
-// 🧠 Find category by highest keyword match
-function detectCategory(title: string): string {
-  const lowerTitle = title.toLowerCase();
-  let matchedCategory: string | null = null;
-  let maxMatches = 0;
-
-  for (const [category, keywords] of Object.entries(categoryKeywords)) {
-    const matches = keywords.filter((kw) => lowerTitle.includes(kw)).length;
-    if (matches > maxMatches) {
-      maxMatches = matches;
-      matchedCategory = category;
-    }
-  }
-
-  return matchedCategory || "All";
-}
-
-// 📝 Estimate read time
-function estimateReadTime(content: string): string {
-  const wordsPerMinute = 200;
-  const wordCount = content.split(/\s+/).length;
-  const minutes = Math.ceil(wordCount / wordsPerMinute);
-  return `${minutes} min`;
-}
-
-// 🖼️ Check for image existence
-function getFeaturedImage(slug: string): string {
-  const imagePath = path.join(process.cwd(), "public", "images", "blog", `${slug}.jpg`);
-  if (fs.existsSync(imagePath)) {
-    return `/images/blog/${slug}.jpg`;
-  }
-  return "/images/blog/placeholder.jpg";
-}
-
 export type BlogMeta = {
-  id: number;
   title: string;
   excerpt: string;
   category: string;
   author: string;
   readTime: string;
   publishDate: string;
-  slug: string;
-  image: string;
   featured: boolean;
+  featuredImage: string;
+  slug: string;
 };
 
-export function getAllBlogPosts(): BlogMeta[] {
-  const blogDir = path.join(process.cwd(), "app", "blog");
-  const slugs = fs
-    .readdirSync(blogDir)
-    .filter((name) => fs.statSync(path.join(blogDir, name)).isDirectory());
+const blogDir = path.join(process.cwd(), "app", "blog");
+const publicImagesDir = path.join(process.cwd(), "public", "images", "blog");
 
-  const posts: BlogMeta[] = slugs.map((slug, index) => {
-    const filePath = path.join(blogDir, slug, "page.tsx");
-    let content = "";
-    try {
-      content = fs.readFileSync(filePath, "utf-8");
-    } catch {
-      content = "";
+// ✅ Category keyword weights (higher = priority)
+const keywordPriority: Record<string, string[]> = {
+  Taxes: ["tax", "irs", "fpt", "gst"],
+  Loans: ["loan", "credit", "debt"],
+  Investing: ["invest", "etf", "portfolio"],
+  "Real Estate": ["real-estate", "mortgage", "rent", "house"],
+  Savings: ["save", "budget", "cd", "rate", "fund", "emergency"],
+  Insurance: ["insurance"],
+  Retirement: ["retire"],
+  Education: ["gpa", "college", "study", "tuition", "scholarship"],
+};
+
+const categoryOrder = [
+  "Taxes",
+  "Loans",
+  "Investing",
+  "Real Estate",
+  "Savings",
+  "Insurance",
+  "Retirement",
+  "Education",
+];
+
+function detectCategory(title: string): string {
+  const lowerTitle = title.toLowerCase();
+  const matchedCategories: string[] = [];
+
+  for (const [category, keywords] of Object.entries(keywordPriority)) {
+    if (keywords.some((kw) => lowerTitle.includes(kw))) {
+      matchedCategories.push(category);
     }
+  }
 
-    const title = slug
-      .replace(/-/g, " ")
-      .replace(/\b\w/g, (l) => l.toUpperCase());
+  if (matchedCategories.length === 0) return "All";
 
-    const category = detectCategory(title);
-
-    const excerpt =
-      content
-        .replace(/\n/g, " ")
-        .replace(/<[^>]*>/g, "")
-        .slice(0, 180) + "...";
-
-    const readTime = estimateReadTime(content);
-    const image = getFeaturedImage(slug);
-
-    return {
-      id: index + 1,
-      title,
-      excerpt,
-      category,
-      author: "CalcPortal Pro Team",
-      readTime,
-      publishDate: new Date().toISOString(),
-      slug,
-      image,
-      featured: false, // You can make rules to auto-feature some posts here if needed
-    };
-  });
-
-  return posts;
+  // Sort by priority in `categoryOrder`
+  matchedCategories.sort(
+    (a, b) =>
+      categoryOrder.indexOf(a) - categoryOrder.indexOf(b)
+  );
+  return matchedCategories[0];
 }
 
-export function getAllCategories(): string[] {
-  const base = Object.keys(categoryKeywords);
-  return ["All", ...base];
+function generateExcerpt(title: string): string {
+  return `Read our expert guide on ${title.replace(/-/g, " ")} and improve your financial knowledge.`;
+}
+
+export function getAllBlogPosts(): BlogMeta[] {
+  const slugs = fs
+    .readdirSync(blogDir)
+    .filter((name) => fs.lstatSync(path.join(blogDir, name)).isDirectory());
+
+  return slugs.map((slug) => {
+    const metaFilePath = path.join(blogDir, slug, "meta.json");
+
+    let meta: BlogMeta;
+
+    if (fs.existsSync(metaFilePath)) {
+      const raw = fs.readFileSync(metaFilePath, "utf-8");
+      meta = JSON.parse(raw);
+    } else {
+      // 🏷️ Auto-generate metadata if not present
+      const title = slug.replace(/-/g, " ");
+      const category = detectCategory(title);
+      const excerpt = generateExcerpt(title);
+
+      // 📅 Default to today's date
+      const today = new Date().toISOString().split("T")[0];
+
+      // 🖼️ Check image existence
+      const imagePath = path.join(publicImagesDir, `${slug}.jpg`);
+      const imageUrl = fs.existsSync(imagePath)
+        ? `/images/blog/${slug}.jpg`
+        : `/images/blog/placeholder.jpg`;
+
+      meta = {
+        title: title,
+        excerpt,
+        category,
+        author: "CalcPortal Pro Team",
+        readTime: "5 min",
+        publishDate: today,
+        featured: false,
+        featuredImage: imageUrl,
+        slug: slug,
+      };
+
+      // ✍️ Save auto-generated meta.json
+      fs.writeFileSync(metaFilePath, JSON.stringify(meta, null, 2));
+    }
+
+    return meta;
+  });
 }
