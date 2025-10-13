@@ -16,15 +16,15 @@ export type BlogMeta = {
 const blogDir = path.join(process.cwd(), "app", "blog");
 const publicImagesDir = path.join(process.cwd(), "public", "images", "blog");
 
-// ✅ Category keyword weights (higher = priority)
+// ✅ Keyword → Category mapping
 const keywordPriority: Record<string, string[]> = {
-  Taxes: ["tax", "irs", "fpt", "gst"],
-  Loans: ["loan", "credit", "debt"],
-  Investing: ["invest", "etf", "portfolio"],
-  "Real Estate": ["real-estate", "mortgage", "rent", "house"],
-  Savings: ["save", "budget", "cd", "rate", "fund", "emergency"],
-  Insurance: ["insurance"],
-  Retirement: ["retire"],
+  Taxes: ["tax", "irs", "fpt", "gst", "fica"],
+  Loans: ["loan", "credit", "debt", "refinance"],
+  Investing: ["invest", "etf", "portfolio", "stock", "bond", "index fund"],
+  "Real Estate": ["real-estate", "mortgage", "rent", "house", "heloc"],
+  Savings: ["save", "budget", "cd", "rate", "fund", "emergency", "high-yield"],
+  Insurance: ["insurance", "coverage"],
+  Retirement: ["retire", "pension", "401k"],
   Education: ["gpa", "college", "study", "tuition", "scholarship"],
 };
 
@@ -39,6 +39,12 @@ const categoryOrder = [
   "Education",
 ];
 
+// ✨ max featured
+const MAX_FEATURED = 3;
+
+// 📊 Average reading speed
+const WORDS_PER_MIN = 200;
+
 function detectCategory(title: string): string {
   const lowerTitle = title.toLowerCase();
   const matchedCategories: string[] = [];
@@ -51,22 +57,46 @@ function detectCategory(title: string): string {
 
   if (matchedCategories.length === 0) return "All";
 
-  // Sort by priority in `categoryOrder`
   matchedCategories.sort(
-    (a, b) =>
-      categoryOrder.indexOf(a) - categoryOrder.indexOf(b)
+    (a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b)
   );
   return matchedCategories[0];
 }
 
 function generateExcerpt(title: string): string {
-  return `Read our expert guide on ${title.replace(/-/g, " ")} and improve your financial knowledge.`;
+  return `Read our expert guide on ${title.replace(/-/g, " ")} to get key financial insights.`;
 }
 
 function detectFeatured(slug: string): boolean {
-  const featuredFile = path.join(blogDir, slug, "featured.txt");
-  const featuredImage = path.join(publicImagesDir, "featured.jpg");
-  return fs.existsSync(featuredFile) || fs.existsSync(featuredImage);
+  const featuredTxt = path.join(blogDir, slug, "featured.txt");
+  const featuredImg = path.join(publicImagesDir, "featured.jpg");
+  return fs.existsSync(featuredTxt) || fs.existsSync(featuredImg);
+}
+
+function detectImage(slug: string): string {
+  const featuredImgPath = path.join(publicImagesDir, "featured.jpg");
+  const normalImgPath = path.join(publicImagesDir, `${slug}.jpg`);
+
+  if (fs.existsSync(featuredImgPath)) {
+    return `/images/blog/featured.jpg`;
+  } else if (fs.existsSync(normalImgPath)) {
+    return `/images/blog/${slug}.jpg`;
+  } else {
+    return `/images/blog/placeholder.jpg`;
+  }
+}
+
+// 🧮 Calculate read time based on page.tsx content word count
+function calculateReadTime(slug: string): string {
+  const pagePath = path.join(blogDir, slug, "page.tsx");
+
+  if (fs.existsSync(pagePath)) {
+    const content = fs.readFileSync(pagePath, "utf-8");
+    const wordCount = content.split(/\s+/).length;
+    const minutes = Math.max(1, Math.ceil(wordCount / WORDS_PER_MIN));
+    return `${minutes} min`;
+  }
+  return "5 min";
 }
 
 export function getAllBlogPosts(): BlogMeta[] {
@@ -74,9 +104,8 @@ export function getAllBlogPosts(): BlogMeta[] {
     .readdirSync(blogDir)
     .filter((name) => fs.lstatSync(path.join(blogDir, name)).isDirectory());
 
-  return slugs.map((slug) => {
+  const posts = slugs.map((slug) => {
     const metaFilePath = path.join(blogDir, slug, "meta.json");
-
     let meta: BlogMeta;
 
     if (fs.existsSync(metaFilePath)) {
@@ -86,38 +115,44 @@ export function getAllBlogPosts(): BlogMeta[] {
       const title = slug.replace(/-/g, " ");
       const category = detectCategory(title);
       const excerpt = generateExcerpt(title);
-
-      // 📅 Default to today's date
       const today = new Date().toISOString().split("T")[0];
-
-      // 🖼️ Detect featured image
-      const featuredImgPath = path.join(publicImagesDir, "featured.jpg");
-      const normalImgPath = path.join(publicImagesDir, `${slug}.jpg`);
-
-      const imageUrl = fs.existsSync(featuredImgPath)
-        ? `/images/blog/featured.jpg`
-        : fs.existsSync(normalImgPath)
-        ? `/images/blog/${slug}.jpg`
-        : `/images/blog/placeholder.jpg`;
-
-      const isFeatured = detectFeatured(slug);
+      const featured = detectFeatured(slug);
+      const featuredImage = detectImage(slug);
+      const readTime = calculateReadTime(slug);
 
       meta = {
         title,
         excerpt,
         category,
         author: "CalcPortal Pro Team",
-        readTime: "5 min",
+        readTime,
         publishDate: today,
-        featured: isFeatured,
-        featuredImage: imageUrl,
+        featured,
+        featuredImage,
         slug,
       };
 
-      // ✍️ Save auto-generated meta.json
       fs.writeFileSync(metaFilePath, JSON.stringify(meta, null, 2));
     }
 
     return meta;
   });
+
+  // 🪄 Featured sorting
+  posts.sort((a, b) => Number(b.featured) - Number(a.featured));
+
+  // ✂️ Limit featured count
+  let featuredCount = 0;
+  const limitedPosts = posts.map((post) => {
+    if (post.featured && featuredCount < MAX_FEATURED) {
+      featuredCount++;
+      return post;
+    }
+    if (post.featured && featuredCount >= MAX_FEATURED) {
+      return { ...post, featured: false };
+    }
+    return post;
+  });
+
+  return limitedPosts;
 }
