@@ -10,12 +10,12 @@ export type BlogPost = {
   id: number;
   title: string;
   excerpt: string;
-  category: string;
+  category?: string; // ✅ made optional
   author: string;
   readTime: string;
   publishDate: string;
   slug: string;
-  image?: string; // ✅ added image
+  image?: string;
   featured?: boolean;
 };
 
@@ -31,7 +31,6 @@ export default function BlogListingClient({ posts, categories }: Props) {
 
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
-  // Initialize and sync category from query string
   useEffect(() => {
     const categoryFromQuery = searchParams.get("category");
     if (categoryFromQuery && categories.includes(categoryFromQuery)) {
@@ -39,7 +38,6 @@ export default function BlogListingClient({ posts, categories }: Props) {
     } else if (!categoryFromQuery) {
       setSelectedCategory("All");
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams, categories]);
 
   const handleSelectCategory = (category: string) => {
@@ -107,7 +105,6 @@ export default function BlogListingClient({ posts, categories }: Props) {
                 key={post.id}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
-                {/* ✅ Image */}
                 <div className="relative h-48 w-full">
                   <Image
                     src={post.image || "/images/blog/placeholder.jpg"}
@@ -121,7 +118,7 @@ export default function BlogListingClient({ posts, categories }: Props) {
                 <div className="p-6">
                   <div className="flex items-center space-x-4 text-sm text-secondary-100 mb-3">
                     <span className="bg-accent-100 text-accent-700 px-2 py-1 rounded-full text-xs font-medium">
-                      {post.category}
+                      {post.category || "Uncategorized"}
                     </span>
                     <div className="flex items-center space-x-1">
                       <Calendar size={14} />
@@ -180,7 +177,6 @@ export default function BlogListingClient({ posts, categories }: Props) {
               key={post.id}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
             >
-              {/* ✅ Image */}
               <div className="relative h-40 w-full">
                 <Image
                   src={post.image || "/images/blog/placeholder.jpg"}
@@ -194,7 +190,7 @@ export default function BlogListingClient({ posts, categories }: Props) {
               <div className="p-5">
                 <div className="flex items-center space-x-2 text-sm text-secondary-100 mb-2">
                   <span className="bg-accent-100 text-accent-700 px-2 py-1 rounded-full text-xs font-medium">
-                    {post.category}
+                    {post.category || "Uncategorized"}
                   </span>
                 </div>
 
