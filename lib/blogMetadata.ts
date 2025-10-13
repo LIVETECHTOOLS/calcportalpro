@@ -63,6 +63,12 @@ function generateExcerpt(title: string): string {
   return `Read our expert guide on ${title.replace(/-/g, " ")} and improve your financial knowledge.`;
 }
 
+function detectFeatured(slug: string): boolean {
+  const featuredFile = path.join(blogDir, slug, "featured.txt");
+  const featuredImage = path.join(publicImagesDir, "featured.jpg");
+  return fs.existsSync(featuredFile) || fs.existsSync(featuredImage);
+}
+
 export function getAllBlogPosts(): BlogMeta[] {
   const slugs = fs
     .readdirSync(blogDir)
@@ -77,7 +83,6 @@ export function getAllBlogPosts(): BlogMeta[] {
       const raw = fs.readFileSync(metaFilePath, "utf-8");
       meta = JSON.parse(raw);
     } else {
-      // 🏷️ Auto-generate metadata if not present
       const title = slug.replace(/-/g, " ");
       const category = detectCategory(title);
       const excerpt = generateExcerpt(title);
@@ -85,22 +90,28 @@ export function getAllBlogPosts(): BlogMeta[] {
       // 📅 Default to today's date
       const today = new Date().toISOString().split("T")[0];
 
-      // 🖼️ Check image existence
-      const imagePath = path.join(publicImagesDir, `${slug}.jpg`);
-      const imageUrl = fs.existsSync(imagePath)
+      // 🖼️ Detect featured image
+      const featuredImgPath = path.join(publicImagesDir, "featured.jpg");
+      const normalImgPath = path.join(publicImagesDir, `${slug}.jpg`);
+
+      const imageUrl = fs.existsSync(featuredImgPath)
+        ? `/images/blog/featured.jpg`
+        : fs.existsSync(normalImgPath)
         ? `/images/blog/${slug}.jpg`
         : `/images/blog/placeholder.jpg`;
 
+      const isFeatured = detectFeatured(slug);
+
       meta = {
-        title: title,
+        title,
         excerpt,
         category,
         author: "CalcPortal Pro Team",
         readTime: "5 min",
         publishDate: today,
-        featured: false,
+        featured: isFeatured,
         featuredImage: imageUrl,
-        slug: slug,
+        slug,
       };
 
       // ✍️ Save auto-generated meta.json
