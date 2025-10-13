@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-// Advanced keyword-to-category mapping
+// 🏷️ Keyword mapping for categories
 const categoryKeywords: Record<string, string[]> = {
   taxes: ["tax", "irs", "gst", "fpt", "bracket", "fica"],
   loans: ["loan", "credit", "debt", "mortgage", "refinance", "heloc"],
@@ -13,6 +13,7 @@ const categoryKeywords: Record<string, string[]> = {
   education: ["gpa", "college", "study", "student", "tuition"],
 };
 
+// 🧠 Find category by highest keyword match
 function detectCategory(title: string): string {
   const lowerTitle = title.toLowerCase();
   let matchedCategory: string | null = null;
@@ -29,11 +30,21 @@ function detectCategory(title: string): string {
   return matchedCategory || "All";
 }
 
+// 📝 Estimate read time
 function estimateReadTime(content: string): string {
   const wordsPerMinute = 200;
   const wordCount = content.split(/\s+/).length;
   const minutes = Math.ceil(wordCount / wordsPerMinute);
   return `${minutes} min`;
+}
+
+// 🖼️ Check for image existence
+function getFeaturedImage(slug: string): string {
+  const imagePath = path.join(process.cwd(), "public", "images", "blog", `${slug}.jpg`);
+  if (fs.existsSync(imagePath)) {
+    return `/images/blog/${slug}.jpg`;
+  }
+  return "/images/blog/placeholder.jpg";
 }
 
 export type BlogMeta = {
@@ -45,8 +56,8 @@ export type BlogMeta = {
   readTime: string;
   publishDate: string;
   slug: string;
-  image?: string;
-  featured?: boolean;
+  image: string;
+  featured: boolean;
 };
 
 export function getAllBlogPosts(): BlogMeta[] {
@@ -56,7 +67,6 @@ export function getAllBlogPosts(): BlogMeta[] {
     .filter((name) => fs.statSync(path.join(blogDir, name)).isDirectory());
 
   const posts: BlogMeta[] = slugs.map((slug, index) => {
-    // Get the page.tsx content for read time estimation
     const filePath = path.join(blogDir, slug, "page.tsx");
     let content = "";
     try {
@@ -65,14 +75,12 @@ export function getAllBlogPosts(): BlogMeta[] {
       content = "";
     }
 
-    // Title formatting (slug to title)
     const title = slug
       .replace(/-/g, " ")
       .replace(/\b\w/g, (l) => l.toUpperCase());
 
     const category = detectCategory(title);
 
-    // Simple excerpt
     const excerpt =
       content
         .replace(/\n/g, " ")
@@ -80,6 +88,7 @@ export function getAllBlogPosts(): BlogMeta[] {
         .slice(0, 180) + "...";
 
     const readTime = estimateReadTime(content);
+    const image = getFeaturedImage(slug);
 
     return {
       id: index + 1,
@@ -90,8 +99,8 @@ export function getAllBlogPosts(): BlogMeta[] {
       readTime,
       publishDate: new Date().toISOString(),
       slug,
-      image: `/images/blog/${slug}.jpg`,
-      featured: false,
+      image,
+      featured: false, // You can make rules to auto-feature some posts here if needed
     };
   });
 
