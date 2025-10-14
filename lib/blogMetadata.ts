@@ -1,5 +1,8 @@
-import fs from "fs";
-import path from "path";
+export function getAllCategories(): string[] {
+  const posts = getAllBlogPosts();
+  return ["All", ...Array.from(new Set(posts.map((p) => p.category)))];
+}
+
 
 export type BlogMeta = {
   title: string;
