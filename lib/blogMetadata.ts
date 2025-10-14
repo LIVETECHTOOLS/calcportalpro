@@ -10,13 +10,15 @@ export type BlogMeta = {
   publishDate: string;
   featured: boolean;
   featuredImage: string;
+  ogImage: string;
   slug: string;
 };
 
+// 📂 Directory paths
 const blogDir = path.join(process.cwd(), "app", "blog");
 const publicImagesDir = path.join(process.cwd(), "public", "images", "blog");
 
-// ✅ Keyword → Category mapping
+// 🧠 Keyword → Category mapping with priority
 const keywordPriority: Record<string, string[]> = {
   Taxes: ["tax", "irs", "fpt", "gst", "fica"],
   Loans: ["loan", "credit", "debt", "refinance"],
@@ -37,14 +39,16 @@ const categoryOrder = [
   "Insurance",
   "Retirement",
   "Education",
+  "All", // catch-all fallback
 ];
 
-// ✨ max featured
+// ✨ Max featured
 const MAX_FEATURED = 3;
 
 // 📊 Average reading speed
 const WORDS_PER_MIN = 200;
 
+// 🧭 Detect category from title (multi-keyword logic with priority)
 function detectCategory(title: string): string {
   const lowerTitle = title.toLowerCase();
   const matchedCategories: string[] = [];
@@ -63,16 +67,19 @@ function detectCategory(title: string): string {
   return matchedCategories[0];
 }
 
+// 📝 Generate auto excerpt if none
 function generateExcerpt(title: string): string {
   return `Read our expert guide on ${title.replace(/-/g, " ")} to get key financial insights.`;
 }
 
+// 🏷️ Detect if featured.txt or featured.jpg exists
 function detectFeatured(slug: string): boolean {
   const featuredTxt = path.join(blogDir, slug, "featured.txt");
   const featuredImg = path.join(publicImagesDir, "featured.jpg");
   return fs.existsSync(featuredTxt) || fs.existsSync(featuredImg);
 }
 
+// 🖼️ Detect cover image or fallback
 function detectImage(slug: string): string {
   const featuredImgPath = path.join(publicImagesDir, "featured.jpg");
   const normalImgPath = path.join(publicImagesDir, `${slug}.jpg`);
@@ -86,7 +93,17 @@ function detectImage(slug: string): string {
   }
 }
 
-// 🧮 Calculate read time based on page.tsx content word count
+// 🌐 Detect OG image with fallback to og-image.jpg
+function detectOGImage(slug: string): string {
+  const normalImgPath = path.join(publicImagesDir, `${slug}.jpg`);
+  if (fs.existsSync(normalImgPath)) {
+    return `https://calcportalpro.com/images/blog/${slug}.jpg`;
+  } else {
+    return `https://calcportalpro.com/og-image.jpg`;
+  }
+}
+
+// ⏳ Calculate read time based on page.tsx content
 function calculateReadTime(slug: string): string {
   const pagePath = path.join(blogDir, slug, "page.tsx");
 
@@ -118,6 +135,7 @@ export function getAllBlogPosts(): BlogMeta[] {
       const today = new Date().toISOString().split("T")[0];
       const featured = detectFeatured(slug);
       const featuredImage = detectImage(slug);
+      const ogImage = detectOGImage(slug);
       const readTime = calculateReadTime(slug);
 
       meta = {
@@ -129,6 +147,7 @@ export function getAllBlogPosts(): BlogMeta[] {
         publishDate: today,
         featured,
         featuredImage,
+        ogImage,
         slug,
       };
 
