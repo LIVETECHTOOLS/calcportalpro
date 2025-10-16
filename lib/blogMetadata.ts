@@ -1,10 +1,13 @@
+import fs from "fs";
+import path from "path";
+
 export function getAllCategories(): string[] {
   const posts = getAllBlogPosts();
   return ["All", ...Array.from(new Set(posts.map((p) => p.category)))];
 }
 
-
 export type BlogMeta = {
+  id: string; // 👈 Added this line
   title: string;
   excerpt: string;
   category: string;
@@ -131,6 +134,7 @@ export function getAllBlogPosts(): BlogMeta[] {
     if (fs.existsSync(metaFilePath)) {
       const raw = fs.readFileSync(metaFilePath, "utf-8");
       meta = JSON.parse(raw);
+      if (!meta.id) meta.id = slug; // 👈 ensure id is present even in existing meta files
     } else {
       const title = slug.replace(/-/g, " ");
       const category = detectCategory(title);
@@ -142,6 +146,7 @@ export function getAllBlogPosts(): BlogMeta[] {
       const readTime = calculateReadTime(slug);
 
       meta = {
+        id: slug, // 👈 Added this line
         title,
         excerpt,
         category,
