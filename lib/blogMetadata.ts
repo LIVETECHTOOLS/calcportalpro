@@ -3,7 +3,9 @@ import path from "path";
 
 export function getAllCategories(): string[] {
   const posts = getAllBlogPosts();
-  return ["All", ...Array.from(new Set(posts.map((p) => p.category)))];
+  const categories = Array.from(new Set(posts.map((p) => p.category)));
+  // Ensure "All" is first and only appears once
+  return categories.includes("All") ? categories : ["All", ...categories];
 }
 
 export type BlogMeta = {

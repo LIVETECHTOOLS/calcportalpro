@@ -2,6 +2,7 @@
   "name": "calcportalpro",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,7 +12,10 @@
     "type-check": "tsc --noEmit",
     "performance": "lighthouse https://calcportalpro.com --output=json --output-path=./lighthouse-report.json",
     "validate-html": "npm run build && npx html-validate dist",
-    "test:accessibility": "npm run build && npx axe-core --dir=dist"
+    "test:accessibility": "npm run build && npx axe-core --dir=dist",
+    "auto-blog": "node scripts/auto-blog.js",
+    "auto-blog:all": "node scripts/auto-blog.js",
+    "auto-blog:watch": "node scripts/auto-blog.js --watch"
   },
   "dependencies": {
     "@vercel/analytics": "^1.1.1",
