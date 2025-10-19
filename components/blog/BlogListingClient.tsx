@@ -7,7 +7,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Calendar, Clock, User, ArrowRight } from "lucide-react";
 
 export type BlogPost = {
-  id: number;
+  id: string; // Changed from number to string to match BlogMeta
   title: string;
   excerpt: string;
   category?: string; // ✅ made optional
