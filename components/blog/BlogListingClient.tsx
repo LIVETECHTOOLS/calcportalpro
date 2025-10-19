@@ -100,7 +100,7 @@ export default function BlogListingClient({ posts, categories }: Props) {
             Featured Articles
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featured.map((post) => (
+            {featured.map((post, index) => (
               <article
                 key={post.id}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
@@ -174,7 +174,7 @@ export default function BlogListingClient({ posts, categories }: Props) {
           All Articles
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredPosts.map((post) => {
+          {filteredPosts.map((post, index) => {
             return (
               <article
                 key={post.id}
