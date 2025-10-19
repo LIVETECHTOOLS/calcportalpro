@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function 5TipsBuildingInvestmentPortfolioPage() {
+export default function TipsBuildingInvestmentPortfolioPage() {
   return (
     <BlogPostTemplate
       title="5 Tips for Building an Investment Portfolio in 2025"
