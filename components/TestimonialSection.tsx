@@ -54,7 +54,7 @@ export default function TestimonialSection() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-secondary-500 mb-4">
-            What Our Users Say
+            What Our Financial Calculator Users Say
           </h2>
           <p className="text-lg text-secondary-100 max-w-2xl mx-auto">
             Join thousands of users who trust CalcPortal Pro for their financial calculations.

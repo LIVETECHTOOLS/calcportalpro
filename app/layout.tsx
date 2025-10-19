@@ -15,7 +15,7 @@ const inter = Inter({
 // ✅ Metadata must stay in a server component
 export const metadata: Metadata = {
   metadataBase: new URL("https://calcportalpro.com"),
-  title: "CalcPortal Pro",
+  title: "Free Financial Calculators & Tools | CalcPortal Pro",
   description:
     "Free financial calculators for loans, mortgages, investments, taxes, and retirement planning. Make smarter money decisions with our easy-to-use tools.",
   keywords: [
@@ -161,7 +161,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
-        {/* Analytics */}
+        {/* Analytics - Non-blocking */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-3RWDG6W0T4"
@@ -181,7 +181,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google AdSense */}
+        {/* Google AdSense - Non-blocking */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5944904248745587"

@@ -62,7 +62,7 @@ export default function CategoryBlocks() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-secondary-500 mb-4">
-            Financial Tools for Every Need
+            Free Financial Calculators for Every Need
           </h2>
           <p className="text-lg text-secondary-100 max-w-2xl mx-auto">
             From budgeting to retirement planning, we have the tools you need to make informed financial decisions.

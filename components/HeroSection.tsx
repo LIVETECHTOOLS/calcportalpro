@@ -17,7 +17,7 @@ export default function HeroSection() {
             className="space-y-6"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-secondary-500 leading-tight">
-              Smarter Financial Tools.
+              Free Financial Calculators & Tools.
               <br />
               <span className="text-gradient">Better Money Decisions.</span>
             </h1>

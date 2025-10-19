@@ -60,7 +60,7 @@ export default function PopularCalculators() {
       <div className="container-max">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-secondary-500 mb-4">
-            Popular Calculators
+            Popular Financial Calculators
           </h2>
           <p className="text-lg text-secondary-100 max-w-2xl mx-auto">
             Our most-used financial tools to help you make smart money decisions.

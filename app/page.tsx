@@ -6,7 +6,7 @@ import EducationalHubs from "@/components/EducationalHubs";
 import TestimonialSection from "@/components/TestimonialSection";
 
 export const metadata: Metadata = {
-  title: "CalcPortal Pro",
+  title: "Free Financial Calculators & Tools | CalcPortal Pro",
   description:
     "Free financial calculators for loans, mortgages, investments, taxes, and retirement planning. Make smarter money decisions with our easy-to-use tools.",
   keywords:

@@ -68,7 +68,7 @@ export default function EducationalHubs() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold text-secondary-500 mb-4">
-              Educational Hubs
+              Financial Education & Tools
             </h2>
             <p className="text-lg text-secondary-100 max-w-2xl">
               Learn from financial experts and improve your money management skills.
