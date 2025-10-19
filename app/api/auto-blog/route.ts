@@ -37,8 +37,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Invalid action' }, { status: 400 });
     
   } catch (error) {
-    console.error('Auto-blog API error:', error);
-    return NextResponse.json({ 
+    // Silent fail for API errors
+    return NextResponse.json({
       error: 'Internal server error',
       details: error instanceof Error ? error.message : 'Unknown error'
     }, { status: 500 });
@@ -81,8 +81,8 @@ export async function GET(request: NextRequest) {
     });
     
   } catch (error) {
-    console.error('Auto-blog API error:', error);
-    return NextResponse.json({ 
+    // Silent fail for API errors
+    return NextResponse.json({
       error: 'Internal server error',
       details: error instanceof Error ? error.message : 'Unknown error'
     }, { status: 500 });

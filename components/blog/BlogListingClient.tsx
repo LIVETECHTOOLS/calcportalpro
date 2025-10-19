@@ -174,10 +174,6 @@ export default function BlogListingClient({ posts, categories }: Props) {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredPosts.map((post) => {
-            // Debug logging
-            if (post.slug === '2025-tax-brackets' || post.slug === '50-30-20-rule-budgeting-guide-2025') {
-              console.log('Debug post:', post.slug, 'image:', post.image);
-            }
             return (
               <article
                 key={post.id}
@@ -192,7 +188,6 @@ export default function BlogListingClient({ posts, categories }: Props) {
                   className="object-cover"
                   style={{ aspectRatio: '16/9' }}
                   onError={(e) => {
-                    console.log('Image failed to load:', post.slug, post.image);
                     e.currentTarget.src = "/images/blog/placeholder.jpg";
                   }}
                 />

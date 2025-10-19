@@ -42,8 +42,8 @@ export async function POST(request: NextRequest) {
     }
     
   } catch (error) {
-    console.error('Auto-blog webhook error:', error);
-    return NextResponse.json({ 
+    // Silent fail for webhook errors
+    return NextResponse.json({
       error: 'Internal server error',
       details: error instanceof Error ? error.message : 'Unknown error'
     }, { status: 500 });
@@ -64,16 +64,10 @@ function startFileWatching() {
       // Wait a bit for file to be fully written
       setTimeout(() => {
         try {
-          console.log(`🔄 Auto-detected new blog post: ${slug}`);
           const success = autoTransformBlogPost(slug);
-          
-          if (success) {
-            console.log(`✅ Auto-transformed: ${slug}`);
-          } else {
-            console.log(`ℹ️  No transformation needed: ${slug}`);
-          }
+          // Silent success/failure logging
         } catch (error) {
-          console.error(`❌ Auto-transformation failed for ${slug}:`, error);
+          // Silent fail for auto-transformation errors
         }
       }, 1000);
     }
@@ -132,7 +126,7 @@ async function transformAllPosts() {
 if (process.env.NODE_ENV === 'development') {
   // Start watching after a delay to ensure server is ready
   setTimeout(() => {
-    console.log('🔍 Starting auto-blog file watcher...');
+    // Starting auto-blog file watcher
     startFileWatching();
   }, 5000);
 }

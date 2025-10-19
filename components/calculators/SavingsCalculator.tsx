@@ -169,7 +169,7 @@ export default function SavingsCalculator() {
       await navigator.clipboard.writeText(text);
       // You could add a toast notification here
     } catch (err) {
-      console.error('Failed to copy text: ', err);
+      // Silent fail for clipboard errors
     }
   };
 
