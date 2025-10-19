@@ -172,11 +172,16 @@ export default function BlogListingClient({ posts, categories }: Props) {
           All Articles
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredPosts.map((post) => (
-            <article
-              key={post.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-            >
+          {filteredPosts.map((post) => {
+            // Debug logging
+            if (post.slug === '2025-tax-brackets' || post.slug === '50-30-20-rule-budgeting-guide-2025') {
+              console.log('Debug post:', post.slug, 'image:', post.image);
+            }
+            return (
+              <article
+                key={post.id}
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              >
               <div className="relative h-40 w-full">
                 <Image
                   src={post.image || "/images/blog/placeholder.jpg"}
@@ -184,6 +189,10 @@ export default function BlogListingClient({ posts, categories }: Props) {
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
+                  onError={(e) => {
+                    console.log('Image failed to load:', post.slug, post.image);
+                    e.currentTarget.src = "/images/blog/placeholder.jpg";
+                  }}
                 />
               </div>
 
@@ -217,8 +226,9 @@ export default function BlogListingClient({ posts, categories }: Props) {
                   </Link>
                 </div>
               </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       </div>
     </div>
