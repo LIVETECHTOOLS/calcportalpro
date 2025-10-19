@@ -72,7 +72,7 @@ export default function TestimonialSection() {
                 transition={{ duration: 0.5 }}
                 className="text-center"
               >
-                {/* ✅ Avatar with fallback */}
+                {/* ✅ Avatar with proper aspect ratio */}
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full overflow-hidden shadow-lg bg-gray-200 flex items-center justify-center">
                   {!imageError ? (
                     <Image
@@ -81,6 +81,7 @@ export default function TestimonialSection() {
                       width={80}
                       height={80}
                       className="object-cover w-full h-full"
+                      style={{ aspectRatio: '1/1' }}
                       onError={() => setImageError(true)}
                     />
                   ) : (

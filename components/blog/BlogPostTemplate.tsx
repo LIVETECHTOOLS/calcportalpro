@@ -150,6 +150,8 @@ export default function BlogPostTemplate({
                 width={featuredImage.width || 1200}
                 height={featuredImage.height || 630}
                 className="mx-auto rounded-lg shadow-lg object-cover w-full"
+                style={{ aspectRatio: '16/9' }}
+                sizes="(max-width: 768px) 100vw, 1200px"
                 priority
               />
             </div>

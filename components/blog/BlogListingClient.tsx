@@ -112,6 +112,7 @@ export default function BlogListingClient({ posts, categories }: Props) {
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
+                    style={{ aspectRatio: '16/9' }}
                   />
                 </div>
 
@@ -189,6 +190,7 @@ export default function BlogListingClient({ posts, categories }: Props) {
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
+                  style={{ aspectRatio: '16/9' }}
                   onError={(e) => {
                     console.log('Image failed to load:', post.slug, post.image);
                     e.currentTarget.src = "/images/blog/placeholder.jpg";
