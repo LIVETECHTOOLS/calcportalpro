@@ -69,7 +69,7 @@ export async function GET(request: NextRequest) {
         success: true,
         posts: analyses,
         total: analyses.length,
-        needsTransformation: analyses.filter(a => !a.error && a.needsTransformation).length
+        needsTransformation: analyses.filter(a => !('error' in a) && a.needsTransformation).length
       });
     }
     
