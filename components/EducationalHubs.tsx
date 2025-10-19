@@ -112,6 +112,7 @@ export default function EducationalHubs() {
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       style={{ aspectRatio: '16/9' }}
+                      priority={index < 3}
                     />
                     {/* Category Tag */}
                     <div className="absolute bottom-3 left-3">

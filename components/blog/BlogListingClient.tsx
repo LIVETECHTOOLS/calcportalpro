@@ -113,6 +113,7 @@ export default function BlogListingClient({ posts, categories }: Props) {
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
                     style={{ aspectRatio: '16/9' }}
+                    priority={index < 6}
                   />
                 </div>
 
@@ -187,6 +188,7 @@ export default function BlogListingClient({ posts, categories }: Props) {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                   style={{ aspectRatio: '16/9' }}
+                  priority={index < 6}
                   onError={(e) => {
                     e.currentTarget.src = "/images/blog/placeholder.jpg";
                   }}

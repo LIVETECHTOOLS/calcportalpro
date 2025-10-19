@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font display optimization for better performance */
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('/fonts/inter-var.woff2') format('woff2');
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

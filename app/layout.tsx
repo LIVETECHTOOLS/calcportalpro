@@ -152,7 +152,12 @@ export default function RootLayout({
         />
         <meta name="google" content="notranslate" />
 
-        {/* Fonts preload */}
+        {/* Resource hints for performance */}
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//pagead2.googlesyndication.com" />
+        <link rel="dns-prefetch" href="//images.unsplash.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="preload"
           href="/fonts/inter-var.woff2"
