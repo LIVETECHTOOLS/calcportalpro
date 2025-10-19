@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import AdUnit from '@/components/ads/AdUnit';
 
@@ -15,6 +16,12 @@ interface BlogPostTemplateProps {
   calculatorLink?: string;
   calculatorText?: string;
   adSlots?: string[];
+  featuredImage?: {
+    src: string;
+    alt: string;
+    width?: number;
+    height?: number;
+  };
 }
 
 export function generateBlogMetadata({
@@ -55,7 +62,8 @@ export default function BlogPostTemplate({
   children,
   calculatorLink,
   calculatorText,
-  adSlots = []
+  adSlots = [],
+  featuredImage
 }: BlogPostTemplateProps) {
   const categoryColors = {
     "Taxes": "red",
@@ -132,6 +140,20 @@ export default function BlogPostTemplate({
           <p className="text-xl text-gray-700 leading-relaxed mb-8">
             {description}
           </p>
+          
+          {/* Featured Image */}
+          {featuredImage && (
+            <div className="my-8">
+              <Image
+                src={featuredImage.src}
+                alt={featuredImage.alt}
+                width={featuredImage.width || 1200}
+                height={featuredImage.height || 630}
+                className="mx-auto rounded-lg shadow-lg object-cover w-full"
+                priority
+              />
+            </div>
+          )}
 
           {adSlots.length > 0 && <AdUnit adSlot={adSlots[0]} />}
 
