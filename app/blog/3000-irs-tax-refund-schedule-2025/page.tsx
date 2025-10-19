@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function 3000IrsTaxRefundSchedule2025Page() {
+export default function IrsTaxRefundSchedule2025Page() {
   return (
     <BlogPostTemplate
       title="$3000 IRS Tax Refund Schedule 2025: When to Expect Your Refund"
