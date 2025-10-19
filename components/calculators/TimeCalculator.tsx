@@ -227,7 +227,7 @@ export default function TimeCalculator() {
     }
   };
 
-  const updateFormData = (field: keyof TimeFormData, value: any) => {
+  const updateFormData = (field: keyof TimeFormData, value: string | number) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 

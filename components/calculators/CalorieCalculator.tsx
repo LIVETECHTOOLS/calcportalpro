@@ -198,7 +198,7 @@ export default function CalorieCalculator() {
     };
   };
 
-  const updateFormData = (field: keyof CalorieFormData, value: any) => {
+  const updateFormData = (field: keyof CalorieFormData, value: string | number) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 

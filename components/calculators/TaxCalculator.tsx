@@ -226,7 +226,7 @@ Take-Home Pay: $${results.takeHomePay.toFixed(2)}`
               </label>
               <select
                 value={inputs.filingStatus}
-                onChange={(e) => handleInputChange('filingStatus', e.target.value as any)}
+                onChange={(e) => handleInputChange('filingStatus', e.target.value as 'single' | 'married' | 'head' | 'widow')}
                 className="input-field"
               >
                 <option value="single">Single</option>

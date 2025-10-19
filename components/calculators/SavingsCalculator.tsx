@@ -156,7 +156,7 @@ export default function SavingsCalculator() {
     }
   };
 
-  const updateFormData = (field: keyof SavingsFormData, value: any) => {
+  const updateFormData = (field: keyof SavingsFormData, value: string | number) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
@@ -300,7 +300,7 @@ export default function SavingsCalculator() {
             </label>
             <select
               value={formData.compoundingFrequency}
-              onChange={(e) => updateFormData('compoundingFrequency', e.target.value as any)}
+              onChange={(e) => updateFormData('compoundingFrequency', e.target.value as 'monthly' | 'quarterly' | 'annually' | 'daily')}
               className="input-field"
             >
               <option value="annually">Annually</option>

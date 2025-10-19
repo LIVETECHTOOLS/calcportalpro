@@ -212,18 +212,14 @@ function autoTransformBlogPost(slug) {
       // Write transformed content
       fs.writeFileSync(pagePath, transformedContent);
       
-      console.log(`✅ Auto-transformed blog post: ${slug}`);
-      console.log(`   Title: ${analysis.title}`);
-      console.log(`   Category: ${analysis.category}`);
-      console.log(`   Word Count: ${analysis.wordCount}`);
-      console.log(`   Backup created: ${backupPath}`);
+      // Auto-transformed blog post successfully
       return true;
     }
     
-    console.log(`ℹ️  No transformation needed for: ${slug} (${analysis.wordCount} words)`);
+    // No transformation needed
     return false;
   } catch (error) {
-    console.error(`❌ Failed to transform blog post ${slug}:`, error.message);
+    // Failed to transform blog post
     return false;
   }
 }
@@ -234,7 +230,7 @@ function transformAllBlogPosts() {
     .filter(name => fs.lstatSync(path.join(blogDir, name)).isDirectory())
     .filter(name => name !== 'page.tsx');
   
-  console.log(`🔄 Found ${slugs.length} blog posts to analyze...`);
+  // Found blog posts to analyze
   
   let transformed = 0;
   for (const slug of slugs) {
@@ -243,12 +239,12 @@ function transformAllBlogPosts() {
     }
   }
   
-  console.log(`✅ Auto-transformation complete: ${transformed}/${slugs.length} posts transformed`);
+  // Auto-transformation complete
 }
 
 // Main execution
 if (args.length === 0) {
-  console.log('🔄 Auto-transforming all blog posts...');
+  // Auto-transforming all blog posts
   transformAllBlogPosts();
 } else if (args[0] === '--help' || args[0] === '-h') {
   console.log(`
@@ -276,11 +272,11 @@ Features:
 `);
 } else {
   const slug = args[0];
-  console.log(`🔄 Auto-transforming blog post: ${slug}`);
+  // Auto-transforming specific blog post
   
   if (autoTransformBlogPost(slug)) {
-    console.log(`✅ Successfully transformed: ${slug}`);
+    // Successfully transformed
   } else {
-    console.log(`ℹ️  No transformation needed for: ${slug}`);
+    // No transformation needed
   }
 }

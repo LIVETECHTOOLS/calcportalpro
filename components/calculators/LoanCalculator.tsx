@@ -112,7 +112,7 @@ export default function LoanCalculator() {
     }, 500);
   };
 
-  const updateFormData = (field: keyof LoanFormData, value: any) => {
+  const updateFormData = (field: keyof LoanFormData, value: string | number) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 

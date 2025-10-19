@@ -134,7 +134,7 @@ Total Pay: $${results.totalPay.toFixed(2)}`
               </label>
               <select
                 value={inputs.payType}
-                onChange={(e) => handleInputChange('payType', e.target.value as any)}
+                onChange={(e) => handleInputChange('payType', e.target.value as 'hourly' | 'salary')}
                 className="input-field"
               >
                 <option value="salary">Annual Salary</option>

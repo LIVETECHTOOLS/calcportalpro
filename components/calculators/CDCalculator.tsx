@@ -197,7 +197,7 @@ Effective Annual Rate: ${results.effectiveAnnualRate.toFixed(2)}%`
                 />
                 <select
                   value={inputs.termType}
-                  onChange={(e) => handleInputChange('termType', e.target.value as any)}
+                  onChange={(e) => handleInputChange('termType', e.target.value as 'months' | 'years')}
                   className="input-field w-24"
                 >
                   <option value="months">Months</option>
@@ -214,7 +214,7 @@ Effective Annual Rate: ${results.effectiveAnnualRate.toFixed(2)}%`
               </label>
               <select
                 value={inputs.compoundFrequency}
-                onChange={(e) => handleInputChange('compoundFrequency', e.target.value as any)}
+                onChange={(e) => handleInputChange('compoundFrequency', e.target.value as 'monthly' | 'quarterly' | 'annually')}
                 className="input-field"
               >
                 <option value="annually">Annually</option>
