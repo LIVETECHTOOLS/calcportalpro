@@ -140,7 +140,11 @@ export default function GPACalculator() {
     setCourses(courses.filter(course => course.id !== id));
   };
 
-  const updateCourse = (id: string, field: keyof Course, value: string | number) => {
+  const updateCourse = (
+    id: string,
+    field: keyof Course,
+    value: string | number | boolean
+  ) => {
     setCourses(courses.map(course => 
       course.id === id ? { ...course, [field]: value } : course
     ));
