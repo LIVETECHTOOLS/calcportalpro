@@ -1,205 +1,318 @@
 import { Metadata } from 'next'
+import BlogPostTemplate from '@/components/blog/BlogPostTemplate'
+import AdUnit from '@/components/ads/AdUnit'
 
 export const metadata: Metadata = {
-  title: 'HMRC Savings Account Tax Warning: What UK Savers Must Know in 2025',
+  title: 'HMRC Savings Account Tax Warning: What UK Savers Must Know in 2025 | CalcPortal Pro',
   description: 'Understand the HMRC savings account tax warning in 2025, how interest is taxed, PSA limits, HMRC rules, and strategies to minimise tax on savings.',
-  keywords: 'HMRC savings account tax warning, UK savings tax 2025, HMRC savings interest rules, Personal Savings Allowance UK, HMRC savings tax warning 2025',
+  keywords: 'HMRC savings account tax warning, UK savings tax 2025, HMRC savings interest rules, Personal Savings Allowance UK, HMRC savings tax warning 2025, UK tax on savings interest, HMRC tax rules',
   openGraph: {
     title: 'HMRC Savings Account Tax Warning: What UK Savers Must Know in 2025',
     description: 'Understand the HMRC savings account tax warning in 2025, how interest is taxed, PSA limits, HMRC rules, and strategies to minimise tax on savings.',
     type: 'article',
     publishedTime: '2025-09-18T00:00:00.000Z',
     authors: ['CalcPortal Pro Team'],
-    tags: ['HMRC', 'savings account', 'tax warning', 'UK tax 2025'],
   },
-}
-
-// Article Schema
-const articleSchema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "HMRC Savings Account Tax Warning: What UK Savers Must Know in 2025",
-  "description": "Understand the HMRC savings account tax warning in 2025, how interest is taxed, PSA limits, HMRC rules, and strategies to minimise tax on savings.",
-  "image": "https://calcportalpro.com/og-image.jpg",
-  "author": {
-    "@type": "Organization",
-    "name": "CalcPortal Pro Team"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "CalcPortal Pro",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://calcportalpro.com/logo.png"
-    }
-  },
-  "datePublished": "2025-09-18T00:00:00.000Z",
-  "dateModified": "2025-09-18T00:00:00.000Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://calcportalpro.com/blog/hmrc-savings-account-tax-warning"
-  }
 }
 
 export default function HMRCSavingsAccountTaxWarningPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-sm p-6 sm:p-10">
-          <div className="text-center mb-10">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              HMRC Savings Account Tax Warning: What UK Savers Must Know in 2025
-            </h1>
-            <p className="text-xl text-gray-600 mb-6">
-              Learn how HMRC taxes savings account interest, understand PSA limits, and discover ways to reduce your savings tax bill in 2025.
-            </p>
-            <div className="flex justify-center items-center space-x-4 text-sm text-gray-500">
-              <span>Published: September 18, 2025</span>
-              <span>•</span>
-              <span>18 min read</span>
-              <span>•</span>
-              <span>UK Tax Guide</span>
-            </div>
+    <BlogPostTemplate
+      title="HMRC Savings Account Tax Warning: What UK Savers Must Know in 2025"
+      description="Understand the HMRC savings account tax warning in 2025, how interest is taxed, PSA limits, HMRC rules, and strategies to minimise tax on savings."
+      keywords="HMRC savings account tax warning, UK savings tax 2025, HMRC savings interest rules, Personal Savings Allowance UK, HMRC savings tax warning 2025, UK tax on savings interest, HMRC tax rules"
+      publishDate="2025-09-18T00:00:00.000Z"
+      readTime="9 min"
+      category="Taxes"
+      calculatorLink="/calculators/tax"
+      calculatorText="Use our tax calculator to estimate your tax liability and plan your finances."
+      adSlots={["6578932201", "6578932202", "6578932203"]}
+      slug="hmrc-savings-account-tax-warning"
+    >
+      <p className="text-xl text-gray-700 leading-relaxed mb-8">
+        UK savers are facing an important tax warning from HMRC in 2025 as interest rates on savings accounts have risen significantly. With many high-yield savings accounts now offering 4-5% APY, more savers are exceeding their Personal Savings Allowance (PSA) and facing unexpected tax bills. This comprehensive guide explains the HMRC savings account tax warning, how interest is taxed, and strategies to minimize your tax liability on savings.
+      </p>
+
+      <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+        Understanding the HMRC Savings Account Tax Warning
+      </h2>
+      
+      <p className="text-gray-700 mb-6">
+        HMRC has issued warnings to UK savers about the potential tax implications of higher interest rates on savings accounts. As interest rates have increased from near-zero levels to 4-5% or higher, many savers who previously paid no tax on their savings interest are now finding themselves liable for tax.
+      </p>
+
+      <p className="text-gray-700 mb-6">
+        The warning highlights that savers need to be aware of their Personal Savings Allowance limits and understand how interest income is taxed. Many people are unaware that they may owe tax on their savings interest, especially if they have multiple accounts or significant savings balances.
+      </p>
+
+      <div className="bg-red-50 border-l-4 border-red-400 p-6 my-6">
+        <h4 className="font-semibold text-red-900 mb-2">Key Points from HMRC Warning:</h4>
+        <ul className="text-red-800 space-y-1">
+          <li>• Higher interest rates mean more savers exceed PSA limits</li>
+          <li>• Tax is due on interest above the Personal Savings Allowance</li>
+          <li>• Many savers are unaware of their tax obligations</li>
+          <li>• HMRC may contact savers about unpaid tax on interest</li>
+          <li>• Self-assessment may be required for higher earners</li>
+        </ul>
+      </div>
+
+      <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+        How Savings Interest is Taxed in the UK
+      </h2>
+      
+      <p className="text-gray-700 mb-6">
+        Understanding how savings interest is taxed is crucial for UK savers. The tax system treats savings interest as income, but there are allowances and special rules that can reduce or eliminate your tax liability.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Personal Savings Allowance (PSA)
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        The Personal Savings Allowance allows most UK taxpayers to earn a certain amount of interest tax-free each year. The allowance depends on your income tax band:
+      </p>
+
+      <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+        <li><strong>Basic rate taxpayers (20%):</strong> £1,000 PSA</li>
+        <li><strong>Higher rate taxpayers (40%):</strong> £500 PSA</li>
+        <li><strong>Additional rate taxpayers (45%):</strong> £0 PSA</li>
+      </ul>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Tax Rates on Savings Interest
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        Interest above your PSA is taxed at your marginal income tax rate. This means basic rate taxpayers pay 20% on interest above £1,000, while higher rate taxpayers pay 40% on interest above £500.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Starting Rate for Savings
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        There's also a starting rate for savings of 0% on the first £5,000 of savings income for those with total income below £17,570. This can provide additional tax-free interest for lower earners.
+      </p>
+
+      <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+        Why More Savers Are Now Affected
+      </h2>
+      
+      <p className="text-gray-700 mb-6">
+        The combination of higher interest rates and increased savings balances means that many more UK savers are now exceeding their Personal Savings Allowance and becoming liable for tax on their savings interest.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Rising Interest Rates
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        Interest rates on savings accounts have increased from near-zero levels to 4-5% or higher. This means that even modest savings balances can now generate significant interest income that may exceed PSA limits.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Increased Savings Balances
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        Many people have built up larger savings balances during periods of economic uncertainty, and these larger balances generate more interest income that can push them over PSA limits.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Multiple Accounts
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        Savers with multiple accounts may not realize that all their interest income is combined for tax purposes. Even if each individual account generates less than the PSA, the total may exceed the allowance.
+      </p>
+
+      <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 my-6">
+        <h4 className="font-semibold text-yellow-900 mb-2">Example: PSA Exceeded with Higher Rates:</h4>
+        <div className="space-y-2 text-yellow-800">
+          <div className="flex justify-between">
+            <span>Savings Balance:</span>
+            <span>£30,000</span>
           </div>
-
-          <div className="prose prose-lg max-w-none">
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: JSON.stringify(articleSchema),
-              }}
-            />
-
-            <p className="lead">
-              HMRC has issued fresh warnings about how savings account interest is taxed in 2025. With interest rates remaining higher than in previous years, more UK savers are being pushed over their Personal Savings Allowance (PSA), creating unexpected tax bills.
-            </p>
-
-            <h2>Understanding the HMRC Savings Account Tax Warning</h2>
-            <p>
-              In 2025, HMRC reminds savers that while banks and building societies pay interest gross (without tax deduction), it is still taxable income. Depending on your income level, you may exceed your PSA and face tax obligations.
-            </p>
-
-            <h2>Personal Savings Allowance (PSA) in 2025</h2>
-            <p>
-              The PSA determines how much savings interest you can earn tax-free:
-            </p>
-            <ul>
-              <li><strong>Basic rate taxpayers (20%):</strong> £1,000 tax-free allowance</li>
-              <li><strong>Higher rate taxpayers (40%):</strong> £500 tax-free allowance</li>
-              <li><strong>Additional rate taxpayers (45%):</strong> No allowance</li>
-            </ul>
-
-            <h2>Why More Savers Are Affected in 2025</h2>
-            <p>
-              Rising interest rates mean even modest savings balances can generate interest that breaches the PSA. For example, £50,000 in a 5% savings account generates £2,500 interest — well above the PSA.
-            </p>
-
-            <h2>Case Studies: How the Tax Warning Affects Different Savers</h2>
-            <p>To understand the real-world impact of the HMRC savings account tax warning, let’s explore some examples:</p>
-            <h3>Case 1: Jane, a Basic-Rate Taxpayer</h3>
-            <p>
-              Jane earns £30,000 a year and has £40,000 in a savings account paying 4% interest. She earns £1,600 interest annually. Her PSA covers £1,000, but the extra £600 is taxed at 20%, costing her £120.
-            </p>
-
-            <h3>Case 2: David, a Higher-Rate Taxpayer</h3>
-            <p>
-              David earns £65,000 and has £80,000 in savings at 4.5%. His interest totals £3,600. His PSA is only £500, so £3,100 is taxable at 40%, creating a £1,240 tax bill.
-            </p>
-
-            <h3>Case 3: Margaret, a Retiree</h3>
-            <p>
-              Margaret relies on her pension and has £20,000 in savings at 5%. She earns £1,000 in interest, which falls within her PSA, meaning she pays no tax. But if rates rise further or her savings grow, she could be affected.
-            </p>
-
-            <h2>How HMRC Collects Tax on Savings Interest</h2>
-            <p>
-              HMRC typically collects tax on savings interest automatically through your tax code if you are employed or receiving a pension. In some cases, such as if your savings interest is particularly high, you may need to file a Self-Assessment tax return.
-            </p>
-
-            <h2>Recent HMRC Updates and Penalties</h2>
-            <p>
-              In 2025, HMRC has increased its focus on compliance. Banks now report savings interest directly to HMRC, making it harder to overlook taxable amounts. Failure to declare savings interest can lead to penalties of up to 30% of the unpaid tax, plus interest charges.
-            </p>
-
-            <h2>Common Misconceptions About Savings Tax</h2>
-            <ul>
-              <li>Many savers wrongly assume all savings interest is tax-free.</li>
-              <li>ISAs are tax-free, but standard savings accounts are not.</li>
-              <li>Banks do not deduct tax at source anymore — the responsibility lies with the saver.</li>
-              <li>Joint accounts do not double the PSA unless both partners are taxpayers and interest is split.</li>
-            </ul>
-
-            <h2>Strategies to Minimise Your Savings Tax Bill</h2>
-            <ul>
-              <li>Maximise use of ISAs (£20,000 annual allowance).</li>
-              <li>Consider Premium Bonds and other tax-free products.</li>
-              <li>Spread savings between partners to double PSA benefits.</li>
-              <li>Review your income sources to stay within thresholds.</li>
-              <li>Use offset mortgages to reduce taxable interest.</li>
-              <li>Create a ladder of fixed-rate ISAs to lock in tax-free returns.</li>
-            </ul>
-
-            <h2>Saver Scenarios: Who Needs to Be Most Careful?</h2>
-            <p>
-              The HMRC savings account tax warning applies to everyone, but some groups are more at risk:
-            </p>
-            <ul>
-              <li><strong>Higher-rate taxpayers:</strong> They have only £500 PSA and breach it quickly.</li>
-              <li><strong>Dual-income households:</strong> Couples who both earn high salaries may see their joint savings interest exceed both PSAs.</li>
-              <li><strong>Students and part-time workers:</strong> Though often under the tax threshold, if they have large savings from inheritance or gifts, they may still pay tax.</li>
-              <li><strong>Pensioners:</strong> Retirees who rely on savings interest as income are particularly exposed to rate rises.</li>
-            </ul>
-
-            <h2>Frequently Asked Questions (FAQs)</h2>
-
-            <h3>1. What is the HMRC savings account tax warning?</h3>
-            <p>
-              It is a reminder from HMRC that savings account interest counts as taxable income, and many savers may now exceed their PSA due to higher rates.
-            </p>
-
-            <h3>2. Do all savers receive the same Personal Savings Allowance?</h3>
-            <p>
-              No. The PSA depends on your income tax band. Basic rate taxpayers have £1,000, higher rate taxpayers £500, and additional rate taxpayers none.
-            </p>
-
-            <h3>3. How does HMRC collect tax on savings?</h3>
-            <p>
-              HMRC adjusts your tax code or requests a Self-Assessment return to collect the tax due.
-            </p>
-
-            <h3>4. Are ISAs affected by the HMRC savings account tax warning?</h3>
-            <p>
-              No. ISAs remain fully tax-free. The warning applies only to standard savings and current accounts generating taxable interest.
-            </p>
-
-            <h3>5. How can I avoid paying tax on savings interest?</h3>
-            <p>
-              By using ISAs, splitting savings with your spouse, or keeping interest below PSA thresholds.
-            </p>
-
-            <h3>6. Do I need to tell HMRC about my savings interest?</h3>
-            <p>
-              Usually no, as banks report it directly. But if your tax code is wrong or your savings interest is very high, you may need to file a return.
-            </p>
-
-            <h3>7. What happens if I ignore the HMRC savings account tax warning?</h3>
-            <p>
-              Ignoring taxable interest can result in penalties, backdated tax bills, and interest charges.
-            </p>
-
-            <h2>Conclusion</h2>
-            <p>
-              The HMRC savings account tax warning is a timely reminder for UK savers in 2025. With rising interest rates, more people are breaching their PSA limits and facing unexpected tax bills. By understanding the rules, learning from case studies, and planning strategically, you can protect more of your savings income from tax.
-            </p>
-
-            <div className="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
-              <p className="text-blue-800">
-                <strong>Pro Tip:</strong> Use our free UK savings tax calculator to check whether your interest will exceed the PSA and explore ways to keep your savings tax-efficient.
-              </p>
-            </div>
+          <div className="flex justify-between">
+            <span>Interest Rate:</span>
+            <span>4.5% APY</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Annual Interest:</span>
+            <span>£1,350</span>
+          </div>
+          <div className="flex justify-between">
+            <span>PSA (Basic Rate):</span>
+            <span>£1,000</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Taxable Interest:</span>
+            <span>£350</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Tax Due (20%):</span>
+            <span>£70</span>
           </div>
         </div>
       </div>
-    </div>
+
+      <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+        Strategies to Minimize Tax on Savings
+      </h2>
+      
+      <p className="text-gray-700 mb-6">
+        There are several legitimate strategies that UK savers can use to minimize their tax liability on savings interest while staying within HMRC rules.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Use Tax-Free Savings Accounts
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        Consider using ISAs (Individual Savings Accounts) for your savings. Interest earned within ISAs is completely tax-free, regardless of your income level or PSA limits. You can contribute up to £20,000 per year to ISAs.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Spread Savings Across Accounts
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        If you're married or in a civil partnership, consider spreading savings across both partners' names to take advantage of both PSAs. Each person has their own PSA allowance.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Consider Premium Bonds
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        Premium Bonds offer tax-free prizes instead of interest. While returns are not guaranteed, they can be a tax-efficient way to hold savings, especially for higher rate taxpayers.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Use the Starting Rate for Savings
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        If your total income is below £17,570, you may be able to use the starting rate for savings to earn up to £5,000 in tax-free interest, in addition to your PSA.
+      </p>
+
+      <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+        What to Do If You Owe Tax on Savings Interest
+      </h2>
+      
+      <p className="text-gray-700 mb-6">
+        If you discover that you owe tax on your savings interest, it's important to take action promptly to avoid penalties and interest charges from HMRC.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Check Your Tax Code
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        HMRC may adjust your tax code to collect tax on savings interest through PAYE if you're employed. Check your tax code to see if it has been adjusted for savings interest.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Register for Self-Assessment
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        If you need to pay tax on savings interest and aren't already registered for self-assessment, you may need to register and file a tax return. This is typically required if your tax liability exceeds £1,000.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Pay Any Outstanding Tax
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        If you owe tax on savings interest, pay it as soon as possible to avoid interest charges and penalties. You can pay online through HMRC's website or by other approved methods.
+      </p>
+
+      <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+        Common Mistakes to Avoid
+      </h2>
+      
+      <p className="text-gray-700 mb-6">
+        There are several common mistakes that UK savers make regarding tax on savings interest that can lead to problems with HMRC.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Ignoring the PSA Limits
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        Many savers assume that all savings interest is tax-free, but this is only true up to the PSA limits. Interest above these limits is taxable.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Not Declaring Interest Income
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        If you're required to file a self-assessment return, you must declare all your interest income, even if it's below the PSA. Failure to do so can result in penalties.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Assuming Banks Handle Everything
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        While banks report interest to HMRC, it's your responsibility to ensure the correct tax is paid. Don't assume that banks will handle all tax matters for you.
+      </p>
+
+      <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+        Planning for the Future
+      </h2>
+      
+      <p className="text-gray-700 mb-6">
+        As interest rates may continue to fluctuate, it's important to plan your savings strategy with tax implications in mind.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Monitor Your Interest Income
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        Keep track of all your savings interest throughout the year to ensure you don't exceed PSA limits unexpectedly. This will help you plan and avoid surprises at tax time.
+      </p>
+
+      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">
+        Consider Tax-Efficient Alternatives
+      </h3>
+      
+      <p className="text-gray-700 mb-6">
+        If you're consistently exceeding PSA limits, consider investing in tax-efficient alternatives like ISAs, pensions, or other tax-advantaged accounts.
+      </p>
+
+      <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
+        Conclusion: Staying Tax-Compliant with Higher Interest Rates
+      </h2>
+      
+      <p className="text-gray-700 mb-6">
+        The HMRC savings account tax warning serves as an important reminder for UK savers to understand their tax obligations on savings interest. With higher interest rates, more savers are finding themselves liable for tax on their savings, making it crucial to understand PSA limits and plan accordingly.
+      </p>
+
+      <p className="text-gray-700 mb-6">
+        By using tax-efficient savings strategies, monitoring your interest income, and staying informed about your tax obligations, you can minimize your tax liability while maximizing your savings returns. Don't wait for HMRC to contact you—take proactive steps to ensure you're compliant with tax rules.
+      </p>
+
+      <p className="text-gray-700 mb-8">
+        Use our <a href="/calculators/tax" className="text-blue-600 hover:text-blue-800 underline">tax calculator</a> to estimate your potential tax liability on savings interest and plan your savings strategy accordingly.
+      </p>
+
+      <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 my-8">
+        <h3 className="text-xl font-semibold text-gray-900 mb-4">Key Takeaways:</h3>
+        <ul className="text-gray-700 space-y-2">
+          <li>• Higher interest rates mean more savers exceed PSA limits</li>
+          <li>• Basic rate taxpayers get £1,000 PSA, higher rate get £500</li>
+          <li>• Interest above PSA is taxed at your marginal rate</li>
+          <li>• Use ISAs for tax-free savings up to £20,000 per year</li>
+          <li>• Consider spreading savings across partners to use both PSAs</li>
+          <li>• Monitor your interest income throughout the year</li>
+          <li>• Register for self-assessment if required</li>
+          <li>• Don't assume banks handle all tax matters for you</li>
+        </ul>
+      </div>
+    </BlogPostTemplate>
   )
 }
