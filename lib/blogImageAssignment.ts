@@ -204,8 +204,12 @@ export function autoAssignImagesToBlogPosts(): void {
         
         // Get appropriate image
         const image = getBlogPostImage(slug, keywords, category, title);
-        
-        console.log(`✅ ${slug}: ${image.src} (${category})`);
+
+        if (image) {
+          console.log(`✅ ${slug}: ${image.src} (${category})`);
+        } else {
+          console.log(`⚠️ ${slug}: no exact-match image found`);
+        }
         
         // You can optionally update the blog post with the image
         // This would require modifying the BlogPostTemplate usage
