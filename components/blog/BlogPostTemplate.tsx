@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import AdUnit from '@/components/ads/AdUnit';
+import { getBlogPostImage } from '@/lib/blogImageAssignment';
 
 interface BlogPostTemplateProps {
   title: string;
@@ -16,6 +17,7 @@ interface BlogPostTemplateProps {
   calculatorLink?: string;
   calculatorText?: string;
   adSlots?: string[];
+  slug?: string; // Add slug for image assignment
   featuredImage?: {
     src: string;
     alt: string;
@@ -63,6 +65,7 @@ export default function BlogPostTemplate({
   calculatorLink,
   calculatorText,
   adSlots = [],
+  slug,
   featuredImage
 }: BlogPostTemplateProps) {
   const categoryColors = {
@@ -83,6 +86,9 @@ export default function BlogPostTemplate({
   const hoverColor = `hover:text-${color}-800`;
   const tagBg = `bg-${color}-100`;
   const tagText = `text-${color}-800`;
+
+  // Auto-assign featured image if not provided
+  const blogImage = featuredImage || (slug ? getBlogPostImage(slug, keywords, category, title) : null);
 
   return (
     <div className={`min-h-screen bg-gradient-to-br ${bgGradient}`}>
@@ -142,13 +148,13 @@ export default function BlogPostTemplate({
           </p>
           
           {/* Featured Image */}
-          {featuredImage && (
+          {blogImage && (
             <div className="my-8">
               <Image
-                src={featuredImage.src}
-                alt={featuredImage.alt}
-                width={featuredImage.width || 1200}
-                height={featuredImage.height || 630}
+                src={blogImage.src}
+                alt={blogImage.alt}
+                width={blogImage.width || 1200}
+                height={blogImage.height || 630}
                 className="mx-auto rounded-lg shadow-lg object-cover w-full"
                 style={{ aspectRatio: '16/9' }}
                 sizes="(max-width: 768px) 100vw, 1200px"
