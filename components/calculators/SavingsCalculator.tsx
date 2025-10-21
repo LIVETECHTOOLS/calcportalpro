@@ -323,7 +323,11 @@ export default function SavingsCalculator() {
               <input
                 type="number"
                 value={formData.goalAmount || ''}
-                onChange={(e) => updateFormData('goalAmount', parseFloat(e.target.value) || undefined)}
+                onChange={(e) => {
+                  const raw = e.target.value;
+                  const nextValue = raw === '' ? '' : (parseFloat(raw) || 0);
+                  updateFormData('goalAmount', nextValue);
+                }}
                 className="input-field pl-8"
                 placeholder="100,000"
                 min="0"
