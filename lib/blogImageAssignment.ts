@@ -215,7 +215,8 @@ export function autoAssignImagesToBlogPosts(): void {
         // This would require modifying the BlogPostTemplate usage
         
       } catch (error) {
-        console.log(`❌ Error processing ${slug}: ${error.message}`);
+        const message = error instanceof Error ? error.message : String(error);
+        console.log(`❌ Error processing ${slug}: ${message}`);
       }
     }
   }
