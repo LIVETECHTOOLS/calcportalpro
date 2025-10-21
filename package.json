@@ -13,10 +13,6 @@
     "performance": "lighthouse https://calcportalpro.com --output=json --output-path=./lighthouse-report.json",
     "validate-html": "npm run build && npx html-validate dist",
     "test:accessibility": "npm run build && npx axe-core --dir=dist",
-    "auto-blog": "node scripts/auto-blog.js",
-    "auto-blog:all": "node scripts/auto-blog.js",
-    "auto-blog:watch": "node scripts/auto-blog.js --watch",
-    "restore-blog": "node scripts/restore-blog-content.js"
   },
   "dependencies": {
     "@vercel/analytics": "^1.1.1",
