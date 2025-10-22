@@ -1,3 +1,4 @@
+"use client";
 import { Metadata } from 'next'
 import BlogPostTemplate from '@/components/blog/BlogPostTemplate'
 import AdUnit from '@/components/ads/AdUnit'
@@ -74,7 +75,7 @@ export default function GreaterPersonalLoanExplainedPage() {
           <li>• No prepayment penalties</li>
           <li>• Minimal or no origination fees</li>
           <li>• Fast approval and funding</li>
-        </ul>
+      </ul>
       </div>
 
       <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">
