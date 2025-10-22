@@ -1,4 +1,3 @@
-"use client";
 import { Metadata } from 'next'
 import BlogPostTemplate from '@/components/blog/BlogPostTemplate'
 import AdUnit from '@/components/ads/AdUnit'
