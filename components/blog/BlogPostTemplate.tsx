@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
@@ -25,33 +24,6 @@ interface BlogPostTemplateProps {
     alt: string;
     width?: number;
     height?: number;
-  };
-}
-
-export function generateBlogMetadata({
-  title,
-  description,
-  keywords,
-  publishDate,
-  category = "Finance"
-}: {
-  title: string;
-  description: string;
-  keywords: string;
-  publishDate: string;
-  category?: string;
-}): Metadata {
-  return {
-    title: `${title} | CalcPortal Pro`,
-    description,
-    keywords,
-    openGraph: {
-      title,
-      description,
-      type: 'article',
-      publishedTime: publishDate,
-      authors: ['CalcPortal Pro Team'],
-    },
   };
 }
 
