@@ -204,3 +204,4 @@ export default function BlogPostTemplate({
   );
 }
 
+export default BlogPostTemplate;
