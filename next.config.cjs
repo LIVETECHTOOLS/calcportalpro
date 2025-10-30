@@ -2,8 +2,6 @@
 const nextConfig = {
   // ✅ Enable strict mode for better debugging and consistency
   reactStrictMode: true,
-  // ✅ Static export
-  output: 'export',
 
   // ✅ Performance & security
   compress: true,
@@ -98,7 +96,7 @@ const nextConfig = {
       };
     }
 
-    // Prevent fs module issues in client bundles
+    // Prevent fs/path module issues in client bundles
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
@@ -109,4 +107,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
