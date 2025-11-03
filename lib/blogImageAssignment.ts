@@ -44,6 +44,11 @@ const availableImages = [
   "3000-irs-tax-refund-schedule-2025.jpg",
   "a-and-d-loan.jpg",
   "can-i-get-a-mortgage-with-unfiled-taxes.jpg",
+  "can-my-lawyer-give-me-a-loan.jpg",
+  "can-you-get-a-home-loan-if-you-owe-taxes-2025.jpg",
+  "can-you-use-a-heloc-to-buy-land-2025.jpg",
+  "charter-savings-bank.jpg",
+  "capital-budgeting-guides.jpg",
 ];
 
 /**
