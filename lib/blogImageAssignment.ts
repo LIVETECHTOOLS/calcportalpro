@@ -20,39 +20,35 @@ const DEFAULT_OG_IMAGE: BlogImage = {
 
 /**
  * ✅ All local images that exist in /public/images/blog
- * These filenames should match each post's slug.
+ * These filenames exactly match the post slugs.
  */
 const availableImages = [
-  "apr-vs-interest-rate.jpg",
-  "budgeting-50-30-20-rule.jpg",
-  "build-credit-fast-2025.jpg",
-  "canada-fpt-gst-2025.jpg",
-  "cd-rates-2025.jpg",
-  "daylight-savings-2025.jpg",
-  "emergency-fund.jpg",
-  "gpa-college-admissions-2025.jpg",
-  "high-yield-savings.jpg",
-  "house-afford.jpg",
-  "index-funds-vs-etfs.jpg",
-  "insurance-guide-2025.jpg",
-  "investment-portfolio-tips.jpg",
-  "investment-strategies-2025.jpg",
-  "mortgage-vs-rent.jpg",
-  "refinance-mortgage-2025.jpg",
-  "retirement-planning-2025.jpg",
-  "small-business-tax-deductions.jpg",
-  "student-loans-2025.jpg",
-  "study-hacks-gpa-2025.jpg",
-  "tax-brackets-2025.jpg",
-  "types-of-loans.jpg",
-
-  // ✅ Added new image for SmartCredit Review
+  "2025-tax-brackets-complete-guide.jpg",
+  "50-30-20-rule-budgeting-guide-2025.jpg",
+  "5-tips-building-investment-portfolio.jpg",
+  "apr-vs-interest-rate-difference.jpg",
+  "canada-fpt-gst-payment-dates-2025.jpg",
+  "cd-rates-guide-2025.jpg",
+  "how-to-build-credit-fast-2025.jpg",
+  "how-to-start-emergency-fund.jpg",
+  "how-gpa-impacts-college-admissions.jpg",
+  "high-yield-savings-account-guide.jpg",
+  "how-much-house-can-i-afford.jpg",
+  "insurance-planning-guide-2025.jpg",
+  "mortgage-vs-rent-which-better.jpg",
+  "when-to-refinance-mortgage-2025.jpg",
+  "student-loans-guide-2025.jpg",
+  "top-study-hacks-improve-gpa.jpg",
+  "understanding-different-types-loans.jpg",
   "smartcredit-review-2025.jpg",
+  "3000-irs-tax-refund-schedule-2025.jpg",
+  "a-and-d-loan.jpg",
+  "can-i-get-a-mortgage-with-unfiled-taxes.jpg",
 ];
 
 /**
  * ✅ Get the blog post image if available.
- * If the image doesn't exist, returns `null` (no fallback).
+ * Matches based on the post’s slug (no fallback if missing).
  */
 export function getBlogPostImage(
   slug?: string,
@@ -60,21 +56,22 @@ export function getBlogPostImage(
   _category: string = "Finance",
   title: string = ""
 ): BlogImage | null {
-  if (slug) {
-    const match = availableImages.find(
-      (img) => img.replace(".jpg", "") === slug
-    );
-    if (match) {
-      return {
-        src: `/images/blog/${match}`,
-        alt: `${title || slug} - Blog featured image`,
-        width: 1200,
-        height: 630,
-      };
-    }
+  if (!slug) return null;
+
+  const matchedImage = availableImages.find(
+    (img) => img.replace(".jpg", "") === slug
+  );
+
+  if (matchedImage) {
+    return {
+      src: `/images/blog/${matchedImage}`,
+      alt: `${title || slug} - Blog featured image`,
+      width: 1200,
+      height: 630,
+    };
   }
 
-  // 🚫 No image found — return null (so you can easily identify posts missing images)
+  // 🚫 No matching image found
   return null;
 }
 
