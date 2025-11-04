@@ -11,7 +11,7 @@ const blogPosts = [
     category: 'Savings',
     author: 'Sarah Collins',
     readTime: '6 min',
-    image: '/images/blog/emergency-fund.jpg',
+    image: '/images/blog/how-to-start-emergency-fund.jpg',
     href: '/blog/how-to-start-emergency-fund',
   },
   {
@@ -20,7 +20,7 @@ const blogPosts = [
     category: 'Savings',
     author: 'CalcPortal Pro Team',
     readTime: '8 min',
-    image: '/images/blog/high-yield-savings.jpg',
+    image: '/images/blog/high-yield-savings-account-guide.jpg',
     href: '/blog/high-yield-savings-account-guide',
   },
   {
@@ -29,7 +29,7 @@ const blogPosts = [
     category: 'Real Estate',
     author: 'CalcPortal Pro Team',
     readTime: '7 min',
-    image: '/images/blog/house-afford.jpg',
+    image: '/images/blog/how-much-house-can-i-afford.jpg',
     href: '/blog/how-much-house-can-i-afford',
   },
   {
@@ -38,7 +38,7 @@ const blogPosts = [
     category: 'Investing',
     author: 'CalcPortal Pro Team',
     readTime: '9 min',
-    image: '/images/blog/cd-rates-2025.jpg',
+    image: '/images/blog/cd-rates-guide-2025.jpg',
     href: '/blog/cd-rates-guide-2025',
   },
   {
@@ -47,7 +47,7 @@ const blogPosts = [
     category: 'Taxes',
     author: 'CalcPortal Pro Team',
     readTime: '8 min',
-    image: '/images/blog/canada-fpt-gst-2025.jpg',
+    image: '/images/blog/canada-fpt-gst-payment-dates-2025.jpg',
     href: '/blog/canada-fpt-gst-payment-dates-2025',
   },
   {
@@ -56,7 +56,7 @@ const blogPosts = [
     category: 'Loans',
     author: 'Ziblim Abdulai',
     readTime: '5 min',
-    image: '/images/blog/types-of-loans.jpg',
+    image: '/images/blog/understanding-different-types-loans.jpg',
     href: '/blog/understanding-different-types-loans',
   },
 ];
